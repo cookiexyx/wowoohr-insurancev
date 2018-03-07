@@ -1,0 +1,32 @@
+.login-fixed{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 80;
+	background-color: #fff;
+}
+.login-fixed img{
+	width: 100%;
+}
+.login-fixed-from{
+	width: 316px;
+	margin:46px auto 0;
+}
+.login-fixed-from input{
+	width: 100% !important;
+	border:1px solid #dfdfdf;
+	border-radius:2px;
+	height: 40px;
+	margin-top: 20px;
+	font-size:15px;
+	padding-left: 18px;
+}
+.login-fixed-from input:focus{
+	outline:none;
+}
+.login-fixed-from button{
+	width: 100%;
+	margin-top: 24px;
+}

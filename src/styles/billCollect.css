@@ -1,0 +1,93 @@
+.billCollect-info{
+	margin-top: 45px;
+	line-height: 30px;
+}
+.billCollect-info span{
+	font-size:12px;
+	color:#494949;
+}
+.billCollect-info .billCollect-month{
+	float: left;
+	position: relative;
+}
+.billCollect-info .billCollect-month b{
+	float: left;
+	font-size:13px;
+	color:#494949;
+	display: block;
+	line-height: 30px;
+	margin-right: 12px;
+	font-weight: normal;
+}
+.billCollect-info .billCollect-month .Plug{
+	float: left;
+	margin-right: 20px;
+	position: relative;
+}
+.billCollect-info .billCollect-month .Plug i{
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	font-size: 16px;
+	color: #cccccc;
+	margin-top: -8px;
+	pointer-events: none;
+}
+.billCollect-info .billCollect-month .Plug input{
+	height:30px;
+	width: 100px;
+	padding-left: 10px;
+}
+.billCollect-info .billCollect-btn{
+	float: right;
+}
+.billCollect-info .billCollect-btn button{
+	border:none;
+	color: #218EFF;
+	cursor: pointer;
+	background-color: transparent;
+}
+.billCollect-tab{
+	margin-top: 14px;
+}
+.billCollect-tab,.billCollect-tab table{
+	width: 100%;
+}
+.billCollect-tab table{
+	border-top:1px solid #ebebeb;
+	border-left:1px solid #ebebeb;
+	border-right:1px solid #ebebeb;
+}
+.billCollect-tab table thead{
+	background-color: #EFF8FF;
+}
+.billCollect-tab table thead td{
+	height: 44px;
+	font-size: 14px;
+	color: #777;
+	padding-left: 20px;
+}
+.billCollect-tab table tbody tr td{
+	height: 56px;
+	border-bottom: 1px solid #ebebeb;
+	padding-left: 20px;
+	font-size: 13px;
+	color: #777;
+} 
+.billCollect-tab table tbody tr td a{
+	color: #218EFF !important;
+	cursor: pointer;
+}
+/* 没有账单 */
+.noBillCont{
+	text-align: center;
+	margin-top: 200px;
+}
+.noBillCont img{
+	display: inline;
+}
+.noBillCont p{
+	font-size:14px;
+	color:#494949;
+	margin-top:26px;
+}

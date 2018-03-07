@@ -1,0 +1,361 @@
+{
+    "code":"200",
+    "msg":"",
+    "result":{
+        "pages":3,
+        "orderLength":10,
+        "pageSize":20,
+        "totalCount":124,
+        "pageNum":1,
+        "dataList":[
+            {
+                "id":1,
+                "productType":{
+                    "value":"社保",
+                    "key":1
+                },
+                "orderNo":"1102017062117151719341330",
+                "idCard":"侯老师的社保",
+                "name":"欧阳峰1",
+                "cityMap":{
+                    "key":"110100",
+                    "value":"北京市"
+                },
+                "mobile":"手机号",
+                "applyBase":"申报基数",
+                "applyStatus":"增员待处理",
+                "applyProductName":{
+                    "key":"110100",
+                    "value":"社保公积金(社保)"
+                },
+                "startApplyMonth":"开始缴纳月",
+                "endApplyMonth":"最后缴纳月",
+                "failReasonSi":"失败原失败原因因社保失败原因社保因社保",
+                "failReasonHf":"失败原因公积金",
+                "applyMonth":"申报月份",
+                "dispatchDate":"派单日期",
+                "idCardPicUrlFront":{
+                    "value":"images/addbook.png",
+                    "key":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d8041d004f52173c0504efc2dbe25f0807d309bca317124d85e7626bbdbcbb6c3ccd4c519a601563c"
+                },
+                "idCardPicUrlBack":{
+                    "value":"images/addbook.png",
+                    "key":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d8041d004f52173c0504efc2dbe25f0807d309bca317124d85e7626bbdbcbb6c3ccd4c519a601563c"
+                },
+                "hkPicUrlOfHomepageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "hkPicUrlOfOwnpageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "hkPicUrlOfHeaderpageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "socialSecurityNumber":"社保编号",
+                "fundAccount":"公积金编号",
+                "residenceNatureMap":{
+                    "value":"城镇（户籍属性）",
+                    "key":"1"
+                },
+                 "residenceCitysMap":{
+                       "value":"户籍所在地",
+                        "key":"350200"
+                 },
+                "seriesPayMonths":"1"
+            },
+            {
+                "id":2,
+                "productType":{
+                    "value":"社保",
+                    "key":1
+                },
+                "orderNo":"1102017062117151719341330",
+                "idCard":"身份证",
+                "name":"欧阳佳丽2",
+                "cityMap":{
+                    "key":"110100",
+                    "value":"北京市"
+                },
+                "mobile":"手机号",
+                "applyBase":"申报基数",
+                "applyStatus":"增员待处理",
+                "applyProductName":{
+                    "key":"110100",
+                    "value":"社保公积金(社保)"
+                },
+                "startApplyMonth":"开始缴纳月",
+                "endApplyMonth":"最后缴纳月",
+                "failReasonSi":"失败原失败原败原因社保因社保",
+                "failReasonHf":"失败原因公积金",
+                "applyMonth":"申报月份",
+                "dispatchDate":"派单日期",
+                "idCardPicUrlFront":{
+                    "value":"images/back.jpg",
+                    "key":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d8041d004f52173c0504efc2dbe25f0807d309bca317124d85e7626bbdbcbb6c3ccd4c519a601563c"
+                },
+                "idCardPicUrlBack":{
+                    "value":"images/back.jpg",
+                    "key":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d8041d004f52173c0504efc2dbe25f0807d309bca317124d85e7626bbdbcbb6c3ccd4c519a601563c"
+                },
+                "hkPicUrlOfHomepageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "hkPicUrlOfOwnpageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "hkPicUrlOfHeaderpageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "socialSecurityNumber":"社保编号",
+                "fundAccount":"公积金编号",
+                "residenceNatureMap":{
+                    "value":"城镇（户籍属性）",
+                    "key":"1"
+                },
+                 "residenceCitysMap":{
+                       "value":"户籍所在地",
+                        "key":"350200"
+                 },
+                "seriesPayMonths":"1"
+            },
+            {
+                "id":3,
+                "productType":{
+                    "value":"社保",
+                    "key":1
+                },
+                "idCard":"身份证",
+                "name":"欧阳佳丽3",
+                "cityMap":{
+                    "key":"110100",
+                    "value":"北京市"
+                },
+                "orderNo":"1102017062117151719341330",
+                "mobile":"手机号",
+                "applyBase":"申报基数",
+                "applyStatus":"增员待处理",
+                "applyProductName":{
+                    "key":"110100",
+                    "value":"社保公积金(社保)"
+                },
+                "startApplyMonth":"开始缴纳月",
+                "endApplyMonth":"最后缴纳月",
+                "failReasonSi":"失败败原因社保因社保",
+                "failReasonHf":"失败原因公积金",
+                "applyMonth":"申报月份",
+                "dispatchDate":"派单日期",
+                "idCardPicUrlFront":{
+                    "value":"images/back.jpg",
+                    "key":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d8041d004f52173c0504efc2dbe25f0807d309bca317124d85e7626bbdbcbb6c3ccd4c519a601563c"
+                },
+                "idCardPicUrlBack":{
+                    "value":"images/back.jpg",
+                    "key":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d8041d004f52173c0504efc2dbe25f0807d309bca317124d85e7626bbdbcbb6c3ccd4c519a601563c"
+                },
+                "hkPicUrlOfHomepageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "hkPicUrlOfOwnpageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "hkPicUrlOfHeaderpageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "socialSecurityNumber":"社保编号",
+                "fundAccount":"公积金编号",
+                "residenceNatureMap":{
+                    "value":"城镇（户籍属性）",
+                    "key":"1"
+                },
+                 "residenceCitysMap":{
+                       "value":"户籍所在地",
+                        "key":"350200"
+                 },
+                "seriesPayMonths":"1"
+            },
+            {
+                "id":4,
+                "productType":{
+                    "value":"社保",
+                    "key":1
+                },
+                "orderNo":"1102017062117151719341330",
+                "idCard":"身份证",
+                "name":"欧阳佳丽4",
+                "cityMap":{
+                    "key":"110100",
+                    "value":"北京市"
+                },
+                "mobile":"手机号",
+                "applyBase":"申报基数",
+                "applyStatus":"增员待处理",
+                "applyProductName":{
+                    "key":"110100",
+                    "value":"社保公积金(社保)"
+                },
+                "startApplyMonth":"开始缴纳月",
+                "endApplyMonth":"最后缴纳月",
+                "failReasonSi":"失败原因保失败原因社保因社保",
+                "failReasonHf":"失败原因公积金",
+                "applyMonth":"申报月份",
+                "dispatchDate":"派单日期",
+                "idCardPicUrlFront":{
+                    "value":"images/back.jpg",
+                    "key":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d8041d004f52173c0504efc2dbe25f0807d309bca317124d85e7626bbdbcbb6c3ccd4c519a601563c"
+                },
+                "idCardPicUrlBack":{
+                    "value":"images/back.jpg",
+                    "key":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d8041d004f52173c0504efc2dbe25f0807d309bca317124d85e7626bbdbcbb6c3ccd4c519a601563c"
+                },
+                "hkPicUrlOfHomepageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "hkPicUrlOfOwnpageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "hkPicUrlOfHeaderpageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "socialSecurityNumber":"社保编号",
+                "fundAccount":"公积金编号",
+                "residenceNatureMap":{
+                    "value":"城镇（户籍属性）",
+                    "key":"1"
+                },
+                 "residenceCitysMap":{
+                       "value":"户籍所在地",
+                        "key":"350200"
+                 },
+                "seriesPayMonths":"1"
+            },
+            {
+                "id":5,
+                "productType":{
+                    "value":"社保",
+                    "key":1
+                },
+                "orderNo":"1102017062117151719341330",
+                "idCard":"身份证",
+                "name":"欧阳佳丽5",
+                "cityMap":{
+                    "key":"110100",
+                    "value":"北京市"
+                },
+                "mobile":"手机号",
+                "applyBase":"申报基数",
+                "applyStatus":"增员待处理",
+                "applyProductName":{
+                    "key":"110100",
+                    "value":"社保公积金(社保)"
+                },
+                "startApplyMonth":"开始缴纳月",
+                "endApplyMonth":"最后缴纳月",
+                "failReasonSi":"失败原社保因社保",
+                "failReasonHf":"失败原因公积金",
+                "applyMonth":"申报月份",
+                "dispatchDate":"派单日期",
+                "idCardPicUrlFront":{
+                    "value":"images/back.jpg",
+                    "key":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d8041d004f52173c0504efc2dbe25f0807d309bca317124d85e7626bbdbcbb6c3ccd4c519a601563c"
+                },
+                "idCardPicUrlBack":{
+                    "value":"images/back.jpg",
+                    "key":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d8041d004f52173c0504efc2dbe25f0807d309bca317124d85e7626bbdbcbb6c3ccd4c519a601563c"
+                },
+                "hkPicUrlOfHomepageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "hkPicUrlOfOwnpageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "hkPicUrlOfHeaderpageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "socialSecurityNumber":"社保编号",
+                "fundAccount":"公积金编号",
+                "residenceNatureMap":{
+                    "value":"城镇（户籍属性）",
+                    "key":"1"
+                },
+                 "residenceCitysMap":{
+                       "value":"户籍所在地",
+                        "key":"350200"
+                 },
+                "seriesPayMonths":"1"
+            },
+            {
+                "id":6,
+                "productType":{
+                    "value":"社保",
+                    "key":1
+                },
+                "orderNo":"1102017062117151719341330",
+                "idCard":"身份证",
+                "name":"欧阳佳丽6",
+                "cityMap":{
+                    "key":"110100",
+                    "value":"北京市"
+                },
+                "mobile":"手机号",
+                "applyBase":"申报基数",
+                "applyStatus":"增员待处理",
+                "applyProductName":{
+                    "key":"110100",
+                    "value":"社保公积金(社保)"
+                },
+                "startApplyMonth":"开始缴纳月",
+                "endApplyMonth":"最后缴纳月",
+                "failReasonSi":"失败原原社保失败原因社保因社保",
+                "failReasonHf":"失败原因公积金",
+                "applyMonth":"申报月份",
+                "dispatchDate":"派单日期",
+                "idCardPicUrlFront":{
+                    "value":"images/back.jpg",
+                    "key":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d8041d004f52173c0504efc2dbe25f0807d309bca317124d85e7626bbdbcbb6c3ccd4c519a601563c"
+                },
+                "idCardPicUrlBack":{
+                    "value":"images/back.jpg",
+                    "key":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d8041d004f52173c0504efc2dbe25f0807d309bca317124d85e7626bbdbcbb6c3ccd4c519a601563c"
+                },
+                "hkPicUrlOfHomepageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "hkPicUrlOfOwnpageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "hkPicUrlOfHeaderpageMap":{
+                    "value": "images/back.jpg",
+                    "key": "4432asdfdsfdff"
+                },
+                "socialSecurityNumber":"社保编号",
+                "fundAccount":"公积金编号",
+                "residenceNatureMap":{
+                    "value":"城镇（户籍属性）",
+                    "key":"1"
+                },
+                 "residenceCitysMap":{
+                       "value":"户籍所在地",
+                        "key":"350200"
+                 },
+                "seriesPayMonths":"1"
+            }
+        ]
+    }
+}

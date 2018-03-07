@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" ng-app="appmvc">
+	<head>		
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Cache-Control" content="max-age=86400" />
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<title>人力窝合作伙伴线上代理服务系统</title>
+		<link rel="stylesheet" type="text/css" href="css/style.min.css">		
+	</head>
+	<body>
+		<div class="header noprint" id="headerFixed" style="display: none;">
+				
+			<div class="float-xs-left wowoo-logo">
+				<img src="images/wologo.png" ng-click="redirect('/order/increase')">
+			</div>
+
+			<div class="float-xs-right user_avatar">
+				<div>
+					<span class="avatar"><i class="icon-touxiang"></i></span>
+					<span style="color:#1689ff;" ng-bind="userName"></span>
+				</div>
+				<ul>
+					<li ng-click="redirect('/account/reset')"><a href="javascript:void(0);">修改密码</a></li>
+					<li ng-click="logOut()"><a href="javascript:void(0);">退出登录</a></li>
+				</ul>
+			</div>
+			<!-- <div class="float-xs-right nav icon-mail-color" ng-click="redirect('message/center')"  ng-class="{'nav-active':locationPath.indexOf('/message/')>=0||ismessage}" >
+				<span class="icon-mail"></span>
+			</div> -->
+			<!-- <div class="float-xs-right nav" ng-click="redirect('/bill/payee')"  ng-class="{'nav-active':locationPath.indexOf('/bill/')>=0||isBill}"  >
+				我的账单
+			</div> -->
+			<div  class="float-xs-right nav " ng-click="redirect('/insurance/fund')" ng-class="{'nav-active':locationPath.indexOf('/insurance/')>=0||isInsurance}">
+			我的社保公积金
+			</div>
+
+			 <div  class="float-xs-right nav " ng-click="redirect('/order/increase')" ng-class="{'nav-active':locationPath.indexOf('/order/')>=0||isOrder}" >
+				我的订单
+			</div>
+		</div>
+	
+
+		<div class="subnav noprint" id="subnavFixed" style="display: none">
+			<div class="container">
+				<div class="my-order" ng-show="locationPath.indexOf('/order/')>=0||isOrder">
+					<div class="float-xs-left " ng-click="redirect('/order/increase')" 
+					ng-class="{'active-bar':locationPath.indexOf('/order/increase')>=0||locationPath.indexOf('/increaseOrder')>=0}"
+					>
+						<a href="javascript:void(0);" >增员订单</a>
+					</div>
+					 <div  class="float-xs-left  " ng-click="redirect('/order/delect')"  
+					 	ng-class="{'active-bar':locationPath == '/order/delect' || locationPath.indexOf('/order/delectDetail/')>=0 || locationPath == '/order/delectDownload'}"><a  href="javascript:void(0);">减员订单</a>
+					</div>
+					 <div  class="float-xs-left  " ng-click="redirect('/order/all')" 
+					 	ng-class="{'active-bar':locationPath == '/order/all' || locationPath.indexOf('/order/allDetail/')>=0}">
+						<a  href="javascript:void(0);">所有订单</a>
+					</div>
+					<div  ng-click="redirect('/order/fail')" class="float-xs-left" 
+					ng-class="{'active-bar':locationPath.indexOf('/order/fail')>=0||locationPath.indexOf('/failOrder')>=0}">
+						<a  href="javascript:void(0);">失败订单</a>
+					</div>
+					<div class="float-xs-right downloadListPublic" ng-click="redirect('/order/download')" ng-class="{'active-bar':locationPath.indexOf('/order/download')>=0}">
+						<span class="exportList" >下载列表</span>
+						<span ng-if="totalFileNum>0&&totalFileNum<10" class="exportList num" ng-bind="totalFileNum"></span>
+						 <span ng-if="totalFileNum>9" class="exportList num dot"><i>...</i></span>
+					</div>
+				</div>
+				<!-- 消息中心-->
+				<div class="my-order" ng-show="locationPath.indexOf('/message/')>=0||isMessage">
+					<div class="float-xs-left " ng-click="redirect('/message/center')" 
+					ng-class="{'active-bar':locationPath == '/message/center'}"
+					>
+						<a href="javascript:void(0);" >消息中心</a>
+					</div>
+				</div>
+				<!-- 我的账单-->
+				<div class="my-order" ng-show="locationPath.indexOf('/bill/')>=0||isBill">
+					<div class="float-xs-left " ng-click="redirect('/bill/payee')" 
+					ng-class="{'active-bar':locationPath == '/bill/payee'}"
+					>
+						<a href="javascript:void(0);" >收款账单</a>
+					</div>
+					<!-- <div class="float-xs-left " ng-click="redirect('/bill/retreat')" 
+					ng-class="{'active-bar':locationPath == '/bill/retreat'}"
+					>
+						<a href="javascript:void(0);" >退款单</a>
+					</div> -->
+				</div>
+
+				<!-- 我的社保公积金-->
+				<div class="my-order" ng-show="locationPath.indexOf('/insurance/')>=0||isInsurance">
+					<div class="float-xs-left " ng-click="redirect('/insurance/fund')" 
+					ng-class="{'active-bar':locationPath == '/insurance/fund'||locationPath == '/insurance/add'||locationPath == '/insurance/modify'||locationPath == '/insurance/checking'||locationPath == '/insurance/refuse'||locationPath.indexOf('/insurance/')>=0}"
+					>
+						<a href="javascript:void(0);" >我的社保公积金</a>
+					</div>
+				</div>
+
+				<!-- 账号中心-->
+				<div class="my-order" ng-show="locationPath.indexOf('/account/')>=0||isAccount">
+					<div class="float-xs-left " ng-click="redirect('/account/reset')" 
+					ng-class="{'active-bar':locationPath == '/account/reset'||locationPath == '/insurance/add'||locationPath == '/insurance/modify'}"
+					>
+						<a href="javascript:void(0);" >账号中心</a>
+					</div>
+				</div>
+			</div>
+
+<!-- 	
+		<div class="my-insurance">
+			<div  ng-click="redirect('order/fail')" class="float-xs-left ">
+				<a  href="javascript:void(0);">我的社保公积金</a>
+			</div>
+		</div>
+
+		<div class="my-bill">
+			<div  ng-click="redirect('order/fail')" class="float-xs-left" >
+				<a  href="javascript:void(0);">我的账单</a>
+			</div>
+		</div> -->
+	</div>
+			
+			<ng-view></ng-view>
+		<div id="successPop"></div>
+		<div id='popAlert'></div>
+		<div id='loading'><img src="images/loading.gif"></div>
+		<div class="popup-window animated" id="errorPromte" ng-click="hidePopup()">
+			<div class="popup-window-no">
+			    <p class="service-err-msg">{{serviceErrMsg}}</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="scripts/lib.min.js"></script>
+  		<script type="text/javascript" src="scripts/index.js"></script> 
+  		<script src="https://s13.cnzz.com/z_stat.php?id=1262309054&web_id=1262309054" language="JavaScript"></script>		
+	</body>
+</html>

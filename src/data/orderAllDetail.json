@@ -1,0 +1,72 @@
+{
+	"code": "200",
+    "msg": "",
+    "result": {
+		"orderId": "订单id",
+		"orderNumber": "订单号",
+		"name": "姓名",
+		"idCard": "身份证号",
+		"cityCode": "城市编码",
+		"cityMap":{
+			"key":"城市编码",
+			"value":"上海"
+		},
+        "payAmount": 8000,
+		"productName": "申报产品",
+		"dimissionReason": "离职原因",
+		"orderMonthMax":"2017-08",
+		"orderMonthMin":"2017-05",
+		"dimissionDate": "离职日期",
+		"insuranceDetialDtoList": [
+			{
+				"insuranceType": "险种类型",
+				"insuranceTypeMap": {
+					"key":"1",
+					"value":"养老"
+				},
+				"payMonth": "缴纳月份",
+				"companyBaseNumber": "公司基数",
+				"companyRatio": "公司比例",
+				"companyFixedAmount": "公司固定金额",
+				"companyPayAmount": "公司缴纳额",
+				"personBaseNumber": "个人基数",
+				"personRatio": "个人比例",
+				"personFixedAmount": "个人固定金额",
+				"personPayAmount": "个人缴纳额",
+				"insurancePayAmount": "缴纳总额",
+				"status": "4",
+				"detailStatusMap": {
+					"key": "1",
+					"value": "申报成功"
+				}
+			},
+			{
+				"insuranceType": "险种类型",
+				"insuranceTypeMap": {
+					"key":"1",
+					"value":"养老"
+				},
+				"payMonth": "缴纳月份",
+				"companyBaseNumber": "公司基数",
+				"companyRatio": "公司比例",
+				"companyFixedAmount": "公司固定金额",
+				"companyPayAmount": "公司缴纳额",
+				"personBaseNumber": "个人基数",
+				"personRatio": "个人比例",
+				"personFixedAmount": "个人固定金额",
+				"personPayAmount": "个人缴纳额",
+				"insurancePayAmount": "缴纳总额",
+				"status": "3",
+				"detailStatusMap": {
+					"key": "2",
+					"value": "申报失败"
+				},
+				"failReason": "险种失败原因",
+				"detailFailReasonMap":  {
+					"key": "1",
+					"value": "上家未退"
+				}
+			}
+		]
+	}
+}

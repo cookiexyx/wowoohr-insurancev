@@ -1,0 +1,50 @@
+<div id="orderDeclarWrap" ng-show="!is404">
+	<div class="order-declar-header">申报材料
+	<button class="btn">下载材料源文件</button>
+	<button class="btn">打印材料</button>
+	<button class="btn">反馈材料错误</button></div>
+
+		<div class="banner">
+			<ul class="img" >
+				<li ng-repeat="material in materialList" class="imgList">
+		
+					<div class="img-header row">
+						订单号：{{material.orderNum}}
+					</div>
+					<div class="content row">
+						<div class="col-xs-6 left-box">
+						<h3>{{material.name}}</h3>
+						<p>身份证： {{material.idCard}}</p>
+						<p>缴纳城市：{{material.payCity}}</p>
+						<p>申报名称：{{material.declareProducts}}</p>
+						<p>户籍属性：{{material.declareProducts}}</p>
+						<p>申报基数：{{material.declareBase}}</p>
+						<p>申报月份：{{material.declareMonth}}</p>
+						<p>派单日期：{{material.sendDate}}</p>
+					
+						</div>
+						<div class="col-xs-6 right-box">
+							<div class="card">
+								<p>身份证正面照</p>
+								<img src="images/ang.jpg">
+							</div>
+							<div class="card"> 
+								<p>身份证背面照</p>
+								<img src="images/back.jpg">
+							</div>
+						</div>	
+					</div>
+
+				</li>
+		
+			</ul>
+		
+			
+		</div>
+		<div class="btn">
+				<span class="prev" ng-click="prev()"></span>
+				<span class="next" ng-click="next()"></span>
+		</div>
+</div>
+<!-- 404页面 -->
+<div class="rm-404" ng-if="is404"><img src="images/404.png"></div>

@@ -1,0 +1,25 @@
+<div class="account-reset-box" ng-show="!is404">
+	<div class="login-fixed-from" ng-show="!modifySucc">
+		<div class="input-err">
+			<input type="password" placeholder="请输入旧密码" ng-model="oldPassword" autocomplete="off">
+			<small class="old-err" ng-bind="oldErr"></small>
+		</div>
+		<div class="input-err">
+			<input type="password" placeholder="请输入新密码" ng-model="newPassword" autocomplete="off">
+			<small class="new-err" ng-bind="newErr"></small>
+		</div>	
+		<div class="input-err">
+			<input type="password" placeholder="请确认新密码" ng-model="confirmNewPassword" autocomplete="off">
+			<small class="confirm-err" ng-bind="confirmErr"></small>
+		</div>	
+		<button class="btn btn-info btn-lg" ng-click="modify()">确认修改</button>
+	</div>
+	<div class="reset-success" ng-if="modifySucc">
+		<img src="images/reset_success.png">
+		<div>你的登录密码已经修改成功</div>
+		<div class="add-button point"><span class="btn btn-info" ng-click="redirect('/login')">重新登录</span></div>
+	</div>
+</div>
+
+<!-- 404页面 -->
+<div class="rm-404" ng-if="is404"><img src="images/404.png"></div>

@@ -1,0 +1,24 @@
+{
+  "code": "200",
+  "msg": "",
+  "result": {
+    "pageNum": 1,
+    "pageSize": 2,
+    "pages": 1,
+    "list": [
+      {
+        "id": 1,
+        "code": "110100",
+        "city": "北京市",
+        "province": "北京"
+      },
+      {
+        "id": 2,
+        "code": "310100",
+        "city": "上海市",
+        "province": "上海"
+      }
+    ],
+    "totalCount": 2
+  }
+}

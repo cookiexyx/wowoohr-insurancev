@@ -1,0 +1,101 @@
+<div ng-show="!is404">
+	<div class="insurance-fund-box">
+	<div ng-if="approvedLength>0">
+		<div class="row insurance-fund-search">
+			<div class="add-fund point" ng-click="goUrl('insurance/add')">添加社保公积金</div>
+	     	<div>
+	     		<span>服务城市</span>	
+	     		<select ng-model="cityAllMap" ng-options="m.code as m.city for m in cityOptions" ng-change="selectType(1,cityAllMap)"></select>
+		        <i class="icon-03"></i>		  				       
+	     		<!-- <input class="cityBtn" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: default;" ng-click="save()" placeholder="全部" readonly>
+	     		<i class="icon-03"></i> -->
+				<!-- <div class="dropdown-menu province-box">
+				    <div class="province-head">
+				    	<div class="point" ng-click="provinceCity(1)"><span ng-bind="province">请选择</span><i class="icon-03"></i></div>
+				    	<div class="point" ng-click="provinceCity(2)"><span ng-bind="city">请选择</span><i class="icon-03"></i></div>
+				    	<i class="icon-cross point" ng-click="hideBox()"></i>
+				    </div>
+				    <ul class="province-cont row">
+				    	<li ng-click="liClick('上海1')" class="col-xs-3 point">上海1</li>
+				    	<li ng-click="liClick('上海2')" class="col-xs-3 point">上海2</li>
+				    	<li ng-click="liClick('上海3')" class="col-xs-3 point">上海3</li>
+				    	<li ng-click="liClick('上海4')" class="col-xs-3 point">上海4</li>
+				    	<li ng-click="liClick('上海5')" class="col-xs-3 point">上海5</li>
+				    	<li ng-click="liClick('上海6')" class="col-xs-3 point">上海6</li>
+				    	<li ng-click="liClick('上海7')" class="col-xs-3 point">上海7</li>
+				    	<li ng-click="liClick('上海8')" class="col-xs-3 point">上海8</li>
+				    	<li ng-click="liClick('上海9')" class="col-xs-3 point">上海9</li>
+				    	<li ng-click="liClick('上海10')" class="col-xs-3 point">上海10</li>
+				    	<li ng-click="liClick('上海11')" class="col-xs-3 point">上海11</li>
+				    	<li ng-click="liClick('上海12')" class="col-xs-3 point">上海12</li>
+				    	<li ng-click="liClick('上海13')" class="col-xs-3 point">上海13</li>
+				    </ul>
+				</div>  --> 				       
+	     	</div>
+	     	<div>
+	     		<span>产品类型</span>
+	     		<select ng-model="typeMap" ng-options="m.itemCode as m.itemName for m in typeOptions" ng-change="selectType(2,typeMap)"></select>
+		        <i class="icon-03"></i>		  				       
+	     	</div>
+	     	<div class="float-xs-right point" ng-click="goUrl('insurance/refuse')">审核拒绝</div>
+	     	<div class="float-xs-right point" ng-click="goUrl('insurance/checking')">审核中(<span ng-bind="auditingLength"></span>)</div>
+		</div>
+		<ul class="insurance-fund-list">
+	        <li class="insurance-list row" ng-repeat="item in dataList">
+	        	<div class="insurance-list-title">
+	        	 	<span ng-bind="item.name"></span>
+					<span class="float-xs-right see-detail point" ng-click="goDetail(item.id)">查看详情</span>
+	        	</div>
+	        	<div class="insurance-list-cont row">
+	        		<div class="col-xs-5">
+	        			<ul class="row">
+	        				<li class="col-xs-6">产品类型：<span ng-bind="item.type.value"></span></li>
+	        				<li class="col-xs-6">服务费：<span ng-bind="item.vendorServiceFee+'元/月'"></span></li>
+	        				<li class="col-xs-6">服务城市：<span ng-bind="item.cityMap.value"></span></li>
+	        				<li class="col-xs-6">社会平均工资：<span ng-bind="item.societyAverageWage+'元'"></span></li>
+	        			</ul>
+	        		</div>
+	        		<div class=" col-xs-7">
+	        			<span class="float-xs-left">申报材料：</span>
+	        			<ul class="row float-xs-left">
+	        				<li class="col-xs-12">新增：<span ng-bind="item.newMaterial"></span></li>
+	        				<li class="col-xs-12">续保：<span ng-bind="item.renewMaterial"></span></li>
+	        			</ul>
+	        		</div>
+	        	</div>
+	        	<div class="insurance-list-footer">
+	        		备注信息：<span ng-bind-html="item.remarks | ntobr"></span>
+	        	</div>
+	        </li>
+	    </ul>
+	</div>
+	<div class="no-fund" ng-if="approvedLength<1&&!refuseLength&&!auditingLength">
+		<img src="images/no_fund.png">
+		<div>你暂无添加任何社保公积金</div>
+		<div class="add-button point"><span class="btn btn-info" ng-click="redirect('insurance/add')">立即添加</span></div>
+	</div>
+	<div class="no-fund one-check" ng-if="approvedLength<1&&(refuseLength||auditingLength)">
+		<img src="images/no_fund.png">
+		<div>你暂无任何社保公积金</div>
+		<div class="add-button point"><span class="btn btn-info" ng-click="redirect('insurance/add')">立即添加新的社保公积金产品</span></div>
+		<div class="hint" ng-show="true">
+		<div ng-if="auditingLength">你有 
+			<span class="text-primary" ng-bind="auditingLength"></span> 
+			条待审核的社保公积金产品，<span class="point text-primary" ng-click="redirect('insurance/checking')">立即查看</span>
+		</div>
+		<div ng-if="refuseLength">你有
+			<span class="text-primary" ng-bind="refuseLength"></span> 条被拒绝的社保公积金产品，<span class="point text-primary" ng-click="redirect('insurance/refuse')">立即查看</span>
+		</div>
+		</div>
+	</div>
+	<!-- 搜索后没有数据 -->
+	<div class="search-no-data" ng-if="approvedLength>0&&dataList.length<1">
+		<img src="images/no_fund.png">
+		<div>暂无数据</div>
+	</div>
+</div>
+</div>
+
+
+<!-- 404页面 -->
+<div class="rm-404" ng-if="is404"><img src="images/404.png"></div>

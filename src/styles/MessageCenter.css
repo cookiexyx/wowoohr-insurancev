@@ -1,0 +1,203 @@
+.NobillMessage{
+	width: 176px;
+	text-align: center;
+	margin:180px auto 0px;
+}
+.NobillMessage p{
+	font-size:14px;
+	color:#494949;
+	margin-bottom: 0;
+	margin-top: 26px;
+}
+
+.billMessageTitle{
+	width: 402px;
+	overflow: hidden;
+	margin-top: 35px;
+}
+.billMessageTitle label{
+	margin-bottom: 0;
+	margin-right: 16px;
+	font-size:14px;
+	color:#000000;
+}
+.billMessageTitle > span{
+	font-size:12px;
+	color:#494949;
+}
+.billMessageTitle > div{
+	float: right;
+	margin-right: 20px;
+}
+.billMessageTitle > div > span{
+	font-size:13px;
+	cursor: pointer;
+}
+.billMessageTitle > div > p{
+	margin-bottom: 0;
+}
+.billMessageTitle > div > p > span{
+	margin-left: 20px;
+	font-size:13px;
+	cursor: pointer;
+}
+.billMessageCont{
+	height: 448px;
+	border:1px solid #ebebeb;
+	margin-top: 18px;
+}
+.billMessageCont-left{
+	height: 448px;
+	width:400px;
+	border-right: 1px solid #ebebeb;
+	overflow-y: auto;
+	float: left;
+}
+.billMessageCont-left .bill-Upward{
+	position: absolute;
+	right: 8px;
+	bottom: 8px;
+	cursor: pointer;
+}
+.billMessageCont-left ul li{
+	width:367px;
+	border-bottom: 1px solid #EDEBE9;
+	height: 75px;
+	position: relative;
+	padding-left: 42px;
+}
+.billMessageCont-left ul li .bill-right-cursor{
+	cursor: pointer;
+	padding-left: 38px;
+	position: relative;
+	height: 75px;
+}
+.billMessageCont-left ul li .bill-right-cursor .bill-right-readState{
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	margin-top: -8px;
+}
+.billMessageCont-left ul li .bill-right-cursor .bill-right-readState span.span-grey{
+	background-color: #d8d8d8;
+	color:#b1b1b1;
+	padding: 0px 2px 1px;
+	border-radius: 1px;
+}
+.billMessageCont-left ul li .bill-right-cursor .bill-right-readState span.span-red{
+	background-color: #fe565b;
+	color: #ffffff;
+	padding: 0px 2px 1px;
+	border-radius: 2px;
+}
+.billMessageCont-left ul li label{
+	position: absolute;
+	left: 12px;
+	top: 50%;
+	margin-top: -7px;
+}
+.billMessageCont-left .bill-right-explain p:nth-child(1){
+	margin-bottom: 0;
+	padding-top: 20px;
+	font-size:14px;
+	color:#494949;
+	position: relative;
+}
+.billMessageCont-left .bill-right-explain p:nth-child(1) span{
+	font-size:12px;
+	color:#cccccc;
+	position: absolute;
+	right:-10px;
+	top: 20px;
+}
+.billMessageCont-left .bill-right-explain p:nth-child(2){
+	font-size:12px;
+	color:#494949;
+}
+
+.billMessageCont-right{
+	width: 730px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 30px;
+}
+.billMessageCont-right ul li > div{
+	background:#F7F7F6;
+	border:1px solid #EBEAE7;
+	height: 38px;
+	line-height: 38px;
+	font-size:14px;
+	color:#494949;
+	padding-left: 22px;
+}
+.billMessageCont-right ul li > div button{
+	height: 36px;
+	line-height: 36px;
+	float: right;
+	border:none;
+	background-color: transparent;
+	cursor: pointer;
+	font-size:13px;
+	margin-right: 9px;
+}
+.billMessageCont-right ul li > div span{
+	font-size:13px;
+	color:#999999;
+	margin-left: 36px;
+}
+.billMessageCont-right p{
+	padding-left: 44px;
+	margin-top: 26px;
+	margin-bottom: 32px;
+}
+.billMessageCont-right .billMessageCont-choose{
+	text-align: center;
+	font-size:14px;
+	color:#494949;
+	padding-top: 155px;
+}
+
+/*弹窗*/
+
+.billMessage-pop{
+	height: 160px;
+	width: 400px;
+	background-color: #fff;
+	padding: 30px;
+	font-size: 13px;
+	color: #000;
+	position: relative;
+}
+.billMessage-pop .row{
+	position: absolute;
+	text-align: center;
+	bottom: 30px;
+	padding-left: 60px;
+}
+.billMessage-pop .row button{
+	width: 100px;
+	margin-right: 20px;
+}
+.billMessage-pop span{
+	color: #0882ff;
+}
+
+.billMessage-singlePop{
+	height: 160px;
+	width: 400px;
+	background-color: #fff;
+	padding: 30px;
+	font-size: 13px;
+	color: #000;
+	position: relative;
+}
+.billMessage-singlePop .row{
+	position: absolute;
+	text-align: center;
+	bottom: 30px;
+	padding-left: 60px;
+}
+.billMessage-singlePop .row button{
+	width: 100px;
+	margin-right: 20px;
+}

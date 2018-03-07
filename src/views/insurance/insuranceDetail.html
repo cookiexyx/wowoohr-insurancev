@@ -1,0 +1,163 @@
+<div ng-show="!is404">
+  <div ng-include="'views/item/titleNav.html'"></div>
+  <div class="insurance-detail-box">
+    <div class="row insurance-detail-title">
+        <div class="float-xs-left">
+          <span ng-bind="data.name"></span>
+          <span ng-bind="data.auditStatus.value"></span>                   
+        </div>
+        <div class="float-xs-right">
+          <span class="point" ng-click="goEditHistory()">修改历史</span>   
+            <button ng-class="{'btn-info':data.auditStatus.key==1||data.auditStatus.key==2,'btn-gray':data.auditState ==0}" ng-click="redirect('insurance/modify/'+auditState+'/'+id)" ng-disabled="data.auditState ==0">修改</button>
+        </div> 
+        <div class="refuse-info" ng-if="data.auditStatus.key == 2" style="margin-top:55px;margin-bottom:25px;">
+          <span>拒绝原因</span><label ng-bind="data.refuseReason"></label>
+        </div>
+    </div>
+    <div class="row insurance-detail-head">
+          <div class="col-xs-3">
+              <ul>
+                  <li style="margin-bottom: 8px;">产品类型：<span ng-bind="data.productType.value"></span></li>
+                  <li style="margin-bottom: 8px;">服务城市：<span ng-bind="data.cityMap.value"></span></li>
+                  <li>服务费：<span ng-bind="data.vendorServiceFee+'元/月'"></span></li>
+              </ul>  
+          </div>
+          <div class="col-xs-4">
+              <span style="color: #999999;">申报材料</span>
+              <ul>
+                  <li style="margin-bottom: -5px; margin-top:-5px;">新增：<span ng-bind="data.newMaterial"></span></li>
+                  <li style="margin-bottom: -5px;">续保：<span ng-bind="data.renewMaterial"></span></li>
+<!--                   <li>
+                      <label ng-if="data.isForceConscience == 2">不需要</label>
+                      <label ng-if="data.isForceConscience == 1">需要</label>强制补缴一个月
+                  </li> -->
+              </ul>
+          </div>
+          <div class="col-xs-5">
+              <ul style="margin-bottom: 0;">
+                  <li>社会平均工资：<span ng-bind="data.societyAverageWage"></span>元</li>
+              </ul> 
+              <div class="float-xs-left">备注信息：</div>
+              <div style="padding-left: 70px;word-break: break-all;" ng-bind-html="data.remarks | ntobr"></div>
+          </div>
+      </div>
+      <div class="row insurance-detail-cont">
+          <table class="table table-border">
+              <thead class="thead-default">
+                  <tr class="table-head">
+                    <th></th>
+                    <th>企业</th>
+                    <th>个人</th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td class="table-td">
+                        <table class="table">
+                          <thead class="thead-default">
+                              <tr class="table1-head">
+                                <th>险种</th>
+                                <th>生效月</th>
+                                <th>失效月</th>
+                                <th>收款方式</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr ng-repeat="item in insuranceFormList">
+                                <td ng-bind="item.productType.value"></td>
+                                <td ng-bind="item.startMonth"></td>
+                                <td ng-bind="item.endMonth|| '-'"></td>
+                                <td ng-bind="item.payMethMap.value"></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                    </td>
+                    <td class="table-td">
+                        <table class="table">
+                          <thead class="thead-default">
+                              <tr class="table2-head">
+                                <th>基数上限</th>
+                                <th>基数下限</th>
+                                <th>比例(%)</th>
+                                <th>固定金额</th>
+                                <th>进位规则</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr ng-repeat="item in insuranceFormList">
+                                <td ng-bind="'{{item.eBaseUp}}' || '-'"></td>
+                                <td ng-bind="'{{item.eBaseDown}}'|| '-'"></td>
+                                <td ng-if="item.eProportion" ng-bind="item.eProportion+'%'"></td>
+                                <td ng-if="!item.eProportion" ng-bind="item.eProportion==0?0:'-'"></td>
+                                <td ng-bind="'{{item.eFixedAmount}}' || '-'"></td>
+                                <td ng-bind="'{{item.eCarryRuleMap.value}}' || '-'"></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                    </td>
+                    <td class="table-td">
+                        <table class="table">
+                          <thead class="thead-default">
+                              <tr class="table3-head">
+                                <th>基数上限</th>
+                                <th>基数下限</th>
+                                <th>比例(%)</th>
+                                <th>固定金额</th>
+                                <th>进位规则</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr ng-repeat="item in insuranceFormList">
+                                <td ng-bind="'{{item.pBaseUp}}'|| '-'"></td>
+                                <td ng-bind="'{{item.pBaseDown}}'|| '-'"></td>
+                                <td ng-if="item.pProportion" ng-bind="item.pProportion+'%'"></td>
+                                <td ng-if="!item.pProportion" ng-bind="item.pProportion==0?0:'-'"></td>
+                                <td ng-bind="'{{item.pFixedAmount}}'|| '-'"></td>
+                                <td ng-bind="'{{item.pCarryRuleMap.value}}'|| '-'"></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                    </td>
+                    <td class="table-td">
+                        <table class="table" style="border:none;">
+                          <thead class="thead-default">
+                              <tr class="table4-head">
+                                <th>增员截止</th>
+                                <th>减员截止</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr ng-repeat="item in insuranceFormList">
+                                <td ng-bind="item.applyEndDayTypeMap.value+item.applyEndDay+'日'"></td>
+                                <td ng-bind="item.terminationEndDayTypeMap.value+item.terminationEndDay+'日'"></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                    </td>
+                    <td class="table-td">
+                        <table class="table" style="border:none;">
+                          <thead class="thead-default">
+                              <tr class="table1-head">
+                                <th>补缴</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr ng-repeat="item in insuranceFormList">
+                                <td ng-if="item.isForceConscience == 1">是</td>
+                                <td ng-if="item.isForceConscience == 2">否</td>
+                                <td ng-if="item.isForceConscience == null">-</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                    </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+
+</div>
+<!-- 404页面 -->
+<div class="rm-404" ng-if="is404"><img src="images/404.png"></div>

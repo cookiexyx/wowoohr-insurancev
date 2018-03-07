@@ -1,0 +1,139 @@
+{
+    "code": "200",
+    "msg": "操作成功",
+    "result": {
+        "productType": [
+            {
+                "key": "1",
+                "value": "社保"
+            },
+            {
+                "key": "2",
+                "value": "公积金"
+            },
+            {
+                "key": "3",
+                "value": "社保公积金"
+            }
+        ],
+        "flagState": [
+            {
+                "key": "0",
+                "value": "无标记"
+            },
+            {
+                "key": "1",
+                "value": "有标记"
+            }
+        ],
+        "isRead": [
+            {
+                "key": "0",
+                "value": "已读"
+            },
+            {
+                "key": "1",
+                "value": "未读"
+            }
+        ],
+        "cityList": [
+            {
+                "key": "110100",
+                "value": "北京市"
+            },
+            {
+                "key": "310100",
+                "value": "上海市"
+            }
+        ],
+        "orderStatus": [
+            {
+                "key": "3",
+                "value": "增员待处理"
+            },
+            {
+                "key": "4",
+                "value": "正常在缴"
+            },
+            {
+                "key": "5",
+                "value": "减员待处理"
+            },
+            {
+                "key": "6",
+                "value": "已停保"
+            },
+            {
+                "key": "7",
+                "value": "申报失败"
+            }
+        ],
+        "vendorList": [
+            {
+                "vendorId": "111",
+                "value": " 北京外企德科上海有限公司 "
+            },
+            {
+                "vendorId": "222",
+                "value": "湖南艾科人力资源有限公司"
+            }
+        ],
+        "vendorProductList": [
+            {
+                "vendorId": "111",
+                "productList": [
+                    {
+                        "productId": "1",
+                        "value": "上海社保"
+                    },
+                    {
+                        "productId": "2",
+                        "value": "上海公积金"
+                    }
+                ]
+            }
+        ],
+        "insuranceType": [
+            {
+                "value": "养老",
+                "key": "1"
+            },
+            {
+                "value": "工伤",
+                "key": "2"
+            },
+            {
+                "value": "医疗",
+                "key": "3"
+            },
+            {
+                "value": "生育",
+                "key": "4"
+            },
+            {
+                "value": "失业",
+                "key": "5"
+            },
+            {
+                "value": "公积金",
+                "key": "6"
+            },
+            {
+                "value": "大病",
+                "key": "8"
+            },
+            {
+                "value": "残保金",
+                "key": "9"
+            },
+            {
+                "value": "采暖费",
+                "key": "10"
+            },
+            {
+                "value": "人力窝残保金",
+                "key": "15"
+            }
+        ]
+    }
+}

@@ -1,0 +1,85 @@
+<div ng-show="!is404">
+	<div ng-show="totalNum > 0">
+	<div class="billMessageTitle">
+		<label ng-class="{'hide':chooseCheckbox}">
+		    <i ng-class="{true:'icon-01',false:'icon-02'}[select_all]"></i>
+	        <input type="checkbox" ng-model="select_all" class="hide" ng-change="selectAll()" >
+	        收到的信息
+	    </label>
+	    <span>共{{totalNum}}条</span>
+	    <div>
+	    	<span ng-class="{'hide':!chooseCheckbox}" class="text-info" ng-click="delete_news()">删除消息</span>
+	    	<p ng-class="{'hide':chooseCheckbox}">
+	    		<span class="text-info" ng-click="delete_choose()">删除</span>
+	    		<span>取消</span>
+	    	</p>
+	    </div>
+	</div>
+
+	<div class="billMessageCont">
+		<div class="billMessageCont-left">
+			<ul>
+				<li ng-repeat="(key,item) in billList" ng-init="item.checked=false">
+					<label ng-class="{'hide':chooseCheckbox}">
+					    <i ng-class="{'icon-02':!item.checked,'icon-01':item.checked}"></i>
+				        <input type="checkbox" ng-model="item.checked" class="hide" ng-change="selectOne()" >
+				    </label>
+				    <div class="bill-right-cursor" ng-click="show_details(key,item.readState)">
+				    	<div class="bill-right-readState">
+				    		<span ng-class="item.readState=='true'?'span-grey':'span-red'"><small>{{item.readState=='true'?"已读":"未读"}}</small></span>
+				    	</div>
+				    	<div class="bill-right-explain">
+				    		<p>你有新的增员订单 <span>{{item.Date}}</span></p>
+				    		<p>单行文字</p>
+				    	</div>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		<div class="billMessageCont-right">
+			<ul>
+				<li ng-repeat="i in billList" ng-init="i.contShow=false" ng-show="i.contShow">
+					<div>你有新的增员订单<span>{{i.Date}}</span><button class="text-info" ng-click="oneDelete(i.id)">删除</button></div>
+					<p>姓名：{{i.name}}</p>
+					<p>身份证：{{i.IDcard}}</p>
+					<p>缴纳城市：{{i.City}}</p>
+					<p>申报月份：{{i.month}}</p>
+					<p>申报名称：{{i.product}}</p>
+				</li>
+			</ul>
+			<div ng-show="chooseInfo" class="billMessageCont-choose">请选择一条消息</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- 无系统消息 -->
+<div class="NobillMessage" ng-show="totalNum<=0">
+	<img src="images/noInfo.png">
+	<p>无系统消息</p>
+</div>
+
+<!-- 弹框 多删除-->
+<div class="pop billMessage-pop" style="display: none">
+	共选中<span>{{checkTitleNum}}</span>条 <br>
+	确认批量删除？
+	<div class="row">
+		<button class="btn more-btn btn-info" ng-click="succOrder()">确认</button>
+		<button  class="btn more-btn btn-warning" ng-click="closePop()">取消</button>
+	</div>
+</div>
+
+<!-- 弹框 单删除-->
+<div class="pop billMessage-singlePop" style="display: none">
+	是否确认删除？
+	<div class="row">
+		<button class="btn more-btn btn-info" ng-click="succSingleOrder()">确认</button>
+		<button  class="btn more-btn btn-warning" ng-click="closePop()">取消</button>
+	</div>
+</div>
+</div>
+
+
+<!-- 404页面 -->
+<div class="rm-404" ng-if="is404"><img src="images/404.png"></div>

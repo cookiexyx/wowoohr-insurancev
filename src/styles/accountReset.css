@@ -1,0 +1,26 @@
+.account-reset-box{
+	padding-top:30px;
+}
+.account-reset-box .reset-success{
+	margin-top: 8%;
+}
+.account-reset-box .reset-success>img{
+	width:12%;
+	margin-left: 44%;
+	margin-bottom: 40px;
+}
+.account-reset-box .reset-success>div{
+	text-align: center;
+	font-size:14px;
+	color:#494949;
+}
+.account-reset-box .reset-success>.add-button{
+	margin: 50px 0;
+}
+.account-reset-box .reset-success>.add-button>span{
+	display: inline-block;
+	padding:0 140px;
+	font-size:14px;
+	line-height: 40px;
+	height: 40px;
+}

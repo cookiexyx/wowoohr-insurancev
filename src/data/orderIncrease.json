@@ -1,0 +1,880 @@
+{
+    "code": "200",
+    "msg": "",
+    "result": {
+        "pageNum": 1,
+        "pageSize": 20,
+        "pages": 15,
+        "totalCount":1,
+        "list": [
+            {
+                "nowPayStatusMap": {
+                    "value": "当前汇缴",
+                    "key": "3"
+                },
+                "companyRatio":8,
+                "personRatio":7,
+                "applyBase": 1000,
+                "applyEndDay": "2017-07-10",
+                "applyProductMap": {
+                    "value": "上海FA的社保",
+                    "applyProductId": "1"
+                },
+                "city": "100011",
+                "cityMap": {
+                    "value": "上海",
+                    "key": "10010"
+                },
+                "dispatchDate": 1497600446860,
+                "dispatchDateFormat": "2017-06-167",
+                "idCard": "430725199002013267",
+                "toDecalareInsurances":"养老、医疗、生育、失业、工伤",
+                "material": {
+                    "education": 1,
+                    "educationMap": {
+                        "value": "大专以下",
+                        "key": "1"
+                    },
+                    "fundAccount": "1232424",
+                    "id": 111111,
+                    "idCardPicUrlA": "images/back.jpg",
+                    "idCardPicUrlAMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "idCardPicUrlB": "images/back.jpg",
+                    "idCardPicUrlBMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "isRead": 1,
+                    "isReadMap": {
+                        "value": "未读",
+                        "key": "2"
+                    },
+                    "materialRmark": "B1",
+                    "materialRmarkMap": {
+                        "value": "身份证信息与输入姓名证件号码信息不一致",
+                        "key": "B1"
+                    },
+                    "materialStatus": 1,
+                    "materialStatusMap": {
+                        "value": "待审核",
+                        "key": "0"
+                    },
+                    "residenceCity": "10000111",
+                    "residenceCityMap": {
+                        "value": "上海",
+                        "key": "1232434"
+                    },
+                    "materialRmarkList":[
+                        {
+                            "value":"身份证信息与输入姓名证件号码信息不一致",
+                            "key":"B1"
+                        },
+                        {
+                            "value":"身份证照片拍摄不符合标准",
+                            "key":"B2"
+                        }
+                    ],
+                    "hkPicUrlOfHomepageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfOwnpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHeaderpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "socialSecurityNumber":"社保编号",
+                    "fundAccount":"公积金编号",
+                    "residenceNatureMap":{
+                        "value":"城镇（户籍属性）",
+                        "key":"1"
+                    },
+                     "residenceCitysMap":{
+                           "value":"户籍所在地",
+                            "key":"350200"
+                     },
+                    "residenceNature": 1,
+                    "residenceNatureMap": {
+                        "value": "待审核",
+                        "key": "0"
+                    }
+                },
+                "mobile": "18817618712",
+                "name": "佘洋22",
+                "orderId": "954b37d3d755e406",
+                "orderMonth": "2017-06",
+                "orderNo": "20174543656576768",
+                "vPayAmount": 200,
+                "productId": 22,
+                "insuredType": 22,
+                "productType": 2,
+                "productTypeMap": {
+                    "value": "社保",
+                    "key": "1"
+                },
+                "rlwServiceFee": 20,
+                "vendorId": 22,
+                "vendorMap": {
+                    "value": "北京外企德科",
+                    "vendorId": "1"
+                },
+                "vendorServiceFee": 20,
+                "orderProductType":"2",
+                "orderProductTypeMap":{
+                    "key":"2",
+                    "value":"公积金"
+                }
+            },
+            {
+                "nowPayStatusMap": {
+                    "value": "补缴",
+                    "key": "1"
+                },
+                "companyRatio":8,
+                "personRatio":7,
+                "applyBase": 1000,
+                "applyEndDay": "2017-07-10",
+                "applyProductMap": {
+                    "value": "上海FA的社保",
+                    "applyProductId": "1"
+                },
+                "city": "100011",
+                "cityMap": {
+                    "value": "上海",
+                    "key": "10010"
+                },
+                "dispatchDate": 1497600446860,
+                "dispatchDateFormat": "2017-06-167",
+                "idCard": "430725199002013267",
+                "toDecalareInsurances":"养老、医疗、生育、失业、工伤",
+                "material": {
+                    "education": 1,
+                    "educationMap": {
+                        "value": "大专以下",
+                        "key": "1"
+                    },
+                    "fundAccount": "1232424",
+                    "id": 222222222,
+                    "idCardPicUrlA": "images/ang.jpg",
+                    "idCardPicUrlAMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "idCardPicUrlB": "images/back.jpg",
+                    "idCardPicUrlBMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "isRead": 1,
+                    "isReadMap": {
+                        "value": "未读",
+                        "key": "1"
+                    },
+                    "materialRmark": "B1",
+                    "materialRmarkMap": {
+                        "value": "身份证信息与输入姓名证件号码信息不一致",
+                        "key": "B1"
+                    },
+                    "materialStatus": 1,
+                    "materialStatusMap": {
+                        "value": "待审核",
+                        "key": "0"
+                    },
+                    "residenceCity": "10000111",
+                    "residenceCityMap": {
+                        "value": "上海",
+                        "key": "1232434"
+                    },
+                    "hkPicUrlOfHomepageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfOwnpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHeaderpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "socialSecurityNumber":"社保编号",
+                    "fundAccount":"公积金编号",
+                    "residenceNatureMap":{
+                        "value":"城镇（户籍属性）",
+                        "key":"1"
+                    },
+                     "residenceCitysMap":{
+                           "value":"户籍所在地",
+                            "key":"350200"
+                     },
+                    "materialRmarkList":[
+                        {
+                            "value":"身份证信息与输入姓名证件号码信息不一致",
+                            "key":"B1"
+                        },
+                        {
+                            "value":"身份证照片拍摄不符合标准",
+                            "key":"B2"
+                        }
+                    ],
+                    "residenceNature": 1,
+                    "residenceNatureMap": {
+                        "value": "待审核",
+                        "key": "0"
+                    }
+                },
+                "mobile": "18817618712",
+                "name": "佘洋",
+                "orderId": 222,
+                "orderMonth": "2017-06",
+                "orderNo": "20174543656576768",
+                "payAmount": 200,
+                "productId": 22,
+                "insuredType": 22,
+                "productType": 2,
+                "productTypeMap": {
+                    "value": "社保",
+                    "key": "1"
+                },
+                "rlwServiceFee": 20,
+                "vendorId": 22,
+                "vendorMap": {
+                    "value": "北京外企德科",
+                    "vendorId": "1"
+                },
+                "vendorServiceFee": 20,
+                "orderProductType":"2",
+                "orderProductTypeMap":{
+                    "key":"2",
+                    "value":"公积金"
+                }
+            },
+            {
+                "nowPayStatusMap": {
+                    "value": "当前汇缴",
+                    "key": "3"
+                },
+                "companyRatio":8,
+                "personRatio":7,
+                "applyBase": 1000,
+                "applyEndDay": "2017-07-10",
+                "applyProductMap": {
+                    "value": "上海FA的社保",
+                    "applyProductId": "1"
+                },
+                "city": "100011",
+                "cityMap": {
+                    "value": "上海",
+                    "key": "10010"
+                },
+                "dispatchDate": 1497600446860,
+                "dispatchDateFormat": "2017-06-167",
+                "idCard": "430725199002013267",
+                "toDecalareInsurances":"养老、医疗、生育、失业、工伤",
+                "material": {
+                    "education": 1,
+                    "educationMap": {
+                        "value": "大专以下",
+                        "key": "1"
+                    },
+                    "fundAccount": "1232424",
+                    "id": 33333333,
+                    "idCardPicUrlA": "images/ang.jpg",
+                    "idCardPicUrlAMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "idCardPicUrlB": "images/back.jpg",
+                    "idCardPicUrlBMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "isRead": 1,
+                    "isReadMap": {
+                        "value": "未读",
+                        "key": "1"
+                    },
+                    "materialRmark": "B1",
+                    "materialRmarkMap": {
+                        "value": "身份证信息与输入姓名证件号码信息不一致",
+                        "key": "B1"
+                    },
+                    "hkPicUrlOfHomepageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfOwnpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHeaderpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "socialSecurityNumber":"社保编号",
+                    "fundAccount":"公积金编号",
+                    "residenceNatureMap":{
+                        "value":"城镇（户籍属性）",
+                        "key":"1"
+                    },
+                     "residenceCitysMap":{
+                           "value":"户籍所在地",
+                            "key":"350200"
+                     },
+                    "materialStatus": 1,
+                    "materialStatusMap": {
+                        "value": "待审核",
+                        "key": "0"
+                    },
+                    "residenceCity": "10000111",
+                    "residenceCityMap": {
+                        "value": "上海",
+                        "key": "1232434"
+                    },
+                    "materialRmarkList":[
+                        {
+                            "value":"身份证信息与输入姓名证件号码信息不一致",
+                            "key":"B1"
+                        },
+                        {
+                            "value":"身份证照片拍摄不符合标准",
+                            "key":"B2"
+                        }
+                    ],
+                    "residenceNature": 1,
+                    "residenceNatureMap": {
+                        "value": "待审核",
+                        "key": "0"
+                    }
+                },
+                "mobile": "18817618712",
+                "name": "佘洋",
+                "orderId": 333,
+                "orderMonth": "2017-06",
+                "orderNo": "20174543656576768",
+                "payAmount": 200,
+                "productId": 22,
+                "insuredType": 22,
+                "productType": 2,
+                "productTypeMap": {
+                    "value": "社保",
+                    "key": "1"
+                },
+                "rlwServiceFee": 20,
+                "vendorId": 22,
+                "vendorMap": {
+                    "value": "北京外企德科",
+                    "vendorId": "1"
+                },
+                "vendorServiceFee": 20,
+                "orderProductType":"2",
+                "orderProductTypeMap":{
+                    "key":"2",
+                    "value":"公积金"
+                }
+            },
+            {
+                "nowPayStatusMap": {
+                    "value": "当前汇缴",
+                    "key": "3"
+                },
+                "companyRatio":8,
+                "personRatio":7,
+                "applyBase": 1000,
+                "applyEndDay": "2017-07-10",
+                "applyProductMap": {
+                    "value": "上海FA的社保",
+                    "applyProductId": "1"
+                },
+                "city": "100011",
+                "cityMap": {
+                    "value": "上海",
+                    "key": "10010"
+                },
+                "dispatchDate": 1497600446860,
+                "dispatchDateFormat": "2017-06-167",
+                "idCard": "430725199002013267",
+                "toDecalareInsurances":"养老、医疗、生育、失业、工伤",
+                "material": {
+                    "education": 1,
+                    "educationMap": {
+                        "value": "大专以下",
+                        "key": "1"
+                    },
+                    "fundAccount": "1232424",
+                    "id": 4444444,
+                    "idCardPicUrlA": "images/ang.jpg",
+                    "idCardPicUrlAMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "idCardPicUrlB": "images/back.jpg",
+                    "idCardPicUrlBMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "isRead": 1,
+                    "isReadMap": {
+                        "value": "未读",
+                        "key": "1"
+                    },
+                    "materialRmark": "B1",
+                    "materialRmarkMap": {
+                        "value": "身份证信息与输入姓名证件号码信息不一致",
+                        "key": "B1"
+                    },
+                    "materialStatus": 1,
+                    "materialStatusMap": {
+                        "value": "待审核",
+                        "key": "0"
+                    },
+                    "hkPicUrlOfHomepageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfOwnpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHeaderpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "socialSecurityNumber":"社保编号",
+                    "fundAccount":"公积金编号",
+                    "residenceNatureMap":{
+                        "value":"城镇（户籍属性）",
+                        "key":"1"
+                    },
+                     "residenceCitysMap":{
+                           "value":"户籍所在地",
+                            "key":"350200"
+                     },
+                    "residenceCity": "10000111",
+                    "residenceCityMap": {
+                        "value": "上海",
+                        "key": "1232434"
+                    },
+                    "materialRmarkList":[
+                        {
+                            "value":"身份证信息与输入姓名证件号码信息不一致",
+                            "key":"B1"
+                        },
+                        {
+                            "value":"身份证照片拍摄不符合标准",
+                            "key":"B2"
+                        }
+                    ],
+                    "residenceNature": 1,
+                    "residenceNatureMap": {
+                        "value": "待审核",
+                        "key": "0"
+                    }
+                },
+                "mobile": "18817618712",
+                "name": "佘洋",
+                "orderId": 444,
+                "orderMonth": "2017-06",
+                "orderNo": "20174543656576768",
+                "payAmount": 200,
+                "productId": 22,
+                "insuredType": 22,
+                "productType": 2,
+                "productTypeMap": {
+                    "value": "社保",
+                    "key": "1"
+                },
+                "rlwServiceFee": 20,
+                "vendorId": 22,
+                "vendorMap": {
+                    "value": "北京外企德科",
+                    "vendorId": "1"
+                },
+                "vendorServiceFee": 20,
+                "orderProductType":"2",
+                "orderProductTypeMap":{
+                    "key":"2",
+                    "value":"公积金"
+                }
+            },
+            {
+                "nowPayStatusMap": {
+                    "value": "当前汇缴",
+                    "key": "3"
+                },
+                "companyRatio":8,
+                "personRatio":7,
+                "applyBase": 1000,
+                "applyEndDay": "2017-07-10",
+                "applyProductMap": {
+                    "value": "上海FA的社保",
+                    "applyProductId": "1"
+                },
+                "city": "100011",
+                "cityMap": {
+                    "value": "上海",
+                    "key": "10010"
+                },
+                "dispatchDate": 1497600446860,
+                "dispatchDateFormat": "2017-06-167",
+                "idCard": "430725199002013267",
+                "toDecalareInsurances":"养老、医疗、生育、失业、工伤",
+                "material": {
+                    "education": 1,
+                    "educationMap": {
+                        "value": "大专以下",
+                        "key": "1"
+                    },
+                    "fundAccount": "1232424",
+                    "id": 5555555,
+                    "idCardPicUrlA": "images/ang.jpg",
+                    "idCardPicUrlAMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "idCardPicUrlB": "images/back.jpg",
+                    "idCardPicUrlBMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "isRead": 1,
+                    "isReadMap": {
+                        "value": "未读",
+                        "key": "1"
+                    },
+                    "materialRmark": "B1",
+                    "materialRmarkMap": {
+                        "value": "身份证信息与输入姓名证件号码信息不一致",
+                        "key": "B1"
+                    },
+                    "materialStatus": 1,
+                    "materialStatusMap": {
+                        "value": "待审核",
+                        "key": "0"
+                    },
+                    "hkPicUrlOfHomepageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfOwnpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHeaderpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "socialSecurityNumber":"社保编号",
+                    "fundAccount":"公积金编号",
+                    "residenceNatureMap":{
+                        "value":"城镇（户籍属性）",
+                        "key":"1"
+                    },
+                     "residenceCitysMap":{
+                           "value":"户籍所在地",
+                            "key":"350200"
+                     },
+                    "residenceCity": "10000111",
+                    "residenceCityMap": {
+                        "value": "上海",
+                        "key": "1232434"
+                    },
+                    "materialRmarkList":[
+                        {
+                            "value":"身份证信息与输入姓名证件号码信息不一致",
+                            "key":"B1"
+                        },
+                        {
+                            "value":"身份证照片拍摄不符合标准",
+                            "key":"B2"
+                        }
+                    ],
+                    "residenceNature": 1,
+                    "residenceNatureMap": {
+                        "value": "待审核",
+                        "key": "0"
+                    }
+                },
+                "mobile": "18817618712",
+                "name": "佘洋",
+                "orderId": 555,
+                "orderMonth": "2017-06",
+                "orderNo": "20174543656576768",
+                "payAmount": 200,
+                "productId": 22,
+                "insuredType": 22,
+                "productType": 2,
+                "productTypeMap": {
+                    "value": "社保",
+                    "key": "1"
+                },
+                "rlwServiceFee": 20,
+                "vendorId": 22,
+                "vendorMap": {
+                    "value": "北京外企德科",
+                    "vendorId": "1"
+                },
+                "vendorServiceFee": 20,
+                "orderProductType":"2",
+                "orderProductTypeMap":{
+                    "key":"2",
+                    "value":"公积金"
+                }
+            },
+            {
+                "nowPayStatusMap": {
+                    "value": "当前汇缴",
+                    "key": "3"
+                },
+                "companyRatio":8,
+                "personRatio":7,
+                "applyBase": 1000,
+                "applyEndDay": "2017-07-10",
+                "applyProductMap": {
+                    "value": "上海FA的社保",
+                    "applyProductId": "1"
+                },
+                "city": "100011",
+                "cityMap": {
+                    "value": "上海",
+                    "key": "10010"
+                },
+                "dispatchDate": 1497600446860,
+                "dispatchDateFormat": "2017-06-167",
+                "idCard": "430725199002013267",
+                "toDecalareInsurances":"养老、医疗、生育、失业、工伤",
+                "material": {
+                    "education": 1,
+                    "educationMap": {
+                        "value": "大专以下",
+                        "key": "1"
+                    },
+                    "fundAccount": "1232424",
+                    "id": 66666666666666,
+                    "idCardPicUrlA": "images/ang.jpg",
+                    "idCardPicUrlAMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "idCardPicUrlB": "images/back.jpg",
+                    "idCardPicUrlBMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "isRead": 1,
+                    "isReadMap": {
+                        "value": "未读",
+                        "key": "1"
+                    },
+                    "materialRmark": "B1",
+                    "materialRmarkMap": {
+                        "value": "身份证信息与输入姓名证件号码信息不一致",
+                        "key": "B1"
+                    },
+                    "hkPicUrlOfHomepageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfOwnpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHeaderpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "socialSecurityNumber":"社保编号",
+                    "fundAccount":"公积金编号",
+                    "residenceNatureMap":{
+                        "value":"城镇（户籍属性）",
+                        "key":"1"
+                    },
+                     "residenceCitysMap":{
+                           "value":"户籍所在地",
+                            "key":"350200"
+                     },
+                    "materialStatus": 1,
+                    "materialStatusMap": {
+                        "value": "待审核",
+                        "key": "0"
+                    },
+                    "residenceCity": "10000111",
+                    "residenceCityMap": {
+                        "value": "上海",
+                        "key": "1232434"
+                    },
+                    "materialRmarkList":[
+                        {
+                            "value":"身份证信息与输入姓名证件号码信息不一致",
+                            "key":"B1"
+                        },
+                        {
+                            "value":"身份证照片拍摄不符合标准",
+                            "key":"B2"
+                        }
+                    ],
+                    "residenceNature": 1,
+                    "residenceNatureMap": {
+                        "value": "待审核",
+                        "key": "0"
+                    }
+                },
+                "mobile": "18817618712",
+                "name": "佘洋",
+                "orderId": 666,
+                "orderMonth": "2017-06",
+                "orderNo": "20174543656576768",
+                "payAmount": 200,
+                "productId": 22,
+                "insuredType": 22,
+                "productType": 2,
+                "productTypeMap": {
+                    "value": "社保",
+                    "key": "1"
+                },
+                "rlwServiceFee": 20,
+                "vendorId": 22,
+                "vendorMap": {
+                    "value": "北京外企德科",
+                    "vendorId": "1"
+                },
+                "vendorServiceFee": 20,
+                "orderProductType":"2",
+                "orderProductTypeMap":{
+                    "key":"1",
+                    "value":"社保"
+                }
+            },
+            {
+                "nowPayStatusMap": {
+                    "value": "当前汇缴",
+                    "key": "3"
+                },
+                "companyRatio":8,
+                "personRatio":7,
+                "applyBase": 1000,
+                "applyEndDay": "2017-07-10",
+                "applyProductMap": {
+                    "value": "上海FA的社保",
+                    "applyProductId": "1"
+                },
+                "city": "100011",
+                "cityMap": {
+                    "value": "上海",
+                    "key": "10010"
+                },
+                "dispatchDate": 1497600446860,
+                "dispatchDateFormat": "2017-06-167",
+                "idCard": "430725199002013267",
+                "toDecalareInsurances":"养老、医疗、生育、失业、工伤",
+                "material": {
+                    "education": 1,
+                    "educationMap": {
+                        "value": "大专以下",
+                        "key": "1"
+                    },
+                    "fundAccount": "1232424",
+                    "id": 77777777777,
+                    "idCardPicUrlA": "images/ang.jpg",
+                    "idCardPicUrlAMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "idCardPicUrlB": "images/back.jpg",
+                    "idCardPicUrlBMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "isRead": 1,
+                    "isReadMap": {
+                        "value": "未读",
+                        "key": "1"
+                    },
+                    "materialRmark": "B1",
+                    "materialRmarkMap": {
+                        "value": "身份证信息与输入姓名证件号码信息不一致",
+                        "key": "B1"
+                    },
+                    "materialStatus": 1,
+                    "materialStatusMap": {
+                        "value": "待审核",
+                        "key": "0"
+                    },
+                    "residenceCity": "10000111",
+                    "residenceCityMap": {
+                        "value": "上海",
+                        "key": "1232434"
+                    },
+                    "materialRmarkList":[
+                        {
+                            "value":"身份证信息与输入姓名证件号码信息不一致",
+                            "key":"B1"
+                        },
+                        {
+                            "value":"身份证照片拍摄不符合标准",
+                            "key":"B2"
+                        }
+                    ],
+                    "hkPicUrlOfHomepageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfOwnpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHeaderpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "socialSecurityNumber":"社保编号",
+                    "fundAccount":"公积金编号",
+                    "residenceNatureMap":{
+                        "value":"城镇（户籍属性）",
+                        "key":"1"
+                    },
+                     "residenceCitysMap":{
+                           "value":"户籍所在地",
+                            "key":"350200"
+                     },
+                    "residenceNature": 1,
+                    "residenceNatureMap": {
+                        "value": "待审核",
+                        "key": "0"
+                    }
+                },
+                "mobile": "18817618712",
+                "name": "佘洋",
+                "orderId": 777,
+                "orderMonth": "2017-06",
+                "orderNo": "20174543656576768",
+                "payAmount": 200,
+                "productId": 22,
+                "insuredType": 22,
+                "productType": 2,
+                "productTypeMap": {
+                    "value": "社保",
+                    "key": "1"
+                },
+                "rlwServiceFee": 20,
+                "vendorId": 22,
+                "vendorMap": {
+                    "value": "北京外企德科",
+                    "vendorId": "1"
+                },
+                "vendorServiceFee": 20,
+                "orderProductType":"2",
+                "orderProductTypeMap":{
+                    "key":"1",
+                    "value":"社保"
+                }
+            }
+        ]
+    }
+}

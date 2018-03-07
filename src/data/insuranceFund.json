@@ -1,0 +1,131 @@
+{
+  "code":"200",
+  "msg": "",
+  "result":{
+    "refuseLength":2,
+    "auditingLength":2,
+    "approvedLength":2,
+    "pageNum": 2,
+    "pageSize":10,
+    "pages":4,
+    "dataList":[
+      {
+        "id": 1,
+        "cityCode": "110100",
+        "city": "北京市",
+        "name": "北京社保",
+        "newMaterial": ["1身份证正面","2身份证反面","3户籍信息"],
+        "renewMaterial": ["1身份证正面","2身份证反面","3户籍信息"],
+        "vendorServiceFee":"18.9",
+        "remarks": "钻石产品",
+            "type":{
+            "key":"1",
+            "value":"社保"
+        }   
+      },
+      {
+          "id":2,
+          "auditId":12,
+          "cityCode": "110101",
+          "city": "上海市",
+          "name": "上海公积金",
+          "newMaterial": ["身份证正面","身份证反面","户籍信息"],
+          "renewMaterial": ["身份证正面","身份证反面","户籍信息"],
+          "vendorServiceFee":"18.9",
+          "remarks": "黄金产品",
+          "type":{
+              "key":"2",
+              "value":"公积金"
+        }
+      },
+      {
+        "id":3,
+        "cityCode": "110101",
+        "city": "上海市",
+        "name": "上海社保+公积金",
+        "newMaterial": ["身份证正面","身份证反面","户籍信息"],
+        "renewMaterial": ["身份证正面","身份证反面","户籍信息"],
+        "vendorServiceFee":"18.9",
+        "remarks": "白银产品",
+         "type":{
+          "key":"3",
+          "value":"社保+公积金"
+        }
+      },
+      {
+        "id":3,
+        "cityCode": "110101",
+        "city": "上海市",
+        "name": "上海社保+公积金",
+        "newMaterial": ["身份证正面","身份证反面","户籍信息"],
+        "renewMaterial": ["身份证正面","身份证反面","户籍信息"],
+        "vendorServiceFee":"18.9",
+        "remarks": "白银产品",
+         "type":{
+          "key":"3",
+          "value":"社保+公积金"
+        }
+      },
+      {
+        "id":3,
+        "cityCode": "110101",
+        "city": "上海市",
+        "name": "上海社保+公积金",
+        "newMaterial": ["身份证正面","身份证反面","户籍信息"],
+        "renewMaterial": ["身份证正面","身份证反面","户籍信息"],
+        "vendorServiceFee":"18.9",
+        "remarks": "白银产品",
+         "type":{
+          "key":"3",
+          "value":"社保+公积金"
+        }
+      },
+      {
+        "id":3,
+        "cityCode": "110101",
+        "city": "上海市",
+        "name": "上海社保+公积金",
+        "newMaterial": ["身份证正面","身份证反面","户籍信息"],
+        "renewMaterial": ["身份证正面","身份证反面","户籍信息"],
+        "vendorServiceFee":"18.9",
+        "remarks": "白银产品",
+         "type":{
+          "key":"3",
+          "value":"社保+公积金"
+        }
+      },
+      {
+        "id":3,
+        "cityCode": "110101",
+        "city": "上海市",
+        "name": "上海社保+公积金",
+        "newMaterial": ["身份证正面","身份证反面","户籍信息"],
+        "renewMaterial": ["身份证正面","身份证反面","户籍信息"],
+        "vendorServiceFee":"18.9",
+        "remarks": "白银产品",
+         "type":{
+          "key":"3",
+          "value":"社保+公积金"
+        }
+      }
+    ],
+    "typeOptions":[
+      {
+        "key":"0",
+        "value":"全部"
+      },
+      {
+        "key":"1",
+        "value":"社保"
+      },
+      {
+        "key":"2",
+        "value":"公积金"
+      },
+      {
+        "key":"3",
+        "value":"社保+公积金"
+      }
+    ]
+  }
+}

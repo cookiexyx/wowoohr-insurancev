@@ -1,0 +1,505 @@
+.insuranceAddProgressCont ul li{
+	width: 33.33%;
+	float: left;
+	font-size:18px;
+	color:#cccccc;
+	margin-top: 12px;
+}
+.insuranceAddProgressGrey{
+	width: 100%;
+	height: 6px;
+	border-radius: 2px;
+	background:#f4f4f4;
+	position: relative;
+}
+.insuranceAddProgressGrey .insuranceAddProgressBule{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 33.33%;
+	height: 6px;
+	border-radius: 2px;
+	background:#218eff;
+}
+.insuranceAddProgressCont{
+	margin-top: 14px;
+}
+.insuranceAddProgressCont ul li.active{
+	color:#218eff;
+}
+.insuranceAddCont{
+	margin-top: 25px;
+}
+.insuranceAddCont .insuranceAddBasic{
+	padding-top: 18px;
+	margin-left: 25%;
+}
+.insuranceAddBasic .insuranceAddBasicForm{
+	overflow: hidden;
+	margin-bottom: 16px;
+}
+.insuranceAddBasic .insuranceAddBasicForm div.leftaddbug{
+	width: 135px;
+	text-align: right;
+	float: left;
+	margin-right: 20px;
+	line-height: 32px;
+	font-size:14px;
+	color:#999999;
+}
+.insuranceAddBasic .insuranceAddBasicForm div.rightaddbug{
+	width: 342px;
+	float: left;
+	position: relative;
+}
+.insuranceAddBasic .insuranceAddBasicForm div.rightaddbug>label{
+	line-height: 32px;
+	padding-right: 20px;
+}
+.insuranceAddBasic .insuranceAddBasicForm div.rightaddbug>label>input[type=radio].normal+label:before {
+    padding-right: 10px;
+}
+.insuranceAddBasic .insuranceAddBasicForm div.rightaddbug b{
+	position: absolute;
+	left: 116px;
+	top: 50%;
+	font-size: 16px;
+	color: #cccccc;
+	margin-top: -8px;
+	pointer-events: none;
+}
+.insuranceAddBasic .insuranceAddBasicForm div.rightaddbug span{
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	height: 38px;
+	line-height: 38px;
+	display: inline-block;
+	padding:0 12px;
+	background:#f8f8f8;
+	font-size:14px;
+	color:#9b9b9b;
+}
+.insuranceAddBasic .insuranceAddBasicForm div.rightaddbug select{
+	width: 140px;
+	height: 32px;
+	border:1px solid #dfdfdf;
+	border-radius:2px;
+	padding-left: 8px;
+	font-size:14px;
+}
+.insuranceAddBasic .insuranceAddBasicForm div.rightaddbug input{
+	width:100%;
+	height: 40px;
+	border:1px solid #dfdfdf;
+	border-radius:2px;
+	padding-left: 8px;
+	font-size:16px;
+}
+.insuranceAddBasic .insuranceAddBasicForm div.rightaddbug textarea{
+	width: 100%;
+	height:124px;
+	border-radius:2px;
+	padding-left: 8px;
+	padding-right: 8px;
+	font-size:16px;
+	resize: none;
+	border:1px solid #dfdfdf;
+}
+.insuranceAddBasic button{
+	width:124px;
+	margin-left: 80px;
+	margin-top: 28px;
+}
+
+/* 设置参保材料 */
+.insuranceAdd-cenbao{
+	margin-top: 122px;
+	margin-left: 150px;
+	margin-right: 150px;
+}
+.insuranceAdd-cenbao div{
+	font-size:14px;
+	color:#999999;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+.insuranceAdd-cenbao>div>.label-box>label{
+	color:#494949;
+/*	margin-left: 30px;*/
+	margin-bottom: 12px;
+	width: 25%;
+}
+.insuranceAdd-cenbao>div>span{
+	display: inline-block;
+	width: 15%;
+}
+.insuranceAdd-cenbao .label-box{
+	width: 85%;
+	float: right;
+}
+.insuranceAdd-cenbao>div>label>label{
+	cursor: pointer;
+}
+.insuranceAdd-cenbao div.cenbaoBtn{
+	margin-top: 160px;
+	margin-left: 270px;
+}
+.insuranceAdd-cenbao div.cenbaoBtn button{
+	width: 124px;
+	margin-left: 24px;
+}
+
+/* 设置各险种政策 */
+.insuranceAdd-policy-head button{
+	float: left;
+}
+.insuranceAdd-policy-head div{
+	float: right;
+	font-size:13px;
+	color:#218eff;
+	position: relative;
+}
+.insuranceAdd-policy-head div select{
+	width: 140px;
+	height: 32px;
+	margin-left: 28px;
+	border:1px solid #dfdfdf;
+	border-radius:2px;
+	padding-left: 4px;
+}
+.insuranceAdd-policy-head div i{
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	font-size: 16px;
+	color: #cccccc;
+	margin-top: -8px;
+	pointer-events: none;
+}
+.insuranceAdd-policy-list{
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
+.insuranceAdd-policy-list table{
+	width: 100%;
+	border:1px solid #ebebeb;
+	border-radius:2px;
+	margin-bottom: 40px;
+}
+.insuranceAdd-policy-list table thead tr td{
+	border-bottom: 2px solid #218EFF;
+	height: 36px;
+	padding-left: 26px;
+	padding-right: 23px;
+}
+.insuranceAdd-policy-list table thead tr td span{
+	font-size:13px;
+	color:#999999;
+}
+.insuranceAdd-policy-list table thead tr td span:nth-child(1) label{
+	width: 76px;
+}
+.insuranceAdd-policy-list table thead tr td span:nth-child(2){
+	display: inline-block;
+	width: 156px;
+}
+.insuranceAdd-policy-list table thead tr td span:nth-child(3) label{
+	width: 102px;
+}
+.insuranceAdd-policy-list table thead tr td span:nth-child(4){
+	display: inline-block;
+	width: 154px;
+}
+.insuranceAdd-policy-list table thead tr td span:nth-child(5){
+	display: inline-block;
+	width: 154px;
+}
+.insuranceAdd-policy-list table thead tr td span>label{
+	margin-bottom: 0;
+}
+.insuranceAdd-policy-list table thead tr td span:nth-child(6){
+	margin-right: 0px;
+}
+.insuranceAdd-policy-list table thead tr td div{
+	float: right;
+}
+.insuranceAdd-policy-list table thead tr td div a{
+	cursor: pointer;
+	margin-left: 15px;
+}
+.insuranceAdd-policy-list tbody tr td{
+	height: 42px;
+	font-size:13px;
+	color:#494949;
+}
+.insuranceAdd-policy-list tbody tr th{
+	font-size:13px;
+	color:#000000;
+	font-weight: normal;
+	padding-left: 26px;
+}
+.insuranceAdd-policy-list tbody tr:nth-child(2n+2){
+	background-color: #FEF6F6;
+}
+.insuranceAdd-policy-list tbody tr:nth-child(2n+3){
+	background-color: #FFFCEE;
+}
+.insuranceAdd-policy .policyBtn{
+	text-align: center;
+}
+.insuranceAdd-policy .policyBtn button{
+	width: 124px;
+	margin:0px 12px;
+}
+.no-insuranceAdd-policy{
+	text-align: center;
+	margin-top: 12%;
+}
+.no-insuranceAdd-policy p{
+	font-size:14px;
+	color:#494949;
+	margin-top: 24px;
+	margin-bottom: 100px;
+}
+.no-insuranceAdd-policy p a{
+	cursor: pointer;
+	text-decoration: underline !important;
+}
+
+/* 弹窗*/
+.insurance-pop{
+	height: 160px;
+	width: 400px;
+	background-color: #fff;
+	padding: 30px;
+	font-size: 13px;
+	color: #000;
+	position: relative;
+}
+.insurance-pop .row{
+	position: absolute;
+	text-align: center;
+	bottom: 30px;
+	padding-left: 60px;
+}
+.insurance-pop .row button{
+	width: 100px;
+	margin-right: 20px;
+}
+
+/*添加险种 弹框 月*/
+.insurance-pop-month{
+	width: 732px;
+	background-color: #fff;
+	padding: 0px 41px 31px;
+	overflow:auto;
+}
+.insurance-pop-month .insurance-pop-month-title{
+	margin-top: 24px;
+	font-size:18px;
+	color:#999999;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.insurance-pop-month .insurance-pop-month-title label{
+	margin-bottom: 0;
+}
+.insurance-pop-month .insurance-pop-month-title span.icon-cross{
+	float: right;
+	font-size: 24px;
+	color: #999999;
+	cursor: pointer;
+}
+.insurance-pop-month .insurance-pop-month-select li.insuranceList{
+	width: 50%;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 20px;
+	padding-left: 30px;
+	position: relative;
+	font-size:14px;
+	color:#999999;
+}
+.insurance-pop-month .insurance-pop-month-select li.insuranceList .insuranceListDiv{
+	position: absolute;
+	right: 0;
+	top:0;
+	width: 198px;
+	height: 100%;
+}
+.insurance-pop-month .insurance-pop-month-select li.insuranceList .insuranceListDiv input{
+	width: 100%;
+	padding-left: 10px;
+	height: 40px;
+}
+.insurance-pop-month .insurance-pop-month-select li.insuranceList select{
+	width: 198px;
+	height: 40px;
+	border:1px solid #dfdfdf;
+	border-radius:2px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding-left: 12px;
+}
+.insurance-pop-month .insurance-pop-month-select .insuranceList i{
+	position: absolute;
+	right: 14px;
+	top: 50%;
+	font-size: 16px;
+	color: #cccccc;
+	margin-top: -8px;
+	pointer-events: none;
+}
+.insurance-pop-month .insuranceTab{
+	width: 100%;
+	border-right:1px solid #ececec;
+	border-bottom:1px solid #ececec;
+	margin-bottom: 20px;
+}
+.insurance-pop-month .insuranceTab tr th{
+	border-left:1px solid #ececec;
+	height: 41px;
+	text-align: center;
+	background:#f8f8f8;
+	font-size:16px;
+	color:#999999;
+	font-weight: normal;
+}
+.insurance-pop-month .insuranceTab tr td{
+	border-left:1px solid #ececec;
+	border-top:1px solid #ececec;
+	height: 56px;
+}
+.insurance-pop-month .insuranceTab tr td span{
+	display: block;
+	line-height: 30px;
+	float: left;
+	text-align: center;
+	padding-top: 5px;
+    width: 127px;
+}
+.insurance-pop-month .insuranceTab tr td div{
+	width:140px;
+	float: left;
+	position: relative;
+	padding: 5px 0;
+}
+.insurance-pop-month .insuranceTab tr td div input,.insurance-pop-month .insuranceTab tr td div select{
+	width: 100%;
+	height: 100%;
+	padding-left: 10px;
+	height: 30px;
+}
+.insurance-pop-month .insuranceTab tr td div select{
+	border:1px solid #dfdfdf;
+	border-radius:2px;
+	padding-right: 24px;
+}
+.insurance-pop-month .insuranceTab tr td div b{
+	position: absolute;
+	right: 1px;
+	top: 6px;
+	height: 28px;
+	width: 28px;
+	display: block;
+	background-color: #f8f8f8;
+	z-index:2;
+	text-align: center;
+	line-height: 28px;
+	font-size:15px;
+	color:#979797;
+	font-weight: normal;
+}
+.insurance-pop-month .insuranceTab tr td div i{
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	font-size: 16px;
+	color: #cccccc;
+	margin-top: -8px;
+	pointer-events: none;
+}
+.insurance-pop-month-addReduce{
+	overflow: hidden;
+}
+.insurance-pop-month-addReduce>span{
+	display: block;
+	width: 104px;
+	float: left;
+	text-align: center;
+	line-height: 40px;
+}
+.insurance-pop-month-addReduce .addReduce-center{
+	width: 341px;
+	float: left;
+	height: 40px;
+	margin-bottom: 22px;
+}
+.insurance-pop-month-addReduce .addReduce-center select{
+	width: 100%;
+	height: 100%;
+	border:1px solid #dfdfdf;
+	border-radius:2px;
+	padding-left: 10px;
+}
+.insurance-pop-month-addReduce .addReduce-center em{
+    position: relative;
+    right: -93%;
+    top: -70%;
+    font-size: 16px;
+    color: #ccc;
+    margin-top: -8px;
+    pointer-events: none;
+}
+.insurance-pop-month-addReduce .addReduce-right{
+	float: left;
+}
+.insurance-pop-month-addReduce .addReduce-right>label{
+	margin-bottom: 0;
+	font-size:14px;
+	color:#999999;
+	margin-top: 9px;
+	margin-left: 30px;
+}
+.insurance-pop-month-addReduce .addReduce-right>label>label{
+	cursor: pointer;
+}
+.insurance-pop-month .footer{
+	text-align: center;
+}
+.insurance-pop-month .footer button{
+	width: 124px;
+	margin: 0 10px;
+}
+
+/* 成功 */
+.add-success-link{
+	margin-top: 8%;
+}
+.add-success-link>img{
+	width:14%;
+	margin-left: 43%;
+	margin-bottom: 25px;
+}
+.add-success-link>div{
+	text-align: center;
+	font-size:14px;
+	color:#494949;
+}
+.add-success-link>.add-button{
+	margin: 30px 0;
+}
+.add-success-link>.add-button>span{
+	display: inline-block;
+	padding:0 40px;
+	font-size:14px;
+	line-height: 40px;
+	height: 40px;
+}
+.insurance-pop-modify small,.insurance-pop-add small{
+	position:relative;
+	left: -92px;
+}

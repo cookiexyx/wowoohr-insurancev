@@ -1,0 +1,116 @@
+{
+  "code":"200",
+  "msg": "",
+  "result":{
+    "refuseLength":1,
+    "auditingLength":2,
+    "pageNum": 2,
+    "pageSize":10,
+    "pages":4,
+    "dataList":[
+      {
+        "id": 1,
+        "cityCode": "110100",
+        "cityMap":{
+			"key":"110100",
+			"value":"北京市"
+		},
+        "name": "北京社保",
+        "newMaterial":"户籍性质、身份证正面照、身份证反面照、劳动合同扫描件",
+        "renewMaterial":"户籍性质、身份证正面照、身份证反面照、劳动合同扫描件",
+        "vendorServiceFee":"18.9",
+        "remarks": "钻石产品",
+         "type":{
+              "key":"1",
+              "value":"社保"
+        }   
+      },
+      {
+          "id":2,
+          "cityCode": "110101",
+          "cityMap":{
+			"key":"110100",
+			"value":"北京市"
+		 },
+          "name": "上海公积金",
+          "newMaterial":"户籍性质、身份证正面照、身份证反面照、劳动合同扫描件",
+          "renewMaterial":"户籍性质、身份证正面照、身份证反面照、劳动合同扫描件",
+          "vendorServiceFee":"18.9",
+          "remarks": "黄金产品",
+          "type":{
+              "key":"2",
+              "value":"公积金"
+        }
+      },
+      {
+        "id":3,
+        "cityCode": "110101",
+        "cityMap":{
+			"key":"110100",
+			"value":"北京市"
+		},
+        "name": "上海社保+公积金",
+        "newMaterial":"户籍性质、身份证正面照、身份证反面照、劳动合同扫描件",
+        "renewMaterial":"户籍性质、身份证正面照、身份证反面照、劳动合同扫描件",
+        "vendorServiceFee":"18.9",
+        "remarks": "白银产品",
+         "type":{
+          "key":"3",
+          "value":"社保+公积金"
+        }
+      },
+      {
+        "id": 1,
+        "cityCode": "110100",
+        "cityMap":{
+      "key":"110100",
+      "value":"北京市"
+    },
+        "name": "北京社保",
+        "newMaterial":"户籍性质、身份证正面照、身份证反面照、劳动合同扫描件",
+        "renewMaterial":"户籍性质、身份证正面照、身份证反面照、劳动合同扫描件",
+        "vendorServiceFee":"18.9",
+        "remarks": "钻石产品",
+         "type":{
+              "key":"1",
+              "value":"社保"
+        }   
+      },
+      {
+        "id": 1,
+        "cityCode": "110100",
+        "cityMap":{
+      "key":"110100",
+      "value":"北京市"
+    },
+        "name": "北京社保",
+        "newMaterial":"户籍性质、身份证正面照、身份证反面照、劳动合同扫描件",
+        "renewMaterial":"户籍性质、身份证正面照、身份证反面照、劳动合同扫描件",
+        "vendorServiceFee":"18.9",
+        "remarks": "钻石产品",
+         "type":{
+              "key":"1",
+              "value":"社保"
+        }   
+      }
+    ],
+    "typeOptions":[
+      {
+        "key":"0",
+        "value":"全部"
+      },
+      {
+        "key":"1",
+        "value":"社保"
+      },
+      {
+        "key":"2",
+        "value":"公积金"
+      },
+      {
+        "key":"3",
+        "value":"社保+公积金"
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+.head-box{
+	margin-top: 15px;
+}
+.bill-payee-box .search-box{
+	margin-bottom: 15px;
+}
+.bill-payee-box .search-box span{
+	font-size:13px;
+	color:#494949;
+	letter-spacing:0.65px;
+}
+.bill-payee-box .search-box input{
+	border:1px solid #dfdfdf;
+	border-radius:2px;
+	width:148px;
+	height:30px;
+	padding-left: 5px;
+}
+.bill-payee-box .search-box i{
+	position: absolute;
+	right: 5px;
+	top:9px;
+	pointer-events: none;
+	color:#dfdfdf;
+}
+.bill-payee-box .search-box label{
+	position: relative;
+}
+.bill-payee-box .search-box>span{
+	padding-right: 20px;
+}
+.bill-payee-cont table th {
+    height: 45px;
+    background-color: #EFF8FF;
+    font-size: 13px;
+    color: #5a5a5a;
+    font-weight: 400;
+    padding-left: 20px;
+}
+.bill-payee-cont table {
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+}
+.bill-payee-cont table td {
+    font-size: 13px;
+    color: #5a5a5a;
+    padding: 20px 0 20px 20px;
+    border-bottom: 1px solid #ebebeb;
+    word-break: break-all;
+}

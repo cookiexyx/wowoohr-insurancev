@@ -1,0 +1,177 @@
+<div ng-show="!is404">
+	<div class="orderincrease" ng-show="orderLength > 0">
+		<div class="row order-search">
+			<div class="ui-widget searchName left">
+				<i class="icon-search" ng-click="sendDate(1)"></i>
+				<input ng-trim="false" type="text" ng-model="name2" class="inputName" placeholder="姓名、身份证号码" autocomplete="off"/>
+				<!--  ng-change="changeFun()"  -->
+		        <!-- <ul id="tags_dropdown" class="angucomplete-dropdown">
+		        	<li ng-repeat="result in nameList" class="angucomplete-row" ng-click="listClick(result.name)">
+		        		{{result.name}}
+		        	</li>
+		        </ul> -->
+			</div>
+			<button class="btn more-btn btn-info" ng-click="filterShow()"> 
+			    <span ng-show="!filtershow">更多筛选</span>
+			    <span ng-show="filtershow">收起筛选</span>
+			    <i ng-class="{'icon-03':!filtershow,'icon-04':filtershow}"></i>
+		    </button>
+			<span>共{{totalCount}}条</span>
+			<div class="search-tips">
+		    	<div class="reset-choose-cont" ng-repeat="item in statusCheckedCopy" >产品类型：{{item.value}} <i class="icon-cross" ng-click="clearStatus(statusCheckedCopy,item,$index)"></i></div>
+			    <!-- <div class="reset-choose-cont" ng-show="payMonthEndCopy">缴纳月份：{{payMonthEndCopy||' / '}}<i class="icon-cross" ng-click="clearMonth()" ></i></div> -->
+			    <div class="reset-choose-cont" ng-repeat="city in cityCheckedCopy" >缴纳城市：{{city.value}} <i class="icon-cross" ng-click="clearCity(cityCheckedCopy,city,$index)"></i></div>
+			    <!-- payMonthEndCopy|| -->
+			    <span ng-if="cityCheckedCopy.length>0||statusCheckedCopy.length>0" ng-click="clearSearch()">取消筛选</span>
+			</div>
+		</div>
+		<div ng-if="orderLength > 0 && list.length >0" >
+			<div class="row title-order">
+				<label for="flag" class="left">
+		 			<i ng-class="{true:'icon-01',false:'icon-02'}[ctrlScope.select_all]"></i>
+			    	<input id="flag" type="checkbox" ng-model="ctrlScope.select_all" ng-click="selectAll(ctrlScope.select_all)" class="hide">
+			    </label>
+			    <span class='all-checkbox'>全选</span>
+				<span class="titNum">已选{{checkTitleNum}}条</span>
+				<button class="add-order left" ng-class="{'checkedShowFalse':checkedShow}" ng-click="checkedShow||addOrder(0)">批量减员完成</button>
+			    <div class="popup-order-no">
+				    <p class="order-err-msg">请选择订单后进行操作</p>
+				</div>
+				<!-- 下载 -->
+				<!-- 				
+				<span ng-if="totalFileNum>0 && totalFileNum<10" class="exportList num" ng-bind="totalFileNum"></span>
+				<span ng-if="totalFileNum>9" class="exportList num dot"><i>...</i></span>
+			    <span class="exportList" ng-click="goDownload()">下载列表</span> 
+			    -->
+			    <span class="exportList list" ng-click="downloadOrder()">导出EXCEL</span>
+			</div>
+			<ul>
+				<li ng-repeat="i in list" class="order-list row" ng-class="{'nocheck-border':!i.checked,'check-border':i.checked}" >
+					<div class="order-list-title">
+			            <label class="left">
+		        	  		<i ng-class="{'icon-02':!i.checked,'icon-01':i.checked}"></i>
+			            	<input type="checkbox" ng-model="i.checked" class="hide" ng-change="selectOne()" >
+			            </label>
+
+						<span>
+							<span class="margin-left10">订单号：{{i.reduceOrderNo}}</span>
+							<span class="order-num" ng-click="goDetail(i.lastOrderId)">查看详情</span>
+						</span>
+						<span>缴纳金额：{{i.vPayAmount}}元</span>
+						<span>服务费：{{i.vendorServiceFree}}元</span>
+						<!-- 星号 标志 -->
+						<!-- <div class="right markContent ">
+							<i class="icon-07" ng-class="{'color-red':i.markText.length>0,'color-ccc':i.markText.length == ''}" ng-click="addMark($event)"></i>
+							<span ng-show="i.markText.length>0" class="mark-text">{{i.markText}}
+		           			 <i class="icon-08" ng-click="mark(i,$event)"></i></span>
+						</div> -->
+					</div>
+					<div class="order-list-content row">
+						<div class="col-xs-3">
+							<h4>{{i.name}}</h4>
+							<p>身份证：&emsp;{{i.idCard}}</p>
+							<p>手机号码：{{i.mobile}}</p>
+						</div>
+						<div class="col-xs-3">
+							<p>缴纳城市：{{i.cityCode}}</p>
+							<p>申报名称：{{i.productName}}</p>
+						</div>
+						<div class="col-xs-3">
+							<p>申报基数：{{i.applyBase}}</p>
+							<!-- <p>最后缴纳月份：{{i.orderMonth}}</p> -->
+						</div>
+						<div class="col-xs-3 right-bar">
+							<p>离职原因：{{i.reasonsForLeavin}}</p>
+							<p>离职日期：{{i.leavinDay}}</p>
+							<ul class="right-bar-btn yiTerm">
+								<li ng-click="addOrder(i.id,i.applyId,i.unpaidOrderId)">减员完成</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 星号 下拉内容 -->
+					<!-- <div class="add-mark">
+						<div class="title">添加标签 <i class="icon-cross" ng-click="closeMark($event)"></i></div>
+						<input type="text" name="" ng-model='i.markText'>
+						<button class="btn more-btn  btn-block btn-info" ng-click="saveMark(i,$event)">确认</button>
+					</div> -->
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 没有任何数据 -->
+	<div class="search-no-data" ng-if="orderLength == 0" >
+		<img src="images/no_fund.png">
+		<div>你暂无需要处理的减员订单</div>
+	</div>
+
+	<!-- 搜索 没有任何数据 -->
+	<div class="search-no-data" ng-if="orderLength > 0 && list.length ==0">
+		<img src="images/no_fund.png">
+		<div>暂无数据</div>
+	</div>
+	<!-- 减员完成 弹框 -->
+	<div class="pop addsucc-pop" style="display: none;text-align: center;">
+		<span ng-if="allTip">共<label ng-bind="checkTitleNum"></label>条，</span>请确认已经处理完毕 <br>
+		确认后将无法再进行修改，是否确认
+		<div class="row">
+			<button class="btn more-btn btn-info" ng-click="succOrder()">确认</button>
+			<button  class="btn more-btn btn-warning" ng-click="closePop()">取消</button>
+		</div>
+	</div>
+	<!-- 导出EXCEL 弹框 -->
+	<div class="pop download-pop" style="display: none">
+		EXCEL文件生成中，可能需要等待10到15分钟…<br/>
+生成完成后，点击下载列表可下载到本地
+		<div class="row btns">
+			<button class="btn more-btn btn-info" ng-click="refreshDownload()">我知道了</button>
+		</div>
+	</div>
+	<!-- 右侧菜单栏弹出 -->
+	<div class="nav-silde-fixed-bj" ng-click="closeNavLarye()"></div>
+	<div class="nav-silde-fixed">
+		<h3>更多筛选</h3>
+		<ul class="nav-silde-ul">
+			<!-- 产品类型 -->
+			<li class="nav-silde-li"><b class="icon-06"></b>产品类型 <br>
+				<div class="tips-title" ng-repeat="item in statusChecked">{{item.value}}<i class="icon-cross" ng-click="clearStatus(statusChecked,item,$index,'sidebar')"></i></div>
+				<div class="class-silde-fixed">
+						<h3>产品类型</h3>
+						<div class="list" ng-repeat="productStatus in productStatusList">
+						 	<label  class="left" >
+					        	  <i ng-class="{'icon-02':!productStatus.statusChecked,'icon-01':productStatus.statusChecked}"></i>
+						          <input type="checkbox" ng-model="productStatus.statusChecked" class="hide" ng-change="selectProduct()" >{{productStatus.value}}
+						     </label>
+						</div>
+				</div>
+			</li>
+			<!-- 缴纳月份 -->
+			<!-- <li class="nav-silde-li"><b class="icon-06"></b>缴纳月份<br>
+				<div class="tips-title" ng-show="payMonthEnd">{{payMonthEnd||' / '}}<i class="icon-cross" ng-click="clearMonth('sidebar')"></i></div>
+				<div class="class-silde-fixed">
+					<h3>缴纳月份</h3>
+					<div class="list list-input">
+				 		<input type="text" name="" ng-model="payMonthEnd" placeholder="请选择最后缴纳月份" id="datetimepickerMonthEnd" readonly="readonly" ng-blur="monthBlur('datetimepickerMonthEnd','payMonthEnd')">
+				 		<b class="icon-23"></b>
+					</div>
+				</div>
+			</li> -->
+			<!-- 缴纳城市 -->
+			<li class="nav-silde-li"><b class="icon-06"></b>缴纳城市 <br>
+				<div class="tips-title" ng-repeat="city in cityChecked" >{{city.value}} <i class="icon-cross" ng-click="clearCity(cityChecked,city,$index,'sidebar')"></i></div>
+				<div class="class-silde-fixed">
+					<h3>缴纳城市</h3>
+					<div class="list" ng-repeat="city in citysList">
+					 	<label  class="left" >
+				        	  <i ng-class="{'icon-02':!city.cityChecked,'icon-01':city.cityChecked}"></i>
+					          <input type="checkbox" ng-model="city.cityChecked" class="hide" ng-change="selectCity()" >{{city.value}}
+					     </label>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<button class="btn btn-info btn-md" ng-click="save()">确认</button>
+	</div>
+</div>
+
+<!-- 404页面 -->
+<div class="rm-404" ng-if="is404"><img src="images/404.png"></div>

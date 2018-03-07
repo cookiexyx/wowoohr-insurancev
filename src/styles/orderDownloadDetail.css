@@ -1,0 +1,38 @@
+.insurance-detail-cont.download-list thead{
+	background-color: #f0f8ff;
+	box-shadow: none ; 
+}
+.insurance-detail-cont.download-list tbody tr{
+	border-top: 1px solid #EBEBEB;
+}
+.insurance-detail-cont.download-list tbody td,.insurance-detail-cont.download-list thead th{
+	border-right:none!important;
+	border-left:none!important;
+	text-align: left;
+}
+.insurance-detail-cont.download-list tbody td span,.insurance-detail-cont.download-list thead th span{
+	padding-left: 20px;
+	display: inline-block;
+    line-height: 20px;
+}
+.insurance-detail-cont.download-list .table{
+	border-right: 1px solid #EBEBEB;
+}
+
+.insurance-detail-cont.download-list>table>thead th {
+    text-align: left!important;
+}
+.insurance-detail-cont.download-list>table td{
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.download-list .gray{
+	color:#adadad;
+}
+.download-list .blue{
+	color:#007efd;
+	cursor: pointer;
+}
+/*.insurance-detail-cont.download-list>table>tbody tr td:last-child{
+	text-align: right!important;
+} */

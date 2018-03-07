@@ -1,0 +1,248 @@
+{
+  "code": "200",
+  "msg": "",
+  "result": {
+    "id": null,
+    "orderId": 2,
+    "orderNumber": "1102017061517082064353210",
+    "name": "杨德明",
+    "idCard": "342623199802324411",
+    "cityCode": "210200",
+    "cityMap": {
+      "value": "大连市",
+      "key": "210200"
+    },
+    "productName": "我是傻逼社保",
+    "produType": 1,
+    "productType": "社保",
+    "productId": 101,
+    "dimissionReason": null,
+    "dimissionDate": null,
+    "payAmount": 8000,
+    "reasonList": [
+      {
+        "id": 8,
+        "failreasonName": "上家未退",
+        "failReason": "A5",
+        "status": 1
+      },
+      {
+        "id": 9,
+        "failreasonName": "存在多个社保账户",
+        "failReason": "A9",
+        "status": 1
+      },
+      {
+        "id": 10,
+        "failreasonName": "用工备案未解除",
+        "failReason": "A11",
+        "status": 1
+      },
+      {
+        "id": 34,
+        "failreasonName": "年收险种上家已缴",
+        "failReason": "A25",
+        "status": 2
+      }
+    ],
+    "reasonListBarringAnnual": [
+      {
+        "id": 8,
+        "failreasonName": "上家未退",
+        "failReason": "A5",
+        "status": 1
+      },
+      {
+        "id": 9,
+        "failreasonName": "存在多个社保账户",
+        "failReason": "A9",
+        "status": 1
+      },
+      {
+        "id": 10,
+        "failreasonName": "用工备案未解除",
+        "failReason": "A11",
+        "status": 1
+      }
+    ],
+    "insuranceApplyResult": [
+      {
+        "value": "申报成功",
+        "key": "3"
+      },
+      {
+        "value": "申报失败",
+        "key": "4"
+      }
+    ],
+    "insuranceDetialDtoList": [
+      {
+        "insuranceId": 5,
+        "insuranceType": 6,
+        "insuranceTypeMap": {
+          "value": "公积金1",
+          "key": "6"
+        },
+        "payMonth": "2017-07",
+        "companyBaseNumber": null,
+        "companyRatio": null,
+        "companyFixedAmount": 7777,
+        "companyPayAmount": 3888.48,
+        "personBaseNumber": null,
+        "personRatio": null,
+        "personFixedAmount": 7777,
+        "personPayAmount": 3888.48,
+        "insurancePayAmount": 7776.96,
+        "status": 3,
+        "paymentMethod": 2,
+        "detailStatusMap": null,
+        "failReason": null,
+        "detailFailReasonMap": null
+      },
+      {
+        "insuranceId": 5,
+        "insuranceType": 6,
+        "insuranceTypeMap": {
+          "value": "公积金2",
+          "key": "6"
+        },
+        "payMonth": "2017-07",
+        "companyBaseNumber": null,
+        "companyRatio": null,
+        "companyFixedAmount": 7777,
+        "companyPayAmount": 3888.48,
+        "personBaseNumber": null,
+        "personRatio": null,
+        "personFixedAmount": 7777,
+        "personPayAmount": 3888.48,
+        "insurancePayAmount": 7776.96,
+        "status": 4,
+        "paymentMethod": 1,
+        "detailStatusMap": {
+            "key":"4",
+            "value":"申报失败"
+        },
+        "failReason": "A5",
+        "detailFailReasonMap": {
+            "key":"A5",
+            "value":"上家未退"
+        }
+      },
+      {
+        "insuranceId": 5,
+        "insuranceType": 6,
+        "insuranceTypeMap": {
+          "value": "公积金3",
+          "key": "6"
+        },
+        "payMonth": "2017-07",
+        "companyBaseNumber": null,
+        "companyRatio": null,
+        "companyFixedAmount": 7777,
+        "companyPayAmount": 3888.48,
+        "personBaseNumber": null,
+        "personRatio": null,
+        "personFixedAmount": 7777,
+        "personPayAmount": 3888.48,
+        "insurancePayAmount": 7776.96,
+        "status": 2,
+        "paymentMethod": 2,
+        "detailStatusMap": null,
+        "failReason": null,
+        "detailFailReasonMap": null
+      },
+      {
+        "insuranceId": 5,
+        "insuranceType": 6,
+        "insuranceTypeMap": {
+          "value": "公积金4",
+          "key": "6"
+        },
+        "payMonth": "2017-07",
+        "companyBaseNumber": null,
+        "companyRatio": null,
+        "companyFixedAmount": 7777,
+        "companyPayAmount": 3888.48,
+        "personBaseNumber": null,
+        "personRatio": null,
+        "personFixedAmount": 7777,
+        "personPayAmount": 3888.48,
+        "insurancePayAmount": 7776.96,
+        "status": 2,
+        "paymentMethod": 2,
+        "detailStatusMap": null,
+        "failReason": null,
+        "detailFailReasonMap": null
+      },
+      {
+        "insuranceId": 5,
+        "insuranceType": 6,
+        "insuranceTypeMap": {
+          "value": "公积金5",
+          "key": "6"
+        },
+        "payMonth": "2017-07",
+        "companyBaseNumber": null,
+        "companyRatio": null,
+        "companyFixedAmount": 7777,
+        "companyPayAmount": 3888.48,
+        "personBaseNumber": null,
+        "personRatio": null,
+        "personFixedAmount": 7777,
+        "personPayAmount": 3888.48,
+        "insurancePayAmount": 7776.96,
+        "status": 2,
+        "paymentMethod": 2,
+        "detailStatusMap": null,
+        "failReason": null,
+        "detailFailReasonMap": null
+      },
+      {
+        "insuranceId": 5,
+        "insuranceType": 6,
+        "insuranceTypeMap": {
+          "value": "公积金6",
+          "key": "6"
+        },
+        "payMonth": "2017-07",
+        "companyBaseNumber": null,
+        "companyRatio": null,
+        "companyFixedAmount": 7777,
+        "companyPayAmount": 3888.48,
+        "personBaseNumber": null,
+        "personRatio": null,
+        "personFixedAmount": 7777,
+        "personPayAmount": 3888.48,
+        "insurancePayAmount": 7776.96,
+        "status": 2,
+        "paymentMethod": 2,
+        "detailStatusMap": null,
+        "failReason": null,
+        "detailFailReasonMap": null
+      },
+      {
+        "insuranceId": 5,
+        "insuranceType": 6,
+        "insuranceTypeMap": {
+          "value": "公积金7",
+          "key": "6"
+        },
+        "payMonth": "2017-07",
+        "companyBaseNumber": null,
+        "companyRatio": null,
+        "companyFixedAmount": 7777,
+        "companyPayAmount": 3888.48,
+        "personBaseNumber": null,
+        "personRatio": null,
+        "personFixedAmount": 7777,
+        "personPayAmount": 3888.48,
+        "insurancePayAmount": 7776.96,
+        "status": 2,
+        "paymentMethod": 2,
+        "detailStatusMap": null,
+        "failReason": null,
+        "detailFailReasonMap": null
+      }
+    ]
+  }
+}

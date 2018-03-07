@@ -1,0 +1,167 @@
+{
+    "msg": "",
+    "code": "200",
+    "result": {
+        "pages": 4,
+        "pageSize": 1,
+        "totalCount": 2,
+        "pageNum": 1,
+        "totalFileNum":9,
+        "fileTypeMap":[
+            {
+                "key":"0",
+                "value":"全部"
+            },
+            {
+                "key":"1",
+                "value":"增员订单"
+            },
+            {
+                "key":"2",
+                "value":"减员订单"
+            }
+        ],
+        "fileDownloadList": [{
+			"fileName": "增员201706191256",
+			"fileType":"减员订单",
+			"operationTime": "2017-06-21 12:56:21",
+			"id":1,
+			"downloadNumber":12,
+			"fileStatus": 1,
+         	"downloadUrl":"http:123456789012345678",
+        	"paramContent":"搜索名：11232；派单日期：2018-09-09",
+        	"taskId":"2323"
+
+		},{
+			"fileName": "增员201706191256",
+			"fileType":"减员订单",
+			"operationTime": "2017-06-21 12:56:21",
+			"id":2,
+			"downloadNumber":12,
+			"fileStatus":1,
+         	"downloadUrl":"http:123456789012345678",
+        	"paramContent":"搜索名：11232；派单日期：2018-09-09",
+        	"taskId":"2323"
+		},{
+			"fileName": "增员201706191256",
+			"fileType":"减员订单",
+			"operationTime": "2017-06-21 12:56:21",
+			"id":3,
+			"downloadNumber":12,
+			"fileStatus":2,
+         	"downloadUrl":"http:123456789012345678",
+        	"paramContent":"搜索名：11232；派单日期：2018-09-09",
+        	"taskId":"2323"
+		},{
+			"fileName": "增员201706191256",
+			"fileType":"减员订单",
+			"operationTime": "2017-06-21 12:56:21",
+			"id":4,
+			"downloadNumber":12,
+			"fileStatus":3,
+         	"downloadUrl":"http:123456789012345678",
+        	"paramContent":"搜索名：11232；派单日期：2018-09-09",
+        	"taskId":"2323"
+		},{
+			"fileName": "增员201706191256",
+			"fileType":"减员订单",
+			"operationTime": "2017-06-21 12:56:21",
+			"id":4,
+			"downloadNumber":12,
+			"fileStatus": 3,
+         	"downloadUrl":"http:123456789012345678",
+        	"paramContent":"搜索名：11232；派单日期：2018-09-09",
+        	"taskId":"2323"
+		},{
+			"fileName": "增员201706191256",
+			"fileType":"减员订单",
+			"operationTime": "2017-06-21 12:56:21",
+			"id":4,
+			"downloadNumber":12,
+			"fileStatus":3,
+         	"downloadUrl":"http:123456789012345678",
+        	"paramContent":"搜索名：11232；派单日期：2018-09-09",
+        	"taskId":"2323"
+		},{
+			"fileName": "增员201706191256",
+			"fileType":"减员订单",
+			"operationTime": "2017-06-21 12:56:21",
+			"id":4,
+			"downloadNumber":12,
+			"fileStatus": 3,
+         	"downloadUrl":"http:123456789012345678",
+        	"paramContent":"搜索名：11232；派单日期：2018-09-09",
+        	"taskId":"2323"
+		},{
+			"fileName": "增员201706191256",
+			"fileType":"减员订单",
+			"operationTime": "2017-06-21 12:56:21",
+			"id":4,
+			"downloadNumber":12,
+			"fileStatus": 3,
+         	"downloadUrl":"http:123456789012345678",
+        	"paramContent":"搜索名：11232；派单日期：2018-09-09",
+        	"taskId":"2323"
+		},{
+			"fileName": "增员201706191256",
+			"fileType":"减员订单",
+			"operationTime": "2017-06-21 12:56:21",
+			"id":4,
+			"downloadNumber":12,
+			"fileStatus": 3,
+         	"downloadUrl":"http:123456789012345678",
+        	"paramContent":"搜索名：11232；派单日期：2018-09-09",
+        	"taskId":"2323"
+		},{
+			"fileName": "增员201706191256",
+			"fileType":"减员订单",
+			"operationTime": "2017-06-21 12:56:21",
+			"id":4,
+			"downloadNumber":12,
+			"fileStatus": 3,
+         	"downloadUrl":"http:123456789012345678",
+        	"paramContent":"搜索名：11232；派单日期：2018-09-09",
+        	"taskId":"2323"
+		},{
+			"fileName": "增员201706191256",
+			"fileType":"减员订单",
+			"operationTime": "2017-06-21 12:56:21",
+			"id":4,
+			"downloadNumber":12,
+			"fileStatus":3,
+         	"downloadUrl":"http:123456789012345678",
+        	"paramContent":"搜索名：11232；派单日期：2018-09-09",
+        	"taskId":"2323"
+		},{
+			"fileName": "增员201706191256",
+			"fileType":"减员订单",
+			"operationTime": "2017-06-21 12:56:21",
+			"id":4,
+			"downloadNumber":12,
+			"fileStatus":3,
+         	"downloadUrl":"http:123456789012345678",
+        	"paramContent":"搜索名：11232；派单日期：2018-09-09",
+        	"taskId":"2323"
+		},{
+			"fileName": "增员201706191256",
+			"fileType":"减员订单",
+			"operationTime": "2017-06-21 12:56:21",
+			"id":4,
+			"downloadNumber":12,
+			"fileStatus":3,
+         	"downloadUrl":"http:123456789012345678",
+        	"paramContent":"搜索名：11232；派单日期：2018-09-09",
+        	"taskId":"2323"
+		},{
+			"fileName": "增员201706191256",
+			"fileType":"减员订单",
+			"operationTime": "2017-06-21 12:56:21",
+			"id":4,
+			"downloadNumber":12,
+			"fileStatus":2,
+         	"downloadUrl":"http:123456789012345678",
+        	"paramContent":"搜索名：11232；派单日期：2018-09-09",
+        	"taskId":"2323"
+		}]
+    }
+}

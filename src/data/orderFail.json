@@ -1,0 +1,525 @@
+{
+    "msg":"",
+    "result":{
+        "pages":4,
+        "pageSize":20,
+        "list":[
+            {
+                "nowPayStatusMap": {
+                    "value": "补缴",
+                    "key": "1"
+                },
+                "orderMonth":"2018-04",
+                "orderId":"d8a41ffa02ed4a361",
+                "city":"440300",
+                "idCard":"342623199802324411",
+                "dispatchDate":1498117245000,
+                "vendorId":"61e757412c7c5ed8",
+                "payAmount":null,
+                "vendorServiceFee":80,
+                "personRatio":7,
+                "failReason":"天热容易try突然给他还发帖回帖",
+                "dispatchDateFormat":"2017-06-22",
+                "productType":1,
+                "applyBase":3123,
+                "cityMap":{
+                    "value":"深圳市",
+                    "key":"440300"
+                },
+                "orderNo":"1102017062217231444316110",
+                "productId":"461ef12e251bce85",
+                "orderProductTypeMap":{
+                    "value":"公积金",
+                    "key":"2"
+                },
+                "orderProductType":2,
+                "mobile":"13428767654",
+                "applyProductMap":{
+                    "applyProductId":"461ef12e251bce85",
+                    "value":"秋霞社保"
+                },
+                "failOrderLength":null,
+                "vendorMap":{
+                    "vendorId":"61e757412c7c5ed8",
+                    "value":"wowoohr"
+                },
+                "companyRatio":8,
+                "rlwServiceFee":80,
+                "material":{
+                    "residenceNatureMap":{
+                        "value":"城镇",
+                        "key":"1"
+                    },
+                    "educationMap":null,
+                    "materialStatus":null,
+                    "materialRmarkList":null,
+                    "residenceCityMap":null,
+                    "education":null,
+                    "idCardPicUrlB":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d93ca21eca6aba3f8af58633e0a6e6061f38194f48d088f1529d88269443f263dccd4c519a601563c",
+                    "isRead":null,
+                    "materialStatusMap":null,
+                    "isReadMap":null,
+                    "updateTime":null,
+                    "idCardPicUrlA":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d93ca21eca6aba3f8af58633e0a6e6061f38194f48d088f1529d88269443f263dccd4c519a601563c",
+                    "fundAccount":null,
+                    "createBy":null,
+                    "materialRmarkMap":null,
+                    "createTime":null,
+                    "updateBy":null,
+                    "residenceCity":"110100",
+                    "idCardPicUrlBMap": {
+                        "value": "images/ang.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "id":"0e8936d8b85a8085",
+                    "residenceNature":1,
+                    "idCardPicUrlAMap": {
+                        "value": "images/ang.jpg",
+                        "key": "3432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHomepageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfOwnpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHeaderpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "socialSecurityNumber":"社保编号",
+                    "fundAccount":"公积金编号",
+                    "residenceNatureMap":{
+                        "value":"城镇（户籍属性）",
+                        "key":"1"
+                    },
+                     "residenceCitysMap":{
+                           "value":"户籍所在地",
+                            "key":"350200"
+                     },
+                    "materialRmark":null
+                },
+                "name":"杨德明11",
+                "productTypeMap":{
+                    "value":"社保公积金",
+                    "key":"3"
+                }
+            },
+            {
+                "nowPayStatusMap": {
+                    "value": "补缴",
+                    "key": "1"
+                },
+                "orderMonth":"2018-04",
+                "orderId":"d8a41ffa02ed4a362",
+                "city":"440300",
+                "idCard":"342623199802324411",
+                "dispatchDate":1498117245000,
+                "vendorId":"61e757412c7c5ed8",
+                "payAmount":null,
+                "vendorServiceFee":80,
+                "personRatio":7,
+                "failReason":"天热容易try突然给他还发帖回帖",
+                "dispatchDateFormat":"2017-06-22",
+                "productType":1,
+                "applyBase":3123,
+                "cityMap":{
+                    "value":"深圳市",
+                    "key":"440300"
+                },
+                "orderNo":"1102017062217231444316110",
+                "productId":"461ef12e251bce85",
+                "orderProductTypeMap":{
+                    "value":"公积金",
+                    "key":"2"
+                },
+                "orderProductType":2,
+                "mobile":"13428767654",
+                "applyProductMap":{
+                    "applyProductId":"461ef12e251bce85",
+                    "value":"秋霞社保"
+                },
+                "failOrderLength":null,
+                "vendorMap":{
+                    "vendorId":"61e757412c7c5ed8",
+                    "value":"wowoohr"
+                },
+                "companyRatio":8,
+                "rlwServiceFee":80,
+                "material":{
+                    "residenceNatureMap":{
+                        "value":"城镇",
+                        "key":"1"
+                    },
+                    "educationMap":null,
+                    "materialStatus":null,
+                    "materialRmarkList":null,
+                    "residenceCityMap":null,
+                    "education":null,
+                    "idCardPicUrlB":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d93ca21eca6aba3f8af58633e0a6e6061f38194f48d088f1529d88269443f263dccd4c519a601563c",
+                    "isRead":null,
+                    "materialStatusMap":null,
+                    "isReadMap":null,
+                    "updateTime":null,
+                    "idCardPicUrlA":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d93ca21eca6aba3f8af58633e0a6e6061f38194f48d088f1529d88269443f263dccd4c519a601563c",
+                    "fundAccount":null,
+                    "createBy":null,
+                    "materialRmarkMap":null,
+                    "createTime":null,
+                    "updateBy":null,
+                    "residenceCity":"110100",
+                    "idCardPicUrlBMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "id":"0e8936d8b85a8085",
+                    "residenceNature":1,
+                    "idCardPicUrlAMap": {
+                        "value": "images/ang.jpg",
+                        "key": "3432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHomepageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfOwnpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHeaderpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "socialSecurityNumber":"社保编号",
+                    "fundAccount":"公积金编号",
+                    "residenceNatureMap":{
+                        "value":"城镇（户籍属性）",
+                        "key":"1"
+                    },
+                     "residenceCitysMap":{
+                           "value":"户籍所在地",
+                            "key":"350200"
+                     },
+                    "materialRmark":null
+                },
+                "name":"杨德明22",
+                "productTypeMap":{
+                    "value":"社保公积金",
+                    "key":"3"
+                }
+            },
+            {
+                "nowPayStatusMap": {
+                    "value": "补缴",
+                    "key": "1"
+                },
+                "orderMonth":"2018-04",
+                "orderId":"d8a41ffa02ed4a363",
+                "city":"440300",
+                "idCard":"342623199802324411",
+                "dispatchDate":1498117245000,
+                "vendorId":"61e757412c7c5ed8",
+                "payAmount":null,
+                "vendorServiceFee":80,
+                "personRatio":7,
+                "failReason":"天热容易try突然给他还发帖回帖",
+                "dispatchDateFormat":"2017-06-22",
+                "productType":1,
+                "applyBase":3123,
+                "cityMap":{
+                    "value":"深圳市",
+                    "key":"440300"
+                },
+                "orderNo":"1102017062217231444316110",
+                "productId":"461ef12e251bce85",
+                "orderProductTypeMap":{
+                    "value":"公积金",
+                    "key":"2"
+                },
+                "orderProductType":2,
+                "mobile":"13428767654",
+                "applyProductMap":{
+                    "applyProductId":"461ef12e251bce85",
+                    "value":"秋霞社保"
+                },
+                "failOrderLength":null,
+                "vendorMap":{
+                    "vendorId":"61e757412c7c5ed8",
+                    "value":"wowoohr"
+                },
+                "companyRatio":8,
+                "rlwServiceFee":80,
+                "material":{
+                    "residenceNatureMap":{
+                        "value":"城镇",
+                        "key":"1"
+                    },
+                    "educationMap":null,
+                    "materialStatus":null,
+                    "materialRmarkList":null,
+                    "residenceCityMap":null,
+                    "education":null,
+                    "idCardPicUrlB":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d93ca21eca6aba3f8af58633e0a6e6061f38194f48d088f1529d88269443f263dccd4c519a601563c",
+                    "isRead":null,
+                    "materialStatusMap":null,
+                    "isReadMap":null,
+                    "updateTime":null,
+                    "idCardPicUrlA":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d93ca21eca6aba3f8af58633e0a6e6061f38194f48d088f1529d88269443f263dccd4c519a601563c",
+                    "fundAccount":null,
+                    "createBy":null,
+                    "materialRmarkMap":null,
+                    "createTime":null,
+                    "updateBy":null,
+                    "residenceCity":"110100",
+                    "idCardPicUrlBMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "id":"0e8936d8b85a8085",
+                    "residenceNature":1,
+                    "idCardPicUrlAMap": {
+                        "value": "images/ang.jpg",
+                        "key": "3432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHomepageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfOwnpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHeaderpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "socialSecurityNumber":"社保编号",
+                    "fundAccount":"公积金编号",
+                    "residenceNatureMap":{
+                        "value":"城镇（户籍属性）",
+                        "key":"1"
+                    },
+                     "residenceCitysMap":{
+                           "value":"户籍所在地",
+                            "key":"350200"
+                     },
+                    "materialRmark":null
+                },
+                "name":"杨德明33",
+                "productTypeMap":{
+                    "value":"社保公积金",
+                    "key":"3"
+                }
+            },{
+                "nowPayStatusMap": {
+                    "value": "补缴",
+                    "key": "1"
+                },
+                "orderMonth":"2018-04",
+                "orderId":"d8a41ffa02ed4a364",
+                "city":"440300",
+                "idCard":"342623199802324411",
+                "dispatchDate":1498117245000,
+                "vendorId":"61e757412c7c5ed8",
+                "payAmount":null,
+                "vendorServiceFee":80,
+                "personRatio":7,
+                "failReason":"天热容易try突然给他还发帖回帖",
+                "dispatchDateFormat":"2017-06-22",
+                "productType":1,
+                "applyBase":3123,
+                "cityMap":{
+                    "value":"深圳市",
+                    "key":"440300"
+                },
+                "orderNo":"1102017062217231444316110",
+                "productId":"461ef12e251bce85",
+                "orderProductTypeMap":{
+                    "value":"公积金",
+                    "key":"2"
+                },
+                "orderProductType":2,
+                "mobile":"13428767654",
+                "applyProductMap":{
+                    "applyProductId":"461ef12e251bce85",
+                    "value":"秋霞社保"
+                },
+                "failOrderLength":null,
+                "vendorMap":{
+                    "vendorId":"61e757412c7c5ed8",
+                    "value":"wowoohr"
+                },
+                "companyRatio":8,
+                "rlwServiceFee":80,
+                "material":{
+                    "residenceNatureMap":{
+                        "value":"城镇",
+                        "key":"1"
+                    },
+                    "educationMap":null,
+                    "materialStatus":null,
+                    "materialRmarkList":null,
+                    "residenceCityMap":null,
+                    "education":null,
+                    "idCardPicUrlB":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d93ca21eca6aba3f8af58633e0a6e6061f38194f48d088f1529d88269443f263dccd4c519a601563c",
+                    "isRead":null,
+                    "materialStatusMap":null,
+                    "isReadMap":null,
+                    "updateTime":null,
+                    "idCardPicUrlA":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d93ca21eca6aba3f8af58633e0a6e6061f38194f48d088f1529d88269443f263dccd4c519a601563c",
+                    "fundAccount":null,
+                    "createBy":null,
+                    "materialRmarkMap":null,
+                    "createTime":null,
+                    "updateBy":null,
+                    "residenceCity":"110100",
+                    "idCardPicUrlBMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "id":"0e8936d8b85a8085",
+                    "residenceNature":1,
+                    "idCardPicUrlAMap": {
+                        "value": "images/ang.jpg",
+                        "key": "3432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHomepageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfOwnpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHeaderpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "socialSecurityNumber":"社保编号",
+                    "fundAccount":"公积金编号",
+                    "residenceNatureMap":{
+                        "value":"城镇（户籍属性）",
+                        "key":"1"
+                    },
+                     "residenceCitysMap":{
+                           "value":"户籍所在地",
+                            "key":"350200"
+                     },
+                    "materialRmark":null
+                },
+                "name":"杨德明44",
+                "productTypeMap":{
+                    "value":"社保公积金",
+                    "key":"3"
+                }
+            },{
+                "nowPayStatusMap": {
+                    "value": "补缴",
+                    "key": "1"
+                },
+                "orderMonth":"2018-04",
+                "orderId":"d8a41ffa02ed4a365",
+                "city":"440300",
+                "idCard":"342623199802324411",
+                "dispatchDate":1498117245000,
+                "vendorId":"61e757412c7c5ed8",
+                "payAmount":null,
+                "vendorServiceFee":80,
+                "personRatio":7,
+                "failReason":"天热容易try突然给他还发帖回帖",
+                "dispatchDateFormat":"2017-06-22",
+                "productType":1,
+                "applyBase":3123,
+                "cityMap":{
+                    "value":"深圳市",
+                    "key":"440300"
+                },
+                "orderNo":"1102017062217231444316110",
+                "productId":"461ef12e251bce85",
+                "orderProductTypeMap":{
+                    "value":"公积金",
+                    "key":"2"
+                },
+                "orderProductType":2,
+                "mobile":"13428767654",
+                "applyProductMap":{
+                    "applyProductId":"461ef12e251bce85",
+                    "value":"秋霞社保"
+                },
+                "failOrderLength":null,
+                "vendorMap":{
+                    "vendorId":"61e757412c7c5ed8",
+                    "value":"wowoohr"
+                },
+                "companyRatio":8,
+                "rlwServiceFee":80,
+                "material":{
+                    "residenceNatureMap":{
+                        "value":"城镇",
+                        "key":"1"
+                    },
+                    "educationMap":null,
+                    "materialStatus":null,
+                    "materialRmarkList":null,
+                    "residenceCityMap":null,
+                    "education":null,
+                    "idCardPicUrlB":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d93ca21eca6aba3f8af58633e0a6e6061f38194f48d088f1529d88269443f263dccd4c519a601563c",
+                    "isRead":null,
+                    "materialStatusMap":null,
+                    "isReadMap":null,
+                    "updateTime":null,
+                    "idCardPicUrlA":"e4e67faf945b1f2c05f435c294502bad48f1c1343b85cb1d93ca21eca6aba3f8af58633e0a6e6061f38194f48d088f1529d88269443f263dccd4c519a601563c",
+                    "fundAccount":null,
+                    "createBy":null,
+                    "materialRmarkMap":null,
+                    "createTime":null,
+                    "updateBy":null,
+                    "residenceCity":"110100",
+                    "idCardPicUrlBMap": {
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "id":"0e8936d8b85a8085",
+                    "residenceNature":1,
+                    "idCardPicUrlAMap": {
+                        "value": "images/ang.jpg",
+                        "key": "3432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHomepageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfOwnpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "hkPicUrlOfHeaderpageMap":{
+                        "value": "images/back.jpg",
+                        "key": "4432asdfdsfdff"
+                    },
+                    "socialSecurityNumber":"社保编号",
+                    "fundAccount":"公积金编号",
+                    "residenceNatureMap":{
+                        "value":"城镇（户籍属性）",
+                        "key":"1"
+                    },
+                     "residenceCitysMap":{
+                           "value":"户籍所在地",
+                            "key":"350200"
+                     },
+                    "materialRmark":null
+                },
+                "name":"杨德明55",
+                "productTypeMap":{
+                    "value":"社保公积金",
+                    "key":"3"
+                }
+            }
+        ],
+        "totalCount":1,
+        "pageNum":1
+    },
+    "code":"200"
+}

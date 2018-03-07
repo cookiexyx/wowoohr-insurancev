@@ -1,0 +1,55 @@
+<div ng-show="!is404">
+    <div ng-include="'views/item/titleNav.html'"></div>
+    <div class="insurance-fund-box">
+        <div class="row insurance-fund-search">
+            <div>
+                    <span>服务城市</span>
+                    <select ng-model="cityAllMap" ng-options="m.code as m.city for m in cityOptions" ng-change="selectType(1,cityAllMap)"></select>
+                    <i class="icon-03"></i>                        
+                </div>
+                <div>
+                    <span>产品类型</span>
+                    <select ng-model="typeMap" ng-options="m.itemCode as m.itemName for m in typeOptions" ng-change="selectType(2,typeMap)"></select>
+                    <i class="icon-03"></i>                            
+                </div>
+            <div class="float-xs-right point" ng-click="goRefuse()">审核拒绝</div>
+        </div>
+        <ul class="insurance-fund-list" ng-if="dataList.length>0">
+            <li class="insurance-list row" ng-repeat="item in dataList">
+                <div class="insurance-list-title">
+                    <span ng-bind="item.name"></span>
+                    <span class="float-xs-right see-detail point" ng-click="goDetail(item.id)">查看详情</span>
+                </div>
+                <div class="insurance-list-cont row">
+                    <div class="col-xs-5">
+                        <ul class="row">
+                            <li class="col-xs-6">产品类型：<span ng-bind="item.type.value"></span></li>
+                            <li class="col-xs-6">服务费：<span ng-bind="item.vendorServiceFee+'元/月'"></span></li>
+                            <li class="col-xs-6">服务城市：<span ng-bind="item.cityMap.value"></span></li>
+                            <li class="col-xs-6">社会平均工资：<span ng-bind="item.societyAverageWage+'元'"></span></li>
+                        </ul>
+                    </div>
+                    <div class=" col-xs-7">
+                        <span class="float-xs-left">申报材料：</span>
+                        <ul class="row float-xs-left">
+                            <li class="col-xs-12">新增：<span ng-bind="item.newMaterial"></span></li>
+                            <li class="col-xs-12">续保：<span ng-bind="item.renewMaterial"></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="insurance-list-footer">
+                    备注信息：<span ng-bind-html="item.remarks | ntobr"></span>
+                </div>
+            </li>
+        </ul>
+        <!-- 搜索后没有数据 -->
+        <div class="search-no-data" ng-if="dataList.length<1">
+            <img src="images/no_fund.png">
+            <div>暂无数据</div>
+        </div>
+    </div>
+</div>
+
+<!-- 404页面 -->
+<div class="rm-404" ng-if="is404"><img src="images/404.png"></div>
+

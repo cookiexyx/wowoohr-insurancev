@@ -1,0 +1,32 @@
+{	
+	"msg":"",
+	"data":{
+		"ifCheckIn":false,
+		"step":"1",
+		"onboardingCompareTable":{
+            "x":["6月","7月","8月","9月","10月","11月","12月"],
+            "onboard":[120, 132, 101, 134, 90, 230, 210],
+            "leave":[220, 182, 191, 234, 290, 330, 310]
+        },
+        "employees":256,			
+        "employeesPercentage":60,
+        "infoPercent":35,
+		"policyStatus":true,
+		"personalNotice":[
+			{
+				"title":"2017年法法定节假日安排法定节假日安排定节假日安排1",
+				"content":"11111111111111111111111111111111111111111111111111111",
+				"date":"2016-12-01"
+			},
+			{
+				"title":"2017年法定节假法定节假日安排法定节假日安排日安排2",
+				"content":"11111111111111111111111111111111111111111111111111111",
+				"date":"2016-12-01"
+			}
+
+		],
+		"avatar":"http://img.dongqiudi.com/uploads/avatar/2014/10/20/8MCTb0WBFG_thumb_1413805282863.jpg",
+		"name":"张凌霄",
+		"department":"研发部"
+	}
+}

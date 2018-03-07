@@ -1,0 +1,346 @@
+<div ng-show="!is404">
+	<div class="orderincrease noprint" ng-show="orderLength > 0">
+		<div class="row order-search">
+			<div class="searchName left">
+	        	<i class="icon-search" ng-click="sendDate(1)"></i>
+		        <input ng-trim="false" type="text" ng-model="name2" class="inputName"  placeholder="姓名、身份证号码" autocomplete="off"/>
+		        <!--  ng-change="changeFun()" -->
+		        <!-- <ul id="tags_dropdown" class="angucomplete-dropdown">
+		        	<li ng-repeat="result in namelist" class="angucomplete-row" ng-click="listClick(result.name)">
+		        		{{result.name}}
+		        	</li>
+		        </ul> -->
+	     	</div>
+	     	<button class="btn more-btn btn-info" ng-click="filterShow()"> 
+			    <span ng-show="!filtershowIf">更多筛选</span>
+			    <span ng-show="filtershowIf">收起筛选</span>
+			    <i ng-class="{'icon-03':!filtershowIf,'icon-04':filtershowIf}"></i>
+		    </button>
+		    <span>共{{totalCount}}条</span>
+		    <span class="exportList list" ng-click="downloadOrder()">导出EXCEL</span>
+
+		    <!-- 筛选 条件 -->
+		    <div class="search-tips">
+		    	<div class="reset-choose-cont" ng-show="beginDate2||endDate2">派单日期：{{beginDate2||' / '}}—{{endDate2||' / '}}<i class="icon-cross" ng-click="clearDate()" ></i></div>
+		    	<!-- <div class="reset-choose-cont" ng-show="payMonth2">缴纳月份：{{payMonth2}}<i class="icon-cross" ng-click="clearMonth()"></i></div> -->
+	    		<div class="reset-choose-cont" ng-repeat="item in statusChecked2">产品类型：{{item.value}}<i class="icon-cross" ng-click="clearStatus(statusChecked2,item,$index)"></i></div>
+				<div class="reset-choose-cont" ng-repeat="city in cityChecked2" >服务城市：{{city.value}} <i class="icon-cross" ng-click="clearCity(cityChecked2,city,$index)"></i></div>
+				<div class="reset-choose-cont" ng-if="orderCheckedCopy.key">阅读状态：{{orderCheckedCopy.value}}<i class="icon-cross" ng-click="clearOrder()"></i></div>
+				<div class="reset-choose-cont" ng-repeat="noApply in noApplyChecked2" >未提交项：{{noApply.value}} <i class="icon-cross" ng-click="clearNoApply(noApplyChecked2,noApply,$index)"></i></div>
+				<span ng-if="statusChecked2.length>0||cityChecked2.length>0||beginDate2||endDate2||payMonth2||orderCheckedCopy.key||noApplyChecked2.length>0" ng-click="cancelSearch()">取消筛选</span>
+		    </div>
+		    <!-- <span class="reset" ng-click="reastBtn()">重置</span> -->
+		</div>
+		<div class="row title-order" ng-if="orderLength > 0 && list.length >0" >
+
+		    <label for="flag" class="left"  >
+	 		 <i ng-class="{true:'icon-01',false:'icon-02'}[ctrlScope.select_all]"></i>
+		      <input id="flag" type="checkbox" ng-model="ctrlScope.select_all" ng-click="selectAll(ctrlScope.select_all)" class="hide">
+		    </label><span
+		        class='all-checkbox'>全选</span>
+		    <span class="titNum">已选{{checkTitleNum}}条</span>
+		    <button class=" add-order left" ng-class="{'checkedShowFalse':checkedShow}" ng-click="checkedShow||addOrder(0)">批量增员完成</button> 
+		    <div class="popup-order-no">
+			    <p class="order-err-msg">请选择订单后进行操作</p>
+			</div>
+		    <!-- <button class=" add-order left" ng-disabled="checkedShow" ng-click="checkedShow||downOrder(0)" >批量下载申报下载</button> -->
+	     	<!-- <div class="filet-btns">
+
+		     <div class="btns" ng-show="filtershow">
+
+		    </div>
+
+			</div>	 -->
+			<!-- 下载 -->
+			 <!-- <span ng-if="totalFileNum>0&&totalFileNum<10" class="exportList num" ng-bind="totalFileNum"></span>
+			 <span ng-if="totalFileNum>9" class="exportList num dot"><i>...</i></span>
+		     <span class="exportList" ng-click="goDownload()">下载列表</span> -->
+		     <!-- <span class="exportList list" ng-click="downloadOrder()">导出EXCEL</span> -->
+		</div>    
+	    <ul ng-if="orderLength > 0 && list.length >0" >
+	        <li ng-repeat="i in list" class="order-list row" ng-class="{'nocheck-border':!i.checked,'check-border':i.checked}" id="id{{i.orderId}}">
+	        	<div class="order-list-title">
+	        	 	<label  class="left"  >
+	        	  <i ng-class="{'icon-02':!i.checked,'icon-01':i.checked}"></i>
+		             <input type="checkbox" ng-model="i.checked" class="hide" ng-change="selectOne()" >
+		             </label>
+		            <span class="margin-left10">订单号：{{i.orderNo}}<span ng-if="i.nowPayStatusMap.key==1">（{{i.nowPayStatusMap.value}}）</span></span>
+		            <span class="order-num" ng-click="goDetail(i.orderId,i.productTypeMap.key)">查看详情</span>
+		           	<span>缴纳金额：{{i.vPayAmount}}元</span>
+		           	<span>服务费：{{i.vendorServiceFee}}元</span>
+		           	<div class="right markContent">
+	           			<!-- <i class="icon-07" ng-class="{'color-red':i.markText.length>0,'color-ccc':i.markText.length == ''}" ng-click="addMark($event)"></i> -->
+	           			<span ng-show="i.markText.length>0" class="mark-text" >{{i.markText}}
+	           			 <i class="icon-08" ng-click="mark(i,$event)"></i></span>
+		           	</div>
+	            </div>
+	            <div class="order-list-content row">
+	            	<div class=" col-xs-3">
+	            		<h4>{{i.name}}</h4>
+	            		<p>身份证：&emsp;{{i.idCard}}</p>
+	            		<p>手机号码：{{i.mobile}}</p>
+	            	</div>
+	            	<div class="col-xs-3">
+	            		<p>缴纳城市：{{i.cityMap.value}}</p>
+	            		<p>申报名称：{{i.applyProductMap.value}}<span ng-if="i.productTypeMap.key==3">（{{i.orderProductTypeMap.value}}）</span></p>
+	            	</div>
+	            	<div class="col-xs-3">
+	            		<p>申报基数：{{i.applyBase}}</p>
+	            		<!-- <p>申报月份：{{i.orderMonth}}</p> -->
+	            		<p>派单日期：{{i.dispatchDateFormat}}</p>
+	            	</div>
+	            	<div class=" col-xs-3 right-bar">
+	            		
+	            		<p ng-if="i.orderProductType==2">缴费比例：{{i.personRatio}}%+{{i.companyRatio}}%</p>
+            			<ul class="right-bar-btn">
+	            			<li ng-click="addOrder(i.orderId)" >增员完成</li>
+	            			<li ng-click="applyMaterial(i.orderId)">申报材料</li>
+	            			<li  ng-click="failPop(i.orderId)">申报失败</li>
+            			</ul>
+            			<div class="readStatus">
+            				<span ng-class="{'color-ccc':i.material.isReadMap.value=='已读','color-red':i.material.isReadMap.value!='已读'}"><small>{{i.material.isReadMap.value}}</small></span><br>
+            			</div>
+	            	</div>			
+	            </div>
+	            <div>
+		            <div class="order-list-footer" ng-if="i.toDecalareInsurances.length > 0">订单内未提交申报项：{{i.toDecalareInsurances}}</div>
+		        </div>
+			  <!-- <div class="add-mark" >
+					<div class="title">添加标签 <i class="icon-cross" ng-click="closeMark($event)"></i></div>
+					<input type="text" name="" ng-model='i.markText'>				
+					<button class="btn more-btn  btn-block btn-info" ng-click="saveMark(i,$event)">确认</button>
+				</div> -->
+	        </li>
+	    </ul>
+	</div>
+<!-- 	<div class="row pagenation-row">
+	  <div class="float-lg-right"><div class="pagination pagination-sm"></div></div>
+	  <div class="float-lg-right">共{{totalCount}}条，{{totalPage}}页</div>  
+	</div> -->
+	<div class="pop addsucc-pop" style="display: none;text-align: center;">
+		<span ng-if="allTip">共<label ng-bind="checkTitleNum"></label>条，</span>请确认已经处理完毕 <br>
+		确认后将无法确认，是否确认
+		<div class="row">
+			<button class="btn more-btn btn-info" ng-click="succOrder()">确认</button>
+			<button  class="btn more-btn btn-warning" ng-click="closePop()">取消</button>
+		</div>
+	</div>
+	<!-- 右侧菜单栏弹出 -->
+	<div class="nav-silde-fixed-bj" ng-click="closeNavLarye()"></div>
+	<div class="nav-silde-fixed ">
+		<h3>更多筛选</h3>
+		<ul class="nav-silde-ul">
+			<li class="nav-silde-li"><b class="icon-06"></b>产品类型 <br>
+				<div class="tips-title" ng-repeat="item in statusChecked">{{item.value}}<i class="icon-cross" ng-click="clearStatus(statusChecked,item,$index,'sidebar')"></i></div>
+				<div class="class-silde-fixed">
+						<h3>产品类型</h3>
+						<div class="list" ng-repeat="productStatus in productStatusList">
+						 	<label  class="left" >
+					        	  <i ng-class="{'icon-02':!productStatus.statusChecked,'icon-01':productStatus.statusChecked}"></i>
+						          <input type="checkbox" ng-model="productStatus.statusChecked" class="hide" ng-change="selectProduct()" >{{productStatus.value}}
+						     </label>
+						</div>
+				</div>
+			</li>
+			<li class="nav-silde-li"><b class="icon-06"></b>派单日期<br>
+				<div class="tips-title" ng-show="beginDate||endDate">{{beginDate||' / '}}—{{endDate||' / '}}<i class="icon-cross" ng-click="clearDate('sidebar')"></i></div>
+				<div class="class-silde-fixed">
+					<h3>派单日期</h3>
+					<div class="list list-input">
+				 		<input type="text" name="" ng-model="beginDate" placeholder="请选择开始日期" id="datetimepicker1" readonly="readonly" ng-blur="dateBlur('datetimepicker1','beginDate')">
+				 		<b class="icon-23"></b>  <!-- 日历icon不对 -->
+					</div>
+					<div class="list list-input">
+				 		<input type="text" name="" ng-model="endDate" placeholder="请选择结束日期" id="datetimepicker2" readonly="readonly" ng-blur="dateBlur('datetimepicker2','endDate')">
+				 		<b class="icon-23"></b>  <!-- 日历icon不对 -->
+					</div>
+				</div>
+			</li>
+			<!-- <li class="nav-silde-li"><b class="icon-06"></b>缴纳月份<br>
+				<div class="tips-title" ng-show="payMonth">{{payMonth}} <i class="icon-cross" ng-click="clearMonth('sidebar')"></i></div>
+				<div class="class-silde-fixed">
+					<h3>缴纳月份</h3>
+					<div class="list list-input">
+				 		<input type="text" name="" ng-model="payMonth" placeholder="请选择月份" id="datetimepicker3" readonly="readonly" ng-blur="dateBlur('datetimepicker3','payMonth')">
+				 		<b class="icon-23"></b>
+					</div>
+				</div>
+			</li> -->
+			<li class="nav-silde-li"><b class="icon-06"></b>缴纳城市 <br>
+				<div class="tips-title" ng-repeat="city in cityChecked" >{{city.value}} <i class="icon-cross" ng-click="clearCity(cityChecked,city,$index,'sidebar')"></i></div>
+				<div class="class-silde-fixed">
+					<h3>缴纳城市</h3>
+					<div class="list" ng-repeat="city in citysList">
+					 	<label  class="left" >
+				        	  <i ng-class="{'icon-02':!city.cityChecked,'icon-01':city.cityChecked}"></i>
+					          <input type="checkbox" ng-model="city.cityChecked" class="hide" ng-change="selectCity()" >{{city.value}}
+					     </label>
+					</div>
+				</div>
+			</li>
+			<!-- 状态 -->
+			<li class="nav-silde-li"><b class="icon-06"></b>阅读状态<br>
+				<div class="class-silde-fixed">
+					<h3>阅读状态</h3>
+					<div class="list" >
+						<label for="flag" class="sidebarStyle" >
+		                	<input class="normalRadio" id="noSelectOrder" type="radio" name="orderStatusSign" value="" ng-model="orderCheckedKey" ng-click="selectOrder()">
+	                		<label for="noSelectOrder">全部</label>
+		                </label>
+		                <label for="flag" class="sidebarStyle" ng-repeat="orderStatus in orderIsReadList">
+		                    <input class="normalRadio" id="{{orderStatus.key}}" type="radio" name="orderStatusSign" ng-value="orderStatus.key" ng-model="orderCheckedKey" ng-click="selectOrder(orderStatus)">
+		                    <label for="{{orderStatus.key}}" ng-bind="orderStatus.value"></label>
+		                </label>
+					</div>
+				</div>
+			</li>
+			<!-- 未提交项 -->
+			<li class="nav-silde-li"><b class="icon-06"></b>未提交项 <br>
+				<div class="tips-title" ng-repeat="noApply in noApplyChecked" >{{noApply.value}} <i class="icon-cross" ng-click="clearNoApply(noApplyChecked,noApply,$index,'sidebar')"></i></div>
+				<div class="class-silde-fixed">
+					<h3>未提交项</h3>
+					<div class="list" ng-repeat="noApply in noApplyList">
+					 	<label  class="left" >
+				        	  <i ng-class="{'icon-02':!noApply.noApplyChecked,'icon-01':noApply.noApplyChecked}"></i>
+					          <input type="checkbox" ng-model="noApply.noApplyChecked" class="hide" ng-change="selectNoApply()" >{{noApply.value}}
+					     </label>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<button class="btn btn-info btn-md" ng-click="save()">确认</button>
+	</div>
+
+	<div class="pop fail-pop" style="display: none">
+		<h3>申报失败原因</h3> 
+		<p>选择失败原因
+	        <select class="select-fail" ng-model="failReasonValue" ng-options="m.failReason as m.failreasonName for m in failOptions"></select>
+	        <i class="icon-03"></i>
+	    </p>
+		<p>确认提交后相关费用将会退回给用户，该订单结束。</p>
+		<div class="row btns">
+			<button class="btn more-btn btn-info" ng-click="failOrder()">确认提交</button>
+			<button  class="btn more-btn btn-warning" ng-click="closePop()">取消</button>
+		</div>
+	</div>
+	<div class="pop download-pop" style="display: none">
+		EXCEL文件生成中，可能需要等待10到15分钟…<br/>
+生成完成后，点击下载列表可下载到本地
+		<div class="row btns">
+			<button class="btn more-btn btn-info" ng-click="refreshDownload()">知道了</button>
+		</div>
+	</div>
+	<!-- slider -->
+	<div id="orderDeclarWrap">
+	<div class="orderwrap"></div>
+	<div class="closebtn noprint" ng-click="closeOrdermaterial()"><i class="icon-cross"></i> </div>
+		<div class="banner">
+			<ul class="img" >
+				<li ng-repeat="material in list" class="imgList" id="img{{$index}}">
+					<div class="imglistli">
+						<div class="img-header row noprint">
+							订单号：{{material.orderNo}}<span ng-if="material.nowPayStatusMap.key==1">（{{material.nowPayStatusMap.value}}）</span>
+						</div>
+						<div class="content row">
+							<div class="col-xs-6 left-box noprint">
+								<h3>{{material.name}}</h3>
+								<p>身份证： {{material.idCard}}</p>
+								<p>缴纳城市：{{material.cityMap.value}}</p>
+								<p style="padding-bottom:20px;">申报产品：{{material.applyProductMap.value}} <span ng-if="material.productTypeMap.key==3">（{{material.orderProductTypeMap.value}}）</span></p>
+								<!-- <p>申报基数：{{material.applyBase}}</p> -->
+								<!-- <p>申报月份：{{material.orderMonth}}</p> -->
+								<p  ng-show="material.material.residenceNatureMap.value">户籍属性：{{material.material.residenceNatureMap.value}}</p>
+			            		<p ng-show="material.material.residenceCityMap.value">户籍所在地：{{material.material.residenceCityMap.value}}</p>
+			            		<p ng-show="material.dispatchDateFormat">派单日期：{{material.dispatchDateFormat}}</p>
+			            		<p ng-show="material.material.socialSecurityNumber">社保编号：{{material.material.socialSecurityNumber}}</p>
+			            		<p ng-show="material.material.fundAccount">公积金编号：{{material.material.fundAccount}}</p>
+							</div>
+							<div class="col-xs-6 right-box">
+								<div class="card"> 
+									<p class="noprint">身份证正面照</p>
+									<img class="img{{$index}}" >
+										<!--  ng-src="{{material.material.idCardPicUrlAMap.value}}" -->
+								</div>
+								<div class="card"> 
+									<p class="noprint">身份证背面照</p>
+									<img class="img{{$index}}" >
+									<!--  ng-src="{{material.material.idCardPicUrlBMap.value}}" -->
+								</div>
+							</div>
+							<div style="padding-left: 103px;">
+								<div class="col-xs-5 registeredPhone noprint" ng-show="material.material.hkPicUrlOfHomepageMap"> 
+									<div>
+										<p>户口本首页照片</p>
+										<img class="img{{$index}}" >
+									</div>
+								</div>
+								<div class="col-xs-5 registeredPhone noprint" ng-show="material.material.hkPicUrlOfOwnpageMap">
+									<div >
+										<p>户口本本人页照片</p>
+										<img class="img{{$index}}" >
+									</div>
+								</div>
+								<div class="col-xs-5 registeredPhone noprint" ng-show="material.material.hkPicUrlOfHeaderpageMap">
+									<div>
+										<p>户口本户主页照片</p>
+										<img class="img{{$index}}" >
+									</div>
+								</div>	
+							</div>
+						</div>
+					</div>
+					<div class="operation row noprint">
+						<div class="col-xs-4">
+							<span class="download" ng-click="downloadIDCard(material.material.idCardPicUrlAMap.key,material.material.idCardPicUrlBMap.key,material.name,material.idCard,material.orderId,material.material.hkPicUrlOfHomepageMap,material.material.hkPicUrlOfOwnpageMap,material.material.hkPicUrlOfHeaderpageMap)"><i class="icon-inbox"></i><br>下载文件</span>
+						</div>
+						<div class="col-xs-4">
+							<span class="print" ng-click="print($index)"><i class="icon-printer"></i><br>打印文件</span>
+						</div>
+						<div class="col-xs-4">
+							<span ng-class="{'feedback2':fbClick}" ng-click="feedback2(material.productId,material.material.insuredType)"><i class="icon-26"></i><br>反馈错误</span>
+						</div>
+						<div class="feedback-box" ng-show="fbClick">
+							<div class="title">{{results[0].name.value}}</div>
+							<div ng-repeat="item in results[0].children">
+							    <label for="flag">
+		                    		<input class="normal" id="{{item.key}}" type="checkbox" ng-checked="materialRmark{{item.key}}" ng-click="checkedFeedback('materialRmark',item.key)" >
+		                    		<label for="{{item.key}}"><span ng-bind="item.value"></span></label>
+		                		</label>
+							</div>
+							<div class="title">{{results[1].name.value}}</div>
+							<div ng-repeat="item in results[1].children">
+							    <label for="flag">
+		                    		<input class="normal" id="{{item.key}}" type="checkbox" ng-checked="materialRmark{{item.key}}" ng-click="checkedFeedback('materialRmark',item.key)" >
+		                    		<label for="{{item.key}}"><span ng-bind="item.value"></span></label>
+		                		</label>
+							</div>
+							<button class="btn btn-info btn-md" ng-click="errConfirm(material.orderId,material.material.id)">确认</button>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="btn noprint">
+			<span class="prev icon-11" ng-class="{'icon-disabled':num==0}" ng-click="num==0||prev()"></span>
+			<span class="next icon-12" ng-class="{'icon-disabled':num+1>=ulwidth&&nowPage>=totalPage}" ng-click="num+1>=ulwidth&&nowPage>=totalPage||next()"></span>
+		</div>
+	</div>
+	<!-- 没有任何数据 -->
+	<div class="search-no-data" ng-if="orderLength == 0" >
+		<img src="images/no_fund.png">
+		<div>你暂无需要处理的增员订单</div>
+	</div>
+
+	<!-- 搜索 没有任何数据 -->
+	<div class="search-no-data" ng-if="orderLength > 0 && list.length ==0">
+		<img src="images/no_fund.png">
+		<div>暂无数据</div>
+	</div>
+	</div>
+</div>
+
+
+
+
+<!-- 404页面 -->
+<div class="rm-404" ng-if="is404"><img src="images/404.png"></div>

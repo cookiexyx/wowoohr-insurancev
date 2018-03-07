@@ -1,0 +1,575 @@
+<div ng-show="!is404">
+	<div ng-if="addSucessLink == true">
+		<div ng-include="'views/item/titleNav.html'"></div>
+		<div class="insuranceAddProgressCont">
+			<div class="insuranceAddProgressGrey">
+				<div class="insuranceAddProgressBule" ng-style="stepWidth"></div>
+			</div>
+			<ul class="clearfix">
+				<li ng-class="{'active':stepshow>=1}">
+					1.设置基本信息
+				</li>
+				<li ng-class="{'active':stepshow>=2}">
+					2.设置参保材料
+				</li>
+				<li ng-class="{'active':stepshow>=3}">
+					3.设置各险种政策
+				</li>
+			</ul>
+		</div>
+		<div class="insuranceAddCont">
+			<div class="insuranceAddBasic" ng-show="stepshow==1">
+				<div class="insuranceAddBasicForm">
+					<div class="leftaddbug">产品类型</div>
+					<div class="rightaddbug">
+						<select ng-model="resultList.type" ng-options="m.key as m.value for m in result.product_tyte" ng-change="typeChange(resultList.type)"></select>
+						<b class="icon-03"></b>
+					</div>
+				</div>
+				<div class="insuranceAddBasicForm">
+					<div class="leftaddbug">服务城市</div>
+					<div class="rightaddbug">
+						<select ng-model="resultList.cityCode" ng-options="m.key as m.value for m in result.cityList"></select>
+						<b class="icon-03"></b>
+					</div>
+				</div>
+				<div class="insuranceAddBasicForm">
+					<div class="leftaddbug">社会平均工资</div>
+					<div class="rightaddbug input-err">
+						<input type="text" placeholder="请输入社会平均工资" ng-model="resultList.societyAverageWage" ng-blur="checkBase('resultList','societyAverageWage','societyfee-err',resultList.societyAverageWage)" maxlength="9" autocomplete="off">
+						<span>元</span>
+						<small class="societyfee-err">请输入0~100000的数字，最多输入两位小数</small>
+					</div>
+				</div>
+				<div class="insuranceAddBasicForm">
+					<div class="leftaddbug">产品名称</div>
+					<div class="rightaddbug input-err">
+						<input type="text" placeholder="请输入产品名称" ng-model="resultList.name" maxlength="20" autocomplete="off">
+						<small class="name-err">请输入产品名称</small>
+					</div>
+				</div>
+				<div class="insuranceAddBasicForm input-err">
+					<div class="leftaddbug">服务费</div>
+					<div class="rightaddbug">
+						<input type="text" placeholder="请输入服务费" ng-model="resultList.vendorServiceFee" ng-blur="checkBase8('resultList','vendorServiceFee','fee-err',resultList.vendorServiceFee)" maxlength="11" autocomplete="off">
+						<span>元／月</span>
+						<small class="fee-err">请输入0~100000000的数字，最多输入两位小数</small>
+					</div>
+				</div>
+				<div class="insuranceAddBasicForm">
+					<div class="leftaddbug">备注信息</div>
+					<div class="rightaddbug">
+						<textarea placeholder="请输入备注信息" ng-model="resultList.remarks" maxlength="100" ></textarea>
+					</div>
+				</div>
+				<button type="button" class="btn btn-info btn-lg" ng-click="saveStep('2')">下一步</button>
+			</div>
+			<div class="insuranceAdd-cenbao" ng-show="stepshow==2">
+				<div>
+					<span>选择新增参保资料</span>
+					<div class="label-box">
+						<label ng-repeat="item in result.new_meterial_type">
+							<input class="normal" id="{{item.key}}" type="checkbox" ng-checked="newChecked{{item.key}}" ng-click="checked('newChecked{{item.key}}')" >
+							<label for="{{item.key}}" ng-bind="item.value"></label>
+						</label>
+					</div>
+				</div>
+				<div>
+					<span>选择续保参保资料</span>
+					<div class="label-box">
+						<label for="flag" ng-repeat="item in result.renew_meterial_type">
+				 			<input class="normal" id="{{item.key}}2" type="checkbox" ng-checked="renewChecked{{item.key}}"  ng-click="checked('renewChecked{{item.key}}')">
+							<label for="{{item.key}}2" ng-bind="item.value"></label>
+					    </label>
+				    </div>
+				</div>
+				<div class="cenbaoBtn">
+					<button class="btn btn-outline-info btn-lg" ng-click="saveStep('1')">上一步</button>
+					<button class="btn btn-info btn-lg" ng-click="saveStep('3')">下一步</button>
+				</div>
+			</div>
+			<div class="insuranceAdd-policy" ng-show="stepshow==3">
+				<div class="insuranceAdd-policy-cont" ng-show="resultList.insuranceFormList.length">
+					<div class="insuranceAdd-policy-head clearfix">
+						<button type="button" class="btn btn-primary btn-md" ng-click="confirm_month()">添加险种</button>
+						<!-- <div>
+							排序方式
+							<select ng-click="sort()">
+								<option>按险种排序</option>
+							</select>
+							<i class="icon-03"></i>
+						</div> -->
+					</div>
+					<div class="insuranceAdd-policy-list">
+						<ul>
+							<li class="insuranceAddList{{$index}}" ng-repeat="item in resultList.insuranceFormList">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<thead>
+										<tr>
+											<td colspan="6">
+												<span>险种：<label ng-bind="item.productType.value"></label></span>
+												<span>生效月：<lable ng-bind="item.startMonth"></lable></span>
+												<span>失效月：<label ng-bind="item.endMonth || '-'"></label></span>
+												<span ng-if="item.isForceConscience==1">需要强制补缴</span>
+												<span>增员截止：<label ng-bind="item.applyEndDayTypeMap.key==1?'当月':'上月'"></label><label ng-bind="item.applyEndDay"></label>日</span>
+												<span>减员截止：<label ng-bind="item.terminationEndDayTypeMap.key==1?'当月':'上月'"></label><label ng-bind="item.terminationEndDay"></label>日</span>
+												<span>收款方式：<label ng-bind="item.payMethMap.value"></label></span>
+												<div>
+													<a class="text-info" ng-click="modifyLayer($index)">修改</a>
+													<a class="text-info" ng-click="copy_tr($index)">复制</a>
+													<a class="text-info" ng-click="delete_tr($index)">删除</a>
+												</div>
+											</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td width="16%">&nbsp;</td>
+											<td width="16%">基数上限</td>
+											<td width="16%">基数下限</td>
+											<td width="16%">比例(%)</td>
+											<td width="16%">固定金额</td>
+											<td width="20%">进位规则</td>
+										</tr>
+										<tr>
+											<th>企业</th>
+											<td ng-bind="'{{item.eBaseUp}}' || '-'"></td>
+											<td ng-bind="'{{item.eBaseDown}}' || '-'"></td>
+											<td ng-if="item.eProportion" ng-bind="item.eProportion+'%'"></td>
+											<td ng-if="!item.eProportion" ng-bind="item.eProportion==0?0:'-'"></td>
+											<td ng-bind="'{{item.eFixedAmount}}' || '-'"></td>
+											<td ng-bind="'{{item.eCarryRuleMap.value}}' || '-'"></td>
+										</tr>
+										<tr>
+											<th>个人</th>
+											<td ng-bind="'{{item.pBaseUp}}' || '-'"></td>
+											<td ng-bind="'{{item.pBaseDown}}' || '-'"></td>
+											<td ng-if="item.pProportion" ng-bind="item.pProportion+'%'"></td>
+											<td ng-if="!item.pProportion" ng-bind="item.pProportion==0?0:'-'"></td>
+											<td ng-bind="'{{item.pFixedAmount}}' || '-'"></td>
+											<td ng-bind="'{{item.pCarryRuleMap.value}}' || '-'"></td>
+										</tr>
+									</tbody>
+								</table>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 没有内容显示 -->
+				<div class="no-insuranceAdd-policy" ng-show="!resultList.insuranceFormList.length">
+					<img src="images/add.png" ng-click="confirm_month()" style="cursor: pointer;">
+					<p>点击<a class="text-primary" ng-click="confirm_month()" >添加险种</a>，设置各险种的政策</p>
+				</div>
+				<div class="policyBtn">
+					<button class="btn btn-outline-info btn-lg" ng-click="saveStep('2')">上一步</button>
+					<button class="btn btn-info btn-lg" ng-click="confirm_add()">确认添加</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 进入页面没有数据 显示 -->
+	<div class="pop insurance-pop" style=" display: none;">
+		<h3>错误提示</h3>
+		请先添加险种
+		<div class="row">
+			<button class="btn more-btn btn-info" ng-click="confirm_month()" >去添加</button>
+			<button  class="btn more-btn btn-warning" ng-click="closePop()" >取消</button>
+		</div>
+	</div>
+	<!-- 添加成功 显示 -->
+	<div class="add-success-link" ng-if="addSucessLink == false" >
+		<img src="images/reset_success.png">
+		<div>你的【{{resultList.name}}】已经添加成功,人力窝会尽快审核,请耐心等待</div>
+		<div class="add-button point"><span class="btn btn-info" ng-click="goUrl('insurance/fund')">返回</span></div>
+	</div>
+	<!-- 添加险种 -->
+	<div class="pop insurance-pop-month insurance-pop-add" style=" display: none;">
+		<div class="insurance-pop-month-title"><label>添加险种</label> <span class="icon-cross" ng-click="closePop()" ></span></div>
+		<ul class="insurance-pop-month-select">
+			<li class="insuranceList">
+				选择险种
+				<select ng-model="sendDetail.productType" ng-options="x.value for x in result.insurance_type track by x.key" ng-change="productTypeChange(sendDetail.productType)"></select>
+				<i class="icon-03"></i>
+			</li>
+			<li class="insuranceList">&nbsp;</li>
+			<li class="insuranceList">
+				收款方式
+				<select ng-model="sendDetail.payMethMap" ng-options="x.value for x in result.payment_method track by x.key" ng-change="layerHeight()"></select>
+				<i class="icon-03"></i>
+			</li>
+			<li class="insuranceList" ng-if="sendDetail.payMethMap.key == 2">
+				强制补缴一个月&nbsp;&nbsp;
+				<label for="flag" style="margin:0 15px">
+		 			<input class="normal" id="not_force2" type="radio" ng-value="2" name="conscience2" ng-model="sendDetail.isForceConscience">
+					<label for="not_force2">否</label>
+			    </label>
+			    <label for="flag">
+		 			<input class="normal" id="is_force2" type="radio" ng-value="1" name="conscience2" ng-model="sendDetail.isForceConscience">
+					<label for="is_force2">是</label>
+			    </label>
+			</li>
+			<li class="insuranceList" ng-if="sendDetail.payMethMap.key == 1">&nbsp; </li>
+			<li class="insuranceList" ng-if="sendDetail.payMethMap.key == 1">
+				首次收款月数
+				<select ng-model="sendDetail.firstReceivablesMonthMap" ng-options="x.value for x in result.first_receivables_month track by x.key"></select>
+				<i class="icon-03"></i>
+			</li>
+			<li class="insuranceList" ng-if="sendDetail.payMethMap.key == 1">
+				次年生成月
+				<div class="insuranceListDiv">
+					<select ng-model="sendDetail.nextGenerationMonth" >
+						<option value="1">1月</option>
+						<option value="2">2月</option>
+						<option value="3">3月</option>
+						<option value="4">4月</option>
+						<option value="5">5月</option>
+						<option value="6">6月</option>
+						<option value="7">7月</option>
+						<option value="8">8月</option>
+						<option value="9">9月</option>
+						<option value="10">10月</option>
+						<option value="11">11月</option>
+						<option value="12">12月</option>
+					</select>
+					<i class="icon-03"></i>
+				</div>
+			</li>
+			<li class="insuranceList">
+				生效月
+				<div class="insuranceListDiv input-err">
+					<input id="datetimepicker1" type="text"  ng-model="sendDetail.startMonth" readonly="readonly" ng-blur="dateBlur('datetimepicker1','sendDetail','startMonth')">
+					<i class="icon-03"></i>
+					<small class="startMonth-err" style="top:-10px;left: 0;">请选择生效月</small>
+				</div>
+			</li>
+			<li class="insuranceList">
+				失效月
+				<div class="insuranceListDiv">
+					<input id="datetimepicker2" type="text"  ng-model="sendDetail.endMonth" readonly="readonly" ng-blur="dateBlur('datetimepicker2','sendDetail','endMonth')">
+					<i class="icon-03"></i>
+				</div>
+			</li>
+		</ul>
+		<table class="insuranceTab" border="0" cellpadding="0" cellspacing="0">
+			<thead>
+				<tr>
+					<th>企业</th>
+					<th>个人</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-if="sendDetail.payMethMap.key == 2">
+					<td>
+						<span>基数上限</span>
+						<div class="input-err">
+							<input type="text" ng-model="sendDetail.eBaseUp" ng-blur="checkBase('sendDetail','eBaseUp','eBaseUp-err',sendDetail.eBaseUp)" maxlength="9" autocomplete="off">
+							<small class="eBaseUp-err">请输入0~100000的数字，最多输入两位小数</small>
+						</div>
+					</td>
+					<td>
+						<span>基数上限</span>
+						<div class="input-err">
+							<input type="text" ng-model="sendDetail.pBaseUp" ng-blur="checkBase('sendDetail','pBaseUp','pBaseUp-err',sendDetail.pBaseUp)" maxlength="9" autocomplete="off">
+							<small class="pBaseUp-err">请输入0~100000的数字，最多输入两位小数</small>
+						</div>
+					</td>
+				</tr>
+				<tr ng-if="sendDetail.payMethMap.key == 2">
+					<td>
+						<span>基数下限</span>
+						<div class="input-err">
+							<input type="text" ng-model="sendDetail.eBaseDown" ng-blur="checkBase('sendDetail','eBaseDown','eBaseDown-err',sendDetail.eBaseDown)" maxlength="9" autocomplete="off">
+							<small class="eBaseDown-err">请输入0~100000的数字，最多输入两位小数</small>
+						</div>
+					</td>
+					<td>
+						<span>基数下限</span>
+						<div class="input-err">
+							<input type="text" ng-model="sendDetail.pBaseDown" ng-blur="checkBase('sendDetail','pBaseDown','pBaseDown-err',sendDetail.pBaseDown)" maxlength="9" autocomplete="off">
+							<small class="pBaseDown-err">请输入0~100000的数字，最多输入两位小数</small>
+						</div>
+					</td>
+				</tr>
+				<tr ng-if="sendDetail.payMethMap.key == 2">
+					<td>
+						<span>缴纳比例</span>
+						<div class="input-err">
+							<input type="text" ng-model="sendDetail.eProportion" ng-blur="checkProportion('sendDetail','eProportion','eProportion-err',sendDetail.eProportion)" maxlength="8" autocomplete="off">
+							<b>%</b>
+							<small class="eProportion-err">请输入0~100的数字，最多四位小数</small>
+						</div>
+					</td>
+					<td>
+						<span>缴纳比例</span>
+						<div class="input-err">
+							<input type="text" ng-model="sendDetail.pProportion" ng-blur="checkProportion('sendDetail','pProportion','pProportion-err',sendDetail.pProportion)" maxlength="8" autocomplete="off">
+							<b>%</b>
+							<small class="pProportion-err">请输入0~100的数字，最多四位小数</small>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>固定金额</span>
+						<div class="input-err">
+							<input type="text" ng-model="sendDetail.eFixedAmount" ng-blur="checkBase('sendDetail','eFixedAmount','eFixedAmount-err',sendDetail.eFixedAmount)" maxlength="9" autocomplete="off">
+							<small class="eFixedAmount-err">请输入0~100000的数字，最多输入两位小数</small>
+						</div>
+					</td>
+					<td>
+						<span>固定金额</span>
+						<div class="input-err">
+							<input type="text" ng-model="sendDetail.pFixedAmount" ng-blur="checkBase('sendDetail','pFixedAmount','pFixedAmount-err',sendDetail.pFixedAmount)" maxlength="9" autocomplete="off">
+							<small class="pFixedAmount-err">请输入0~100000的数字，最多输入两位小数</small>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>进位规则</span>
+						<div>
+							<select ng-model="sendDetail.eCarryRuleMap" ng-options="x.value for x in result.carry_rule track by x.key"></select>
+							<i class="icon-03"></i>
+						</div>
+					</td>
+					<td>
+						<span>进位规则</span>
+						<div>
+							<select ng-model="sendDetail.pCarryRuleMap" ng-options="x.value for x in result.carry_rule track by x.key"></select>
+							<i class="icon-03"></i>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="insurance-pop-month-addReduce">
+			<span>增员截止日</span>
+			<div class="addReduce-center">
+				<select class="applyEndDay" ng-model="sendDetail.applyEndDay" ng-options="m.key as m.value for m in dateList"></select>
+				<em class="icon-03"></em>
+			</div>
+			<div class="addReduce-right">
+			    <label for="flag" ng-repeat="item in result.apply_end_day_type">
+		 			<input class="normal" id="newAdd{{item.key}}" type="radio" ng-value="item.key" name="newAdd" ng-model="sendDetail.applyEndDayTypeMap.key">
+					<label for="newAdd{{item.key}}" ng-bind="item.value"></label>
+			    </label>
+			</div>
+		</div>
+		<div class="insurance-pop-month-addReduce">
+			<span>减员截止日</span>
+			<div class="addReduce-center">
+				<select class="terminationEndDay" ng-model="sendDetail.terminationEndDay" ng-options="m.key as m.value for m in dateList"></select>
+				<em class="icon-03"></em>
+			</div>
+			<div class="addReduce-right">
+				<label for="flag" ng-repeat="item in result.termination_end_day_type">
+		 			<input class="normal" id="newMinus{{item.key}}" type="radio" ng-value="item.key" name="newMinus" ng-model="sendDetail.terminationEndDayTypeMap.key">
+					<label for="newMinus{{item.key}}" ng-bind="item.value"></label>
+			    </label>
+			</div>
+		</div>
+		<div class="footer">
+			<button class="btn more-btn btn-info" ng-click="addInsurance()">确认添加</button>
+			<button  class="btn more-btn btn-warning" ng-click="closePop()" >取消</button>
+		</div>
+	</div>
+
+	<!-- 修改险种 月 -->
+	<div class="pop insurance-pop-month insurance-pop-modify" style=" display: none;">
+		<div class="insurance-pop-month-title"><label>修改险种</label><span class="icon-cross" ng-click="closePop()" ></span></div>
+		<ul class="insurance-pop-month-select">
+			<li class="insuranceList">
+				选择险种
+				<div class="insuranceListDiv" ng-bind="modifyList.productType.value"></div>
+			</li>
+			<li class="insuranceList">&nbsp;</li>
+			<li class="insuranceList">
+				收款方式
+				<div class="insuranceListDiv" ng-bind="modifyList.payMethMap.value"></div>
+			</li>
+			<li class="insuranceList" ng-if="modifyList.payMethMap.key == 2">
+				强制补缴一个月&nbsp;&nbsp;
+				<label for="flag" style="margin:0 15px">
+		 			<input class="normal" id="not_force" type="radio" ng-value="2" name="conscience" ng-model="modifyList.isForceConscience">
+					<label for="not_force">否</label>
+			    </label>
+			    <label for="flag">
+		 			<input class="normal" id="is_force" type="radio" ng-value="1" name="conscience" ng-model="modifyList.isForceConscience">
+					<label for="is_force">是</label>
+			    </label>
+			</li>
+			<li class="insuranceList" ng-if="modifyList.payMethMap.key == 1">&nbsp; </li>
+			<li class="insuranceList" ng-if="modifyList.payMethMap.key==1">
+				首次收款月数
+				<div class="insuranceListDiv" ng-bind="modifyList.firstReceivablesMonthMap.value"></div>
+			</li>
+			<li class="insuranceList" ng-if="modifyList.payMethMap.key==1">
+				次年生成月
+				<div class="insuranceListDiv" ng-bind="modifyList.nextGenerationMonth+'月'"></div>
+			</li>
+			<li class="insuranceList">
+				生效月
+				<div class="insuranceListDiv input-err" ng-show="!startDisabled">
+					<input id="datetimepicker3" type="text" class="yearMonth startMonth" ng-model="modifyList.startMonth" readonly="readonly" ng-blur="dateBlur('datetimepicker3','modifyList','startMonth')">
+					<i class="icon-03"></i>
+					<small class="startMonth-err" style="top:-10px;left: 0;">请选择生效月</small>
+				</div>
+				<div class="insuranceListDiv input-err" ng-show="startDisabled">
+					<div ng-bind="modifyList.startMonth"></div>
+				</div>
+			</li>
+			<li class="insuranceList">
+				失效月
+				<div class="insuranceListDiv" ng-show="!endDisabled">
+					<input id="datetimepicker4" type="text" class="yearMonth endMonth" ng-model="modifyList.endMonth" readonly="readonly" ng-blur="dateBlur('datetimepicker4','modifyList','endMonth')">
+					<i class="icon-03"></i>
+				</div>
+				<div class="insuranceListDiv input-err" ng-show="endDisabled">
+					<div ng-bind="modifyList.startMonth"></div>
+				</div>
+			</li>
+		</ul>
+		<table class="insuranceTab" border="0" cellpadding="0" cellspacing="0">
+			<thead>
+				<tr>
+					<th>企业</th>
+					<th>个人</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-if="modifyList.payMethMap.key==2">
+					<td>
+						<span>基数上限</span>
+						<div class="input-err">
+							<input type="text" ng-model="modifyList.eBaseUp" ng-blur="checkBase('modifyList','eBaseUp','eBaseUp-err',modifyList.eBaseUp)" maxlength="9" autocomplete="off">
+							<small class="eBaseUp-err">请输入0~100000的数字，最多输入两位小数</small>
+						</div>
+					</td>
+					<td>
+						<span>基数上限</span>
+						<div class="input-err">
+							<input type="text" ng-model="modifyList.pBaseUp" ng-blur="checkBase('modifyList','pBaseUp','pBaseUp-err',modifyList.pBaseUp)" maxlength="9" autocomplete="off">
+							<small class="pBaseUp-err">请输入0~100000的数字，最多输入两位小数</small>
+						</div>
+					</td>
+				</tr>
+				<tr ng-if="modifyList.payMethMap.key==2">
+					<td>
+						<span>基数下限</span>
+						<div class="input-err">
+							<input type="text" ng-model="modifyList.eBaseDown" ng-blur="checkBase('modifyList','eBaseDown','eBaseDown-err',modifyList.eBaseDown)" maxlength="9" autocomplete="off">
+							<small class="eBaseDown-err">请输入0~100000的数字，最多输入两位小数</small>
+						</div>
+					</td>
+					<td>
+						<span>基数下限</span>
+						<div class="input-err">
+							<input type="text" ng-model="modifyList.pBaseDown" ng-blur="checkBase('modifyList','pBaseDown','pBaseDown-err',modifyList.pBaseDown)" maxlength="9" autocomplete="off">
+							<small class="pBaseDown-err">请输入0~100000的数字，最多输入两位小数</small>
+						</div>
+					</td>
+				</tr>
+				<tr ng-if="modifyList.payMethMap.key==2">
+					<td>
+						<span>缴纳比例</span>
+						<div class="input-err">
+							<input type="text" ng-model="modifyList.eProportion" ng-blur="checkProportion('modifyList','eProportion','eProportion-err',modifyList.eProportion)" maxlength="8" autocomplete="off">
+							<b>%</b>
+							<small class="eProportion-err">请输入0~100的数字，最多四位小数</small>
+						</div>
+					</td>
+					<td>
+						<span>缴纳比例</span>
+						<div class="input-err">
+							<input type="text" ng-model="modifyList.pProportion" ng-blur="checkProportion('modifyList','pProportion','pProportion-err',modifyList.pProportion)" maxlength="8" autocomplete="off">
+							<b>%</b>
+							<small class="pProportion-err">请输入0~100的数字，最多四位小数</small>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>固定金额</span>
+						<div class="input-err">
+							<input type="text" ng-model="modifyList.eFixedAmount" ng-blur="checkBase('modifyList','eFixedAmount','eFixedAmount-err',modifyList.eFixedAmount)" maxlength="9" autocomplete="off">
+							<small class="eFixedAmount-err">请输入0~100000的数字，最多输入两位小数</small>
+						</div>
+					</td>
+					<td>
+						<span>固定金额</span>
+						<div class="input-err">
+							<input type="text" ng-model="modifyList.pFixedAmount" ng-blur="checkBase('modifyList','pFixedAmount','pFixedAmount-err',modifyList.pFixedAmount)" maxlength="9" autocomplete="off">
+							<small class="pFixedAmount-err">请输入0~100000的数字，最多输入两位小数</small>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>进位规则</span>
+						<div>
+							<select ng-model="modifyList.eCarryRuleMap" ng-options="x.value for x in result.carry_rule track by x.key"></select>
+							<i class="icon-03"></i>
+						</div>
+					</td>
+					<td>
+						<span>进位规则</span>
+						<div>
+							<select ng-model="modifyList.pCarryRuleMap" ng-options="x.value for x in result.carry_rule track by x.key"></select>
+							<i class="icon-03"></i>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="insurance-pop-month-addReduce">
+			<span>增员截止日</span>
+			<div class="addReduce-center">
+				<select class="applyEndDay" ng-model="modifyList.applyEndDay" ng-options="m.key as m.value for m in dateList"></select>
+				<em class="icon-03"></em>
+			</div>
+			<div class="addReduce-right">
+				<label for="flag" ng-repeat="item in result.apply_end_day_type">
+		 			<input class="normal" id="modifyAdd{{item.key}}" type="radio" ng-value="item.key" name="modifyAdd" ng-model="modifyList.applyEndDayTypeMap.key">
+					<label for="modifyAdd{{item.key}}" ng-bind="item.value"></label>
+			    </label>
+			</div>
+		</div>
+		<div class="insurance-pop-month-addReduce">
+			<span>减员截止日</span>
+			<div class="addReduce-center">
+				<select class="terminationEndDay" ng-model="modifyList.terminationEndDay" ng-options="m.key as m.value for m in dateList"></select>
+				<em class="icon-03"></em>
+			</div>
+			<div class="addReduce-right">
+				<label for="flag" ng-repeat="item in result.termination_end_day_type">
+		 			<input class="normal" id="modifyMinus{{item.key}}" type="radio" ng-value="item.key" name="modifyMinus" ng-model="modifyList.terminationEndDayTypeMap.key">
+					<label for="modifyMinus{{item.key}}" ng-bind="item.value"></label>
+			    </label>
+			</div>
+		</div>
+		<div class="footer">
+			<button class="btn more-btn btn-info" ng-click="modifyListBtn()">确认添加</button>
+			<button  class="btn more-btn btn-warning" ng-click="closePop()" >取消</button>
+		</div>
+	</div>
+	<!-- 放弃  弹框 -->
+	<div class="pop giveUp-pop" style=" display: none;">
+		<p>确认放弃</p>
+		<p>离开页面后，当前填写内容将会丢失，确认放弃当前填写内容?</p>
+		<div class="row">
+			<button class="btn more-btn btn-info" ng-click="continueFun()">确认</button>
+			<button  class="btn more-btn btn-warning" ng-click="closePop()">取消</button>
+		</div>
+	</div>
+	<!-- 删除 弹框 -->
+	<div class="pop billMessage-singlePop" style="display: none">
+		是否确认删除？
+		<div class="row">
+			<button class="btn more-btn btn-info" ng-click="confirm_deletion()">确认</button>
+			<button  class="btn more-btn btn-warning" ng-click="closePop()">取消</button>
+		</div>
+	</div>
+</div>
+
+<!-- 404页面 -->
+<div class="rm-404" ng-if="is404"><img src="images/404.png"></div>

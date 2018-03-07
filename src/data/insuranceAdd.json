@@ -1,0 +1,25 @@
+{
+  "code":"200",
+  "msg": "",
+  "result":{
+    "carry_rule":[{"key":"1","value":"四舍五入"},{"key":"2","value":"先四舍五入再向上进位至元位"}],
+    "insurance_type":[{ "key":"1","value":"养老"},{"key":"2","value":"工伤"},{"key":"3","value":"医疗"},{"key":"4","value":"生育"},{"key":"5","value":"失业"},{"key":"6","value":"社保"},{"key":"7","value":"公积金"}],
+    "payment_method":[{"key":"1","value":"年收"},{"key":"2","value":"月收"}],
+    "first_receivables_month":[{"key":"1","value":"收全年"},{"key":"2","value":"起缴月开始收款"}],
+    "apply_end_day_type":[{"key":"1","value":"当月"},{"key":"2","value":"上月"}], 
+    "termination_end_day_type":[{"key":"1","value":"当月"},{"key":"2","value":"上月"}],
+    "endDayTypeOptions":[{"key":"1","value":"当月"},{"key":"2","value":"上月"}], 
+    "cityList":[{"key":"110100","value":"北京市"},{"key":"310100","value":"上海市"}],
+    "new_meterial_type": [{"key": "1","value": "户籍性质"},{"key": "2","value": "身份证正面照"},{"key": "3","value": "身份证反面照"},{"key": "4","value": "劳动合同扫描件"}],
+    "product_tyte": [{"key":"1","value":"社保"},{"key":"2","value":"公积金"},{"key":"3","value":"社保公积金"}],
+    "renew_meterial_type": [
+      {"key": "1","value": "户籍性质"},
+      {"key": "2","value": "身份证正面照"},
+      {"key": "3","value": "身份证反面照"},
+      {"key": "3","value": "身份证反面照"},
+      {"key": "3","value": "身份证反面照"},
+      {"key": "3","value": "身份证反面照"},
+      {"key": "4","value": "劳动合同扫描件"}
+    ]  
+  }
+}

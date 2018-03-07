@@ -1,0 +1,146 @@
+/*========== 首页 ==========*/
+a:hover{
+  text-decoration: none;
+}
+.wowoo-logo{
+  margin-right: 30px;
+}
+.wowoo-logo img{
+    width:84px;
+    cursor: pointer;
+}
+.header .nav{
+  height: 50px;
+  padding: 0 18px 0;
+
+  color: #777;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.nav-active{
+  background-color: #f7f7f7;
+    color:#000 !important;
+}
+
+.header{
+  padding: 0 30px ;
+  min-width: 1200px;
+}
+
+.header .user_avatar{
+    position: relative;
+    padding-left: 24px;
+    cursor: pointer;
+}
+.header .user_avatar ul{
+    position: absolute;
+    right: -10px;
+    top: 50;
+    background:#ffffff;
+    box-shadow:0 2px 8px 0 rgba(0,0,0,0.16);
+    border-radius:2px;
+    padding:10px 0;
+    display: none;
+}
+.header .user_avatar:hover ul{
+    display: block;
+}
+.header .user_avatar ul li{
+    height: 36px;
+    line-height: 36px;
+    padding-left: 26px;
+    width: 120px;
+    cursor: pointer;
+}
+.header .user_avatar ul li:hover{
+    background-color: #F0F0F0;
+}
+.header .user_avatar ul li a{
+    font-size: 13px;
+    color: #777;
+}
+.header .user_avatar:before{
+    content: "";
+    border-left: 1px solid #E1DAD0;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -8px;
+}
+.header .user_avatar img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.header .help-center{  
+  cursor: pointer;
+  position: relative;
+}
+.header .help-center span {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.header .help-center-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    padding: 5px 0;
+    width: 100px;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 7px #ddd;
+}
+.index-content .sidebar-icon{
+  float: right;
+  color: #7f98ab;
+  margin: 12px 10px 0 0;
+}
+.help-center-menu li {
+    width: 100%;
+    padding: 0 20px;
+}
+.help-center-menu li a {
+    display: block;
+    color: #333;
+    height: 40px;
+    line-height: 40px;
+}
+.dis-noll{
+  display: none;
+}
+.subnav{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  min-width: 1200px;
+  margin-top: 50px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #60768d;
+  z-index: 3;
+}
+
+.subnav a{
+  font-size: 14px;
+  color: #fff;
+}
+.subnav .my-order>div,.subnav .my-insurance,.subnav .my-bill{
+padding:0 15px;
+height:40px;
+}
+.subnav .active-bar{
+  background:#476079;
+}
+.icon-mail-color span{
+    color: #218eff;
+    font-size:21px;
+    display: inline-block;
+    margin-top: 14.5px;
+}

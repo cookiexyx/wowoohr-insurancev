@@ -1,0 +1,27 @@
+{
+    "code": "200",
+    "msg": "",
+    "result": [
+        {
+            "type": "product_type",
+            "itemCode": "1",
+            "itemName": "社保",
+            "itemRemark": "产品类型",
+            "itemOrder": 1
+        },
+        {
+            "type": "product_type",
+            "itemCode": "2",
+            "itemName": "公积金",
+            "itemRemark": "产品类型",
+            "itemOrder": 2
+        },
+        {
+            "type": "product_type",
+            "itemCode": "3",
+            "itemName": "社保公积金",
+            "itemRemark": "产品类型",
+            "itemOrder": 3
+        }
+    ]
+}

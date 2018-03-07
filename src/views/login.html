@@ -1,0 +1,14 @@
+<div class="login-fixed">
+	<img src="images/login.jpg">
+	<div class="login-fixed-from input-err">
+		<div class="input-err">
+			<input type="text" placeholder="请输入用户名" ng-model="name" ng-keydown="KeyDown()" autocomplete="off">
+			<small class="name-err" ng-bind="nameErr"></small>
+		</div>
+		<div class="input-err">
+			<input type="password" placeholder="请输入密码" ng-model="password" maxlength="16" ng-keydown="KeyDown()">
+			<small class="password-err" ng-bind="passwordErr"></small>
+		</div>	
+		<button class="btn btn-info btn-lg " ng-click="login()">登录</button>
+	</div>
+</div>

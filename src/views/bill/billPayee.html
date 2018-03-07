@@ -1,0 +1,71 @@
+<div ng-show="!is404">
+	<div class="bill-payee-box" ng-show="listLength>0" >
+		<div class="head-box">
+			<div class="search-box">
+				<span>
+					账单月：
+					<label>
+						<input type="text" id="datetimepicker1" ng-model="fromBillMonth" readonly="readonly" ng-blur="dateBlur('datetimepicker1','modifyList','startMonth')" placeholder="请选择">
+						<i class="icon-03"></i>
+					</label> -
+					<label>
+						<input type="text" id="datetimepicker2" ng-model="toBillMonth" readonly="readonly" ng-blur="dateBlur('datetimepicker2','modifyList','startMonth')" placeholder="请选择">
+						<i class="icon-03"></i>
+					</label>
+				</span>
+				<span>共<span ng-bind="totalCount"></span>条</span>
+			</div>
+		</div>
+		<div class="bill-payee-cont" ng-show="listLength>0&&list.length>0">
+			<table>
+				<thead>
+					<tr>
+						<th>账单月</th>
+						<th>账单类型</th>
+						<th>服务城市</th>
+						<th>账单金额</th>
+						<th>账单生成日</th>
+						<th>账单状态</th>
+						<th>账单详情</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in list">
+						<td ng-bind="item.billMonth"></td>
+						<td>
+							<span ng-if="item.billType == 1">社保账单</span>
+							<span ng-if="item.billType == 2">公积金账单</span>
+							<span ng-if="item.billType == 3">社保公积金账单</span>
+						</td>
+						<td ng-bind="item.cityCode"></td>
+						<td ng-bind="item.payAmount | numberString"></td>
+						<td ng-bind="item.billCreateDate"></td>
+						<td>
+							<span ng-if="item.vendorBillStatus == 1">未收款</span>
+							<span ng-if="item.vendorBillStatus == 2">已收款</span>
+						</td>
+						<td>
+							<a class="text-info" style="cursor: pointer;" ng-click="exportExcel(item.id)" ng-if="item.initOrderNums && item.initOrderNums!=0">导出EXCEL</a>
+							<span ng-if="!item.initOrderNums || item.initOrderNums==0">-</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+		<!-- 没有任何数据 -->
+	<div class="search-no-data" ng-if="listLength == 0" >
+		<img src="images/no_fund.png">
+		<div>你暂无任何收款账单</div>
+	</div>
+
+	<!-- 搜索 没有任何数据 -->
+	<div class="search-no-data" ng-if="listLength > 0 && list.length ==0">
+		<img src="images/no_fund.png">
+		<div>暂无数据</div>
+	</div>
+</div>
+
+
+<!-- 404页面 -->
+<div class="rm-404" ng-if="is404"><img src="images/404.png"></div>

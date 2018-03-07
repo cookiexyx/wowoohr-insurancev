@@ -1,0 +1,114 @@
+<div ng-show="!is404">
+	<div ng-show="!succApplyLink">
+		<div ng-include="'views/item/titleNav.html'"></div>
+		<div class="insurance-detail-box orderIncreaseDetail">
+			<div class="row insurance-detail-title">
+				<div class="float-xs-left">
+					<span class="name" ng-bind="result.name"></span>
+					<span class="info">身份证：{{result.idCard}}</span>
+					<span class="info">缴纳城市：{{result.cityMap.value}}</span>
+					<span class="info">离职原因：{{result.reasonsForLeavin}}</span>
+					<span class="info">离职日期：{{result.leavinDay}}</span>
+				</div>
+			</div>
+			<div class="row insurance-detail-cont">
+				<table class="table table-border">
+					<thead class="thead-default">
+						<tr class="table-head">
+							<th></th>
+							<th>企业</th>
+							<th>个人</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="table-td">
+								<table class="table">
+									<thead class="thead-default">
+										<tr class="table1-head">
+											<th>险种</th>
+											<th>最后缴纳月</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="item in result.insuranceDetialDtoList">
+											<td ng-bind="item.insuranceTypeMap.value"></td>
+											<td ng-bind="item.payMonth"></td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+							<td class="table-td">
+								<table class="table">
+									<thead class="thead-default">
+										<tr class="table2-head">
+											<th>基数
+												<th>比例(%)</th>
+												<th>固定金额</th>
+												<th>缴纳额</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="item in result.insuranceDetialDtoList">
+											<td ng-bind="'{{item.companyBaseNumber}}' || '-'"></td>
+											<td ng-if="item.companyRatio" ng-bind="item.companyRatio+'%'"></td>
+											<td ng-if="!item.companyRatio" ng-bind="item.companyRatio==0?0:'-'"></td>
+											<td ng-bind="'{{item.companyFixedAmount}}' || '-'"></td>
+											<td ng-bind="'{{item.companyPayAmount}}' || '-'"></td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+							<td class="table-td">
+								<table class="table">
+									<thead class="thead-default">
+										<tr class="table3-head">
+											<th>基数
+												<th>比例(%)</th>
+												<th>固定金额</th>
+												<th>缴纳额</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="item in result.insuranceDetialDtoList">
+											<td ng-bind="'{{item.personBaseNumber}}'|| '-'"></td>
+											<td ng-if="item.personRatio" ng-bind="item.personRatio+'%'"></td>
+											<td ng-if="!item.personRatio" ng-bind="item.personRatio==0?0:'-'"></td>
+											<td ng-bind="'{{item.personFixedAmount}}'|| '-'"></td>
+											<td ng-bind="'{{item.personPayAmount}}'|| '-'"></td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+							<td class="table-td">
+								<table class="table" style="border:none;">
+									<thead class="thead-default">
+										<tr class="table4-head">
+											<th>缴纳总额</th>
+											<th>申报结果</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="item in result.insuranceDetialDtoList">
+											<td ng-bind="'{{item.insurancePayAmount}}'||'-'"></td>
+											<td ng-if="item.status==3||item.status==4">{{item.detailStatusMap.value}}<span ng-if="item.detailFailReasonMap.value">（{{item.detailFailReasonMap.value}}）</span></td>
+											<td ng-if="item.status!=3&&item.status!=4"></td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="order-bottom">
+				<span class="float-xs-left">订单号：{{result.orderNumber}}</span>
+				<span class="float-xs-right">总计<label ng-bind="result.payAmount"></label></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 404页面 -->
+<div class="rm-404" ng-if="is404"><img src="images/404.png"></div>

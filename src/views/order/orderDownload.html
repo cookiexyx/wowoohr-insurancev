@@ -1,0 +1,50 @@
+<div ng-show="!is404">
+  <div ng-show="!succApplyLink"> 
+      <div ng-include="'views/item/titleNav.html'"></div>
+      <div class="insurance-detail-box orderIncreaseDetail" ng-show="totalCount > 0" >
+          <div class="row insurance-select">
+            <span>文件类型</span>
+            <label>
+              <select ng-change="selectSearch(selected)" ng-model="selected">
+                  <option ng-repeat="item in result.fileTypeMap" value="{{item.key}}">{{item.value}}</option>
+              </select>
+              <i class="icon-03"></i>
+            </label>
+            <span>共<span ng-bind="totalCount"></span>条</span>
+          </div>
+          <div class="row insurance-detail-cont download-list">
+              <table class="table table-border">
+                  <thead class="thead-default">
+                      <tr class="table-head">
+                        <th><span>文件名</span></th>
+                        <th><span>文件类型</span></th>
+                        <th width="30%"><span>搜索条件</span></th>
+                        <th><span>操作时间</span></th>
+                        <th><span>状态</span></th>
+                        <th></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr ng-repeat="item in result.fileDownloadList">
+                        <td class="table-td"><span ng-bind="item.fileName"></span></td>
+                        <td class="table-td"><span ng-bind="item.fileType"></span></td>
+                        <td class="table-td"><span ng-bind-html="item.paramContent||'-'"></span></td>
+                        <td class="table-td"><span ng-bind="item.operationTime"></span></td>
+                        <td class="table-td"><span ng-show="item.fileStatus==2">未下载</span><span ng-show="item.fileStatus==3">已下载</span><span ng-show="item.fileStatus==1">-</span><span ng-show="item.fileStatus==4">生成失败</span></td>
+                        <td class="table-td"><span class="blue" ng-show="item.fileStatus==3||item.fileStatus==2" ng-click="downloadPdf(item.downloadNumber,item.downloadUrl,item.taskId)">下载</span><span class="gray" ng-show="item.fileStatus==1">文件生成中...</span><span class="gray" ng-show="item.fileStatus==4">{{item.taskShutDownReason}}</span></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+    </div>
+      <!-- 没有任何数据 -->
+    <div class="search-no-data" ng-if="totalCount == 0" >
+      <img src="images/no_fund.png">
+      <div>暂无数据</div>
+    </div>
+</div>
+  
+<!-- 404页面 -->
+<div class="rm-404" ng-if="is404"><img src="images/404.png"></div>
+

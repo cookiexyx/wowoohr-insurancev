@@ -1,0 +1,18 @@
+{	
+	"msg":"",
+	"code":"200",
+	"result":{
+    "failReasionList":[
+     {
+          "id":1,
+          "failreasonName":"上家单位未退",
+          "failReason":"A1"
+     },
+     {
+          "id":2,
+          "failreasonName":"上家已缴费",
+          "failReason":"A2"
+     }
+    ]
+   }
+}

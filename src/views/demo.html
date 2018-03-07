@@ -1,0 +1,162 @@
+<h1>Hello, world!</h1>
+
+<div class="row">
+  <div class="col-xs-4">
+    <button type="button" class="btn btn-primary btn-block" ng-click="save()">保&nbsp;存</button>
+  </div>
+  <div class="col-xs-4">
+    <button type="button" class="btn btn-primary" disabled ng-click="save()">demo1demo1demo1</button>
+    <button type="button" class="btn btn-info btn-lg" ng-click="save()">demo2</button>
+    <button type="button" class="btn btn-warning btn-sm" ng-click="save()">demo3</button>
+    <button type="button" class="btn btn-outline-primary" ng-click="save()">demo4</button>
+    <button type="button" class="btn btn-outline-info" ng-click="save()">demo5</button>
+    <button type="button" class="btn btn-outline-warning" ng-click="succPop()">demo6</button>
+  </div>
+   <button type="button" class="btn btn-outline-warning" ng-click="succPop()">回调弹窗</button>
+   <button type="button" class="btn btn-outline-warning" ng-click="pop()">弹窗</button>
+<div class="pop add-pop" style="display: none">
+    我是弹窗，嘿嘿
+  </div>
+
+  <div class="col-xs-4">
+      <a href="#" class="text-primary">primary link</a>
+      <a href="#" class="text-info">Info link</a>
+      <a href="#" class="text-warning">Warning link</a>
+
+  </div>
+</div>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+<br><br><br>
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip bottom">
+  Tooltip bottom
+</button>
+<br><br>
+<br>
+<div class="alert alert-success clearfix" role="alert">
+  <div class="float-xs-left"><i class="icon-20"></i></div> 
+  <div class="float-xs-left">You successfully read this important alert message.</div>
+</div>
+<div class="alert alert-info clearfix" role="alert">
+  <div class="float-xs-left"><i class="icon-17"></i></div> 
+  <div class="float-xs-left">This alert needs your attention, but it's not super important.</div> 
+</div>
+
+<div class="alert alert-info clearfix alert-dismissible" role="alert">
+  <div class="float-xs-left"><i class="icon-17"></i></div> 
+  <div class="float-xs-left">This alert needs your attention, but it's not super important.&nbsp;&nbsp;<a href="#" class="text-info">提示</a></div>
+  <div class="float-xs-right">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true" class="text-info">&times;</span>
+    </button>
+  </div>
+</div>
+
+
+<div class="alert alert-warning clearfix" role="alert">
+  <div class="float-xs-left"><i class="icon-13"></i></div>
+  <div class="float-xs-left">Better check yourself, you're not looking too good.</div>
+</div>
+<div class="alert alert-danger clearfix" role="alert">
+  <div class="float-xs-left"><i class="icon-20"></i></div> 
+  <div class="float-xs-left">Change a few things up and try submitting again.</div>
+</div>
+<br><br>
+<br>
+
+<div class="col-sm-6" style="height:130px;">
+        <div class="form-group">
+            <div class='input-group date' id='datetimepicker9'>
+                <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+<div class="table-responsive">
+    <table class="table table-bordered">
+      <thead class="thead-default">
+        <tr>
+          <td>#</td>
+          <td>Table heading</td>
+          <td>Table heading</td>
+          <td>Table heading</td>
+          <td>Table heading</td>
+          <td>Table heading</td>
+          <td>Table heading</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row pagenation-row">
+  <div class="float-lg-right"><div class="pagination pagination-sm"></div></div>
+  <div class="float-lg-right">共20条，5页</div>  
+</div>
+
+<input type="text" class="timepicker"/>
+
+<round-progress
+    max="100"
+    current="current"
+    color="#45ccce"
+    bgcolor="#eaeaea"
+    radius="50"
+    stroke="5"
+    semi="false"
+    rounded="true"
+    clockwise="false"
+    responsive="false"
+    duration="800"
+    animation="easeInOutQuart"
+    animation-delay="0"></round-progress>
+
+<div class="switch">
+  <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+  <label for="cmn-toggle-1"></label>
+</div>
+
+<input type="file" id="csvFileInput" onchange="angular.element(this).scope().handleFiles(this.files)"
+          accept=".csv">
+<div id="output">
+    <div ng-click="slidePop()">点击出滑屏</div>
